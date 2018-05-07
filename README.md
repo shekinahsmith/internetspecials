@@ -10,5 +10,6 @@ Tech Stack
 - PHP
 - jQuery/Javascript
 - Vue
+- Foundation 5
 
 This was my first introduction to Vue.js, however, the technical stack for this team was a bit old. Attempting to make our old PHP stack work within the bounds of Vue was incredibly difficult. 
