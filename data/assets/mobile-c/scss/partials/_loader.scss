@@ -1,0 +1,69 @@
+//-----------------------------------------
+// LOADER
+//-----------------------------------------
+
+@import 'global';
+
+// loader (modals, ajax request, etc.)
+.loader {
+	background-color: rgba(#fff, 0.95);
+	font-size: 14px;
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	text-align: center;
+	width: 100%;
+	z-index: map-get($z-index, 'loader');
+
+	// content
+	&__content {
+		padding: 0 30px;
+		transform: translate(-50%, -50%);
+		width: 100%;
+        left: 50%;
+        position: absolute;
+        top: 50%;
+
+		// loading text
+		&:after {
+			color: color(primary, blue);
+			content: 'Loading...';
+			display: block;
+			margin-top: 10px;
+		}
+
+	} // .loader__content
+
+	// image
+	img {
+		@include animation(loader 2000ms linear infinite);
+		width: 40px;
+	}
+
+	// channel lineup loading text
+	&--channel-lineup {
+
+		.loader__content {
+
+			&:after {
+				content: 'Loading Channel Lineup...';
+			}
+
+		} // .loader__content
+
+	} // .loader--serviceability
+
+	// spinning animation
+	@at-root {
+
+		@include keyframes(loader) {
+
+			100% {
+				@include transform(rotate(360deg));
+			}
+		}
+
+	} // @at-root
+
+} // .loader

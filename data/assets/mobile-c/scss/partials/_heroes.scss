@@ -1,0 +1,213 @@
+//-----------------------------------------
+// HEROES
+//-----------------------------------------
+
+@import 'global';
+
+// hero
+.hero {
+    background-position: bottom center;
+    background-size: cover;
+    color: color(primary, white);
+    padding: 14px 0 20px;
+    position: relative;
+
+    // hero headline
+    &__headline {
+        font-size: rem-calc(20);
+        font-weight: 300;
+    }
+
+    &__subheadline {
+        font-weight: 500;
+    }
+
+    p {
+        font-size: rem-calc(12);
+    }
+
+    // text above button
+    &__button-label {
+        margin-bottom: 5px;
+    }
+
+    // hero image
+    &__image {
+        width: 40%;
+
+        &--positioned {
+            margin-top: -20%;
+            position: absolute;
+            top: 50%;
+        }
+
+        &--right {
+            right: 0;
+        }
+
+        &--left {
+            left: 0;
+        }
+    }// .hero__image
+
+    // hero devices
+    &__devices {
+        margin-bottom: 15px;
+        width: 70%;
+    }
+
+    // address check
+    &__address-check {
+        margin: 25px 0;
+
+        // zip code
+        &-zip-code {
+            font-size: rem-calc(12);
+            margin-bottom: 5px;
+        }
+
+        // check availability
+        &-check-availability {
+            color: color(primary, blue);
+            font-size: rem-calc(14);
+            text-decoration: underline;
+        }
+
+    }// .hero__address-check
+
+}// .hero
+
+// interior hero
+.hero--interior {
+    background-color: color(accent, gray-light);
+    color: color(primary, white);
+    padding: 24px 0;
+
+    .hero__headline {
+        font-weight: 500;
+    }
+
+    p {
+        margin-top: 20px;
+    }
+}// .hero--interior
+
+
+// hero landing
+.hero--landing {
+    background-image: url(#{$path-to-images}/heroes/hero-landing-dory.png);
+    background-position: 0 center;
+
+    .hero__headline {
+        font-size: rem-calc(25);
+        margin-bottom: 12px;
+    }
+
+    .button {
+        margin: 20px 0;
+    }
+
+    .price-point__dollars:before {
+        font-weight: 300;
+    }
+}// .hero--landing
+
+// hero deals
+.hero--deals {
+    background-image: url(#{$path-to-images}/heroes/hero-deals.jpg);
+    padding: 30px 0 20px;
+}
+
+// hero why att
+.hero--why-att {
+    background-image: url(#{$path-to-images}/heroes/hero-why-att.jpg);
+    background-position: 70% bottom;
+    padding: 30px 0 20px;
+
+    .button {
+        font-size: rem-calc(14);
+        padding: 8px;
+    }
+    
+}// .hero--why-att
+
+// hero customer support
+.hero--customer-support {
+    background-image: url(#{$path-to-images}/heroes/hero-customer-support.jpg);
+
+    .button {
+        font-size: rem-calc(14);
+        padding: 8px;
+
+        &__image,
+        &__text {
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        &__image {
+            margin-right: 5px;
+
+            .icon {
+                height: 20px;
+                width: 20px;
+
+                path {
+                    fill: color(primary, white);
+                }
+            }
+        }// .button__image
+
+    }// .button
+
+}// .hero--customer-support
+
+// hero business
+.hero--business {
+    background-image: url(#{$path-to-images}/heroes/hero-business.jpg);
+
+    .hero__headline {
+        font-weight: 500;
+    }
+
+    .price-lockup--hero {
+        margin: 28px 0 16px;
+    }
+
+    .price-point__dollars:before {
+        font-weight: 300;
+    }
+
+}// .hero--business
+
+// hero directv, bundles, internet
+.hero--directv,
+.hero--bundles,
+.hero--internet {
+    color: color(primary, black);
+}
+
+// hero internet
+.hero--internet {
+    padding-bottom: 60px;
+    position: relative;
+    overflow: hidden;
+
+    // hero image
+    .hero__image {
+        margin-top: -21%;
+        width: 60%;
+
+        .hero__devices {
+            margin-bottom: 0;
+            width: 100%;
+        }
+    }// .hero__image
+
+    // hero legal
+    .legal {
+        bottom: 30px;
+        left: 20px;
+        position: absolute;
+    }
+}// .hero--internet

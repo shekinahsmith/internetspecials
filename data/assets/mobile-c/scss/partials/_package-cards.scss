@@ -1,0 +1,728 @@
+//-----------------------------------------
+// PACKAGE CARDS
+//-----------------------------------------
+
+@import 'global';
+
+// package filter
+.package-filter {
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
+
+    &--secondary {
+        height: 100px;
+    }
+
+    // package filter toggles
+    &-toggles {
+        font-size: rem-calc(14);
+        font-weight: 500;
+        margin-bottom: 30px;
+
+        // toggle
+        &__toggle {
+            color: color(primary, blue);
+            display: inline-block;
+            position: relative;
+            text-align: center;
+            width: 49%;
+            vertical-align: middle;
+
+            // triangle
+            &:after {
+                @include triangle( 26px, #dfdfdf, up);
+                bottom: -31px;
+                content: '';
+                display: none;
+                left: 50%;
+                margin-left: -13px;
+                position: absolute;
+            }
+
+            // showing correspondign triangle when toggle is clicked
+            &.active {
+
+                &:after {
+                    display: block;
+                }
+            }
+
+            // filter image
+            .filter-image {
+                display: inline-block;
+                vertical-align: middle;
+
+                // svg icon
+                .icon {
+                    height: 20px;
+                    width: 20px;
+                }
+
+            }// .filter-image
+
+        }// .package-filter-toggles__toggle
+
+    }// .package-filter-toggles
+
+    // range slider container
+    &__range-slider {
+        left: 0;
+        opacity: 0;
+        padding: 10px;
+        position: relative;
+        top: 0;
+        transition: opacity 0.2s $authenticMotion;
+        width: 100%;
+        z-index: 1;
+
+        // range sliders with grey background
+        .package-filter--secondary & {
+            padding: 10px 10px 20px;
+            position: absolute;
+        }
+
+        &.active {
+            opacity: 1;
+            z-index: 10;
+        }
+
+        // range slider (utilizing Foundation 5 Range Slider)
+        .range-slider {
+            background-color: color(accent, gray);
+            border-radius: 4px;
+            height: 8px;
+            margin: 20px auto;
+            width: 90%;
+
+            // overwriting default styles that make active segment darker than main bar
+            &-active-segment {
+                background-color: color(accent, gray);
+                border-radius: 4px;
+                height: 5px;
+                left: 0;
+                top: 0;
+                width: 90%;
+
+            }// .range-slider-active-segment
+
+            // overwriting default styles
+            &-handle {
+                border: none;
+                border-radius: 100%;
+                height: 30px;
+                margin-top: -15px;
+                width: 30px;
+                top: 50%;
+                touch-action: none;
+
+            }// .range-slider-active-segment
+
+            // range slider labels
+            &-labels {
+
+                // bundles labels
+                &--bundle {
+
+                    .range-slider-labels__label {
+                        width: 32%;
+
+                        &:first-child {
+                            text-align: left;
+                        }
+
+                        &:last-child {
+                            text-align: right;
+                        }
+                    }
+                }// .rnage-slider-labels__label--bundle
+
+                // channel labels
+                &--channels,
+                &--internet {
+
+                    .range-slider-labels__label {
+                        width: 24%;
+                    }
+                }// .rnage-slider-labels__label--channels
+
+                // label
+                &__label {
+                    display: inline-block;
+                    font-size: rem-calc(14);
+                    text-align: center;
+
+                }// .rnage-slider-labels__label
+
+            }// .range-slider-labels
+
+        }// .range-slider
+
+    }// .package-filter__range-slider
+
+}// .package-filter
+
+// package cards
+.package-card {
+    border: 1px solid color(accent, gray);
+    border-radius: 8px;
+    display: block;
+    margin-bottom: 18px;
+    padding: 15px;
+    text-align: left;
+    width: 100%;
+
+    // package card headline
+    &__headline {
+        font-weight: 500;
+        line-height: 1.2;
+        margin-bottom: 20px;
+    }
+
+    // package card banner
+    &__banner {
+        background-color: #959595;
+        color: color(primary, white);
+        font-size: rem-calc(14);
+        padding: 8px 0;
+        position: relative;
+        text-align: center;
+        z-index: 1;
+
+        // triangle
+        &:before {
+            @include triangle(20px, #959595, down);
+            bottom: -10px;
+            content: '';
+            display: block;
+            left: 50%;
+            margin-left: -5px;
+            position: absolute;
+        }
+
+    }// .package-card__banner
+
+    &__plan-info,
+    &__price {
+        display: inline-block;
+    }
+
+    // package plan info
+    &__plan-info {
+        width: 49%;
+    }
+
+    // package rice
+    &__price {
+        width: 49%;
+        vertical-align: top;
+    }
+
+    &__plan-info-list,
+    &__plan-features-list {
+
+        // list item
+        &-item {
+            padding-left: 15px;
+            position: relative;
+            margin-bottom: 15px;
+
+            // plan list item icons
+            &:before {
+                background-size: cover;
+                content: '';
+                display: block;
+                height: 20px;
+                left: -8px;
+                position: absolute;
+                top: 0;
+                width: 20px;
+            }
+        }
+
+    }// .package-card__plan-info-list, .pakcage-card__plan-features-list
+
+    // plan list
+    &__plan-info-list {
+
+        // plan list item
+        &-item {
+
+            // download item
+            &--download {
+
+                &:before {
+                    background-image: url('/webshared/atv/icons/dist/svg/icon-flat/download.svg');
+                }
+            }
+
+            // upload item
+            &--upload {
+
+                &:before {
+                    background-image: url('/webshared/atv/icons/dist/svg/icon-flat/upload.svg');
+                }
+            }
+
+            // tag line
+            &--tag-line {
+
+                &:before {
+                    background-image: url('/webshared/atv/icons/dist/svg/icon-flat/tv.svg');
+                }
+            }
+
+            &--channel-count,
+            &--bundled-channels {
+                a {
+                    color: color(primary, black);
+                }
+            }
+
+            // channel count
+            &--channel-count {
+	            a{
+		            color: color(primary, blue);
+		            font-size: rem-calc(12);
+                    text-decoration: underline;
+	            }
+
+                &:before {
+                    background-image: url('/webshared/atv/icons/dist/svg/icon-flat/remote.svg');
+                }
+            }
+
+            // speed
+            &--speed {
+
+                &:before {
+                    background-image: url('/webshared/atv/icons/dist/svg/icon-flat/wifi.svg');
+                }
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+        }// .package-card__speed-list-item
+
+    }// .package-card__speed-list
+
+    // price lock up
+    .price-lockup {
+        margin: 0 auto;;
+        position: relative;
+        width: 115px;
+    }
+
+    // price point
+    .price-point {
+        font-size: rem-calc(50);
+        font-weight: 300;
+
+        &__dollars {
+            width: 55px;
+        }
+
+        // frequency
+        &__frequency {
+            color: color(functional, gray);
+            margin-left: 0;
+        }
+    }// .price-point
+
+    // legal
+    &__legal {
+        color: color(functional, gray);
+        margin: 20px 0;
+        a {
+            text-decoration: underline !important;
+        }
+    }
+
+    &__additional-info {
+        display: none;
+    }
+
+    &:not([style*="display: none"] ) {
+
+       .package-card__additional-info.is-visible {
+           display: block;
+       }
+    }
+
+    // plan channels, plan features
+    &__plan-channels,
+    &__plan-features {
+        border-top: 1px solid color(accent, gray);
+        padding: 10px 0;
+    }
+
+    // plan channels
+    &__plan-channels {
+
+        // channels headline
+        &-headline {
+            font-size: rem-calc(12);
+            font-weight: 500;
+            text-transform: uppercase;
+        }
+
+    }// .package-card__plan-channels
+
+    // channel logos list
+    &__logo-list {
+        margin: 10px 0 0;
+
+        &--premiums {
+            margin: 0;
+        }
+
+        // channels list item
+        &-item {
+            display: inline-block;
+            margin-right: 2%;
+            padding: 0 5px;
+            position: relative;
+            text-align: center;
+            width: 22%;
+            vertical-align: middle;
+
+            &:first-child {
+                padding-left: 0;
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            img {
+                width: auto;
+            }
+        } // .package-card__plan-channels-list-item
+
+        // logo list headline
+        &-headline {
+            margin-bottom: 5px;
+        }
+
+    }// .package-card__plan-channels
+
+    // plan featuers
+    &__plan-features {
+
+        // features list
+        &-list {
+
+            // list item
+            &-item {
+                font-size: rem-calc(14);
+                font-weight: 500;
+
+                &:before {
+                    background-image: url('/webshared/atv/icons/dist/svg/icon-flat/check.svg');
+                    top: -2px;
+                }
+
+                // adjusting the position of the check on just the premium channels
+                &--premiums {
+
+                    &:before {
+                        top: 10px;
+                    }
+                }
+
+                &--channel-count {
+
+                    .channel-header,
+                    .channel-count {
+                        display: block;
+                        margin: 5px 0;
+                    }
+
+                    .channel-count {
+                        font-size: rem-calc(14);
+                        font-weight: 300;
+                        color: color(accent, gray-dark);
+                    }
+                }
+
+                // legal
+                .legal {
+                    color: color(functional, gray);
+                    font-weight: 300;
+                }
+
+            }// .package-card__plan-features-list-item
+
+        }// .package-card__plan-features-list
+
+    }// .package-card__plan-features
+
+    // package cta
+    &__cta {
+        margin-top: 10px;
+
+        .button {
+            display: block;
+            margin-bottom: 0;
+            padding: 15px 10px;
+        }
+    }
+
+}// .package-card
+
+// package card stacked with bundle pricing
+.package-card--stacked {
+    padding: 15px 0 0;
+    position: relative;
+
+    // creating pointer using before and after elements
+    &:before,
+    &:after {
+        content: '';
+        position: absolute;
+    }
+
+    // gray border triangle at top of each card
+    &:before {
+        @include triangle(21px, color(accent, gray), up);
+        top: -11px;
+    }
+
+    // white triagle - lays over gray triangle
+    &:after {
+        @include triangle(21px, color(primary, white), up);
+        top: -10px;
+    }
+
+    // positing pointers to match slider above package card for each package
+    &.internet-10 {
+
+        &:before,
+        &:after {
+            left: 25%;
+            margin-left: -20%;
+        }
+    }
+
+    &.internet-25 {
+
+        &:before,
+        &:after {
+            left: 50%;
+            margin-left: -16%;
+        }
+    }
+
+    &.internet-50 {
+
+        &:before,
+        &:after {
+            left: 75%;
+            margin-left: -15%;
+        }
+    }
+
+    &.internet-75 {
+
+        &:before,
+        &:after {
+            left: 100%;
+            margin-left: -15%;
+        }
+    }
+    // END - positioning pointers
+
+    // package card info
+    .package-card__plan-info {
+        @include clearfix;
+        display: block;
+        overflow: hidden;
+        padding: 0 15px;
+        position: relative;
+        width: 100%;
+
+        // bundled package
+        &.package-card__plan-info--bundled {
+            background-color: color(accent, gray-light);
+            padding: 20px 15px 15px;
+
+            .package-card__plan-info-list {
+                margin-bottom: 20px;
+            }
+
+            .package-card__bundled-legal {
+                clear: both;
+                margin-bottom: 20px;
+            }
+        }// .package-card__plan-info--bundled
+
+        .package-card {
+
+            &__image {
+                left: -60px;
+                position: absolute;
+                top: 20px;
+                width: 58%;
+
+            }// .package-card__image
+
+            // plan info list
+            &__plan-info-list {
+                display: block;
+                float: right;
+                width: 60%;
+
+                &-item {
+                    font-size: rem-calc(12);
+                    font-weight: 500;
+                    margin-bottom: 5px;
+
+                    &:before {
+                        content: none;
+                    }
+
+                    &--speed,
+                    &--bundled-headline {
+                        font-size: rem-calc(14);
+                        font-weight: 500;
+                    }
+
+                    &--bundled-channels {
+                        font-weight: 500;
+	                    
+	                    a{
+		                    color: color(accent, blue);
+		                    text-decoration: underline;
+	                    }
+                    }
+
+                    &--button {
+                        margin-top: 20px;
+                    }
+
+                }// .package-card__plan-info-list-item
+
+            }// .package-card__plan-info-list
+
+        }// .package-card
+
+        .legal {
+            color: color(accent, gray-dark);
+        }
+
+    }// .package-card__plan-info
+
+}// .package-card--stacked
+
+// adjusting width of price point to accomodate larger price
+.package-card__price--extra-wide{
+
+    .price-lockup {
+        width: 130px;
+    }
+
+    // price point
+    .price-point {
+
+        &__dollars {
+            width: 83px;
+        }
+
+        &__frequency {
+            margin-left: -8px;
+        }
+    }// .price-point
+
+}// .package-card--directv
+
+// directv cards, bundles
+.package-card--directv,
+.package-card--bundle,
+.package-card--internet {
+
+    // package card cta
+    .package-card__cta {
+
+        &-toggle,
+        &-button {
+            display: inline-block;
+            width: 49%;
+            vertical-align: bottom;
+        }
+
+        &-toggle {
+            color: color(functional, gray);
+            font-size: rem-calc(12);
+            text-decoration: underline;
+            z-index: map-get($z-index, tooltip);
+        }
+    }// .package-card__cta
+
+}// .package-card--directv, .package-card--bundle
+
+
+// business cards
+.package-card--business {
+
+    // package plan info
+    &__plan-info {
+        width: 46%;
+    }
+
+    // package card cta
+    .package-card__cta {
+        float: right;
+        width: 49%;
+    }
+}// .package-card--business
+
+// proudct recommendation cards
+.package-card--product-recommendation {
+    border: none;
+    margin-bottom: 0;
+
+    .package-card {
+
+       // plan features
+        &__plan-features {
+            border: none;
+            padding: 0;
+
+            &--primary {
+                margin-top: 30px;
+            }
+
+            &--secondary {
+                margin: 0;
+            }
+
+        } // .package-card__plan-features
+
+        // package cta
+        &__cta {
+            margin-top: 30px;
+
+            &-toggle {
+                font-size: rem-calc(12);
+                color: color(accent, blue);
+                margin-bottom: 20px;
+            }
+        }// .package-card__cta
+
+    }// .package-card
+
+}// .package-card--product-recommendation
+
+// package cta
+.package-cta {
+    margin-top: 30px;
+
+    a {
+        color: #0078b7;
+        font-weight: 500;
+        line-height: 1.2;
+        text-decoration: underline;
+    }
+}// .package-cta

@@ -1,0 +1,476 @@
+//-----------------------------------------
+// NAVIGATION
+//-----------------------------------------
+@import 'global';
+
+//primary navigation
+.navigation-primary {
+	
+	// navigation header
+	&__header {
+		color       : color(primary, blue);
+		font-size   : 36px;
+		font-weight : 300;
+		
+		// iphone 5
+		@media only screen and (max-device-height : 640px) {
+			font-size : 20px;
+		}
+		// iphone 5
+		
+		&:nth-child(2) {
+			margin-top : 30px;
+		}
+	}
+	// .navigation-primary__header
+	
+	// navigation submen
+	&__submenu {
+		font-size   : 18px;
+		font-weight : 400;
+		
+		// iphone 5
+		@media only screen and (max-device-height : 640px) {
+			font-size : 16px;
+		}
+		// iphone 5
+		
+		// submenu list item
+		&-list-item {
+			margin-bottom : 20px;
+			
+			// iphone 5
+			@media only screen and (max-device-height : 640px) {
+				margin-bottom : 10px;
+			}
+			// iphone 5
+			
+			&:first-child {
+				margin-top : 20px;
+				
+				// iphone 5
+				@media only screen and (max-device-height : 640px) {
+					margin-top : 10px;
+				}
+				// iphone 5
+			}
+		}
+		// .navigation-primary__submenu-list-item
+		
+		// submenu link
+		&-link {
+			color : color(primary, white);
+		}
+		
+	}
+	// .navigation-primary__submenu
+	
+}
+// .navigation-primary
+
+// navigation auxiliary
+.navigation-auxiliary {
+	bottom   : 10px;
+	left     : 0;
+	padding  : 0 20px;
+	position : fixed;
+	width    : 100%;
+	
+	// iphone 5
+	@media only screen and (max-device-height : 640px) {
+		bottom   : auto;
+		left     : auto;
+		padding  : 0;
+		position : relative;
+	}
+	// iphone 5
+	
+	// navigation auxiliary list
+	&__list {
+		
+		// list item
+		&-item {
+			display   : inline-block;
+			font-size : 14px;
+			width     : 49%;
+			
+			// iphone 5
+			@media only screen and (max-device-height : 640px) {
+				font-size : 12px;
+			}
+			// iphone 5
+			
+			&:last-child {
+				text-align : right;
+			}
+			
+			a {
+				color : color(primary, white);
+			}
+		}
+		// .navigation-auxiliary__list-item
+		
+	}
+	// .navigation-auxiliary__list
+	
+}
+// .navigation-auxiliary
+
+// navigation shelf
+.navigation-shelf {
+	
+	padding : 30px 0 20px;
+	
+	// navigation mastfoot list
+	&__list {
+		margin     : 0 auto;
+		text-align : center;
+		width: 90%;
+		
+		// navigation mastfoot list item
+		&-item {
+			background: linear-gradient(180deg, #078CC5 0%, #0574AC 100%);
+			border         : 1px solid color(accent, gray);
+			border-radius  : 5px;
+			font-size      : rem-calc(14);
+			font-weight    : 500;
+			display        : inline-block;
+			padding        : 12px 5px 20px;
+			width          : 45%;
+			margin : 0 2% 4% 2%;
+			vertical-align : top;
+			
+			a {
+				color : color(primary, white);
+			}
+			
+		}
+		// .navigation-mastfoot__list-item
+		
+	}
+	// .navigation-mastfoot__list
+	
+	// navigation mastfoot image
+	&__image {
+		
+		// svg
+		.icon {
+			height : 76px;
+			width  : 100%;
+		}
+	}
+	// .navigation-mastfoot__image
+	
+}
+// .navigation-shelf
+
+// navigation mastfoot legal
+.navigation-mastfoot-legal {
+	color       : color(primary, white);
+	float       : right;
+	font-family : $font-family-condensed;
+	font-size   : 10px;
+	width       : 60%;
+	
+	&__list {
+		
+		&-item {
+			display : inline-block;
+			
+			a {
+				color : color(primary, white);
+			}
+			
+			&:nth-child(-n+2) {
+				margin-bottom : 10px;
+			}
+			
+			&--offer-details,
+			&--privacy {
+				width : 30%;
+			}
+			
+			&--dtv-terms {
+				margin-right : 10px;
+			}
+		}
+		// .navigation-mastfoot-legal__list-item
+		
+	}
+	// .navigation-mastfoot-legal__list
+	
+}
+// .navigation-mastfoot-legal
+
+// navigation fixed
+// Based off of: https://tympanus.net/codrops/2013/08/09/building-a-circular-navigation-with-css-transforms/
+.navigation-fixed {
+	z-index : 9999;
+	
+	// navigation toggle
+	&__toggle {
+		background-color : color(primary, black);
+		border-radius    : 50%;
+		bottom           : 8px;
+		cursor           : pointer;
+		height           : 63px;
+		left             : 50%;
+		margin-left      : -32px;
+		padding          : 13px 0;
+		position         : fixed;
+		text-align       : center;
+		width            : 63px;
+		z-index          : 2;
+		
+		// hamburder menu
+		&-menu-icon {
+			display   : block;
+			position  : absolute;
+			transform : translateY(-50%);
+			top       : 50%;
+			width     : 100%;
+			
+			// each line for hamburger menu
+			span {
+				background-color : color(primary, white);
+				display          : block;
+				height           : 3px;
+				margin           : 0 auto 5px;
+				position         : relative;
+				transition       : all 0.3s $authenticMotion;
+				text-align       : center;
+				width            : 50%;
+				
+			}
+			// span
+			
+			// opened navigation
+			&.opened-nav {
+				
+				// creating "x" when opened
+				span {
+					left        : 50%;
+					margin-left : -25%;
+					position    : absolute;
+					
+					&:first-child {
+						top       : -1px;
+						transform : rotate(43deg);
+					}
+					
+					&:nth-child(2) {
+						display : none;
+					}
+					
+					&:last-child {
+						top       : -2px;
+						transform : rotate(-43deg);
+					}
+					
+					&:first-child,
+					&:last-child {
+						
+						.icon {
+							height : auto;
+							width  : 163px;
+						}
+					}
+				}
+				// span
+			}
+			// .opened-nav
+			
+		}
+		// .navigation-fixed__toggle-menu-icon
+		
+		// toggle icon
+		.icon {
+			
+			path {
+				fill : color(primary, white);
+			}
+		}
+		
+	}
+	// .navigation-fixed__toggle
+	
+	// navigation wrapper
+	&__wrapper {
+		border-radius    : 50%;
+		bottom           : -92px;
+		height           : 180px;
+		left             : 50%;
+		margin-left      : -50%;
+		opacity          : 0;
+		position         : fixed;
+		transition       : transform 0.5s $authenticMotion;
+		transform        : scale(0.1);
+		transform-origin : bottom center;
+		width            : 100%;
+		z-index          : 1;
+		
+		// helper class - attached and removed via js
+		&.opened-nav {
+			bottom        : 20px;
+			border-radius : 50%;
+			opacity       : 1;
+			transform     : scale(1);
+		}
+		
+		&:before,
+		&:after {
+			@include navigation-divider();
+			bottom  : 16px;
+			width   : 100%;
+			content : '';
+		}
+		
+		&:before {
+			left      : 0;
+			transform : rotate(36deg);
+		}
+		
+		&:after {
+			right     : 0;
+			transform : rotate(-36deg);
+		}
+		
+	}
+	// .navgation-fixed__wrapper
+	
+	// navigation list
+	&__list {
+		position : relative;
+		z-index  : 2;
+		
+		// blue background on navigation when opened
+		&:before {
+			$size : 90vw;
+			background-color : color(primary, blue);
+			border-radius    : 100%;
+			box-shadow       : 0 0 40px 50px color(primary, blue), 0 0 30px 40px color(primary, blue);
+			content          : '';
+			height           : $size;
+			position         : absolute;
+			top              : 40px;
+			left             : 50%;
+			margin-left      : -$size/2;
+			width            : $size;
+		}
+		
+		// list item
+		&-item {
+			font-size        : 1em;
+			height           : 160px;
+			left             : 50%;
+			margin           : 16px 0 0 -160px;
+			overflow         : hidden;
+			position         : absolute;
+			top              : 50%;
+			transform-origin : 100% 100%;
+			transition       : border 0.3s ease;
+			width            : 160px;
+			z-index          : 10;
+			
+			//-----------------------------------------
+			// for a central angle x, the list items must be skewed by 90-x degrees in our case x=45deg so skew angle is 45deg
+			// items should be rotated by x, minus (sum of angles - 180)2s
+			// rotating content inside each section
+			//-----------------------------------------
+			&:first-child {
+				transform   : rotate(0deg) skew(44.8deg);
+				padding-top : 20px;
+				
+				span {
+					transform : rotate(70deg);
+				}
+			}
+			
+			&:nth-child(2) {
+				transform : rotate(45deg) skew(44.8deg);
+				
+				&:after {
+					@include navigation-divider();
+					width     : 120px;
+					left      : 95px;
+					bottom    : 55px;
+					transform : rotate(89deg);
+				}
+				
+				span {
+					margin-bottom : 5px;
+					transform     : rotate(24deg);
+				}
+			}
+			
+			&:nth-child(3) {
+				transform : rotate(90deg) skew(44.8deg);
+				
+				span {
+					transform : rotate(-20deg);
+				}
+			}
+			
+			&:nth-child(4) {
+				transform : rotate(135deg) skew(44.8deg);
+				
+				span {
+					padding-top : 15px;
+					transform   : rotate(-65deg);
+				}
+			}
+			
+			&:not(.active) a:focus {
+				// fix the "displacement" bug in webkit browsers when using tab key
+				position : fixed;
+			}
+			
+			// each navigation item
+			a {
+				border-radius   : 50%;
+				bottom          : -7.25em;
+				color           : #fff;
+				display         : block;
+				font-size       : 1.18em;
+				height          : 280px;
+				padding-top     : 12px;
+				position        : absolute;
+				right           : -7.25em;
+				text-align      : center;
+				text-decoration : none;
+				transform       : skew(-45deg) rotate(-70deg) scale(1); // rotating and skewing back to appear normal
+				transition      : opacity 0.3s, color 0.3s;
+				width           : 280px;
+				
+				// container that holds icon and navigation text
+				span {
+					display        : block;
+					font-size      : rem-calc(14);
+					font-weight    : 500;
+					text-align     : center;
+					text-transform : uppercase;
+					
+					.icon {
+						
+						path {
+							fill : color(primary, white);
+						}
+					}
+				}
+			}
+			// a
+			
+			// ensure click to call on order now button covers entire order button and isn't skewed
+			.h-phone-c2c {
+				transform : none;
+				right     : 0;
+			}
+			
+		}
+		// .navigation-fixed__list-item
+		
+	}
+	// .navigation-fixed__list
+	
+}
+// .navigation-fixed

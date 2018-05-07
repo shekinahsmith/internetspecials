@@ -1,0 +1,14 @@
+////
+// Fonts
+////
+
+
+// global dependencies
+@import 'global';
+
+
+// Aleck Sans
+@include font-face('Aleck Sans', '#{$path-to-fonts-webshared}/att-aleck-sans/att-aleck-sans-light', 300, normal);
+@include font-face('Aleck Sans', '#{$path-to-fonts-webshared}/att-aleck-sans/att-aleck-sans-regular', 400, normal);
+@include font-face('Aleck Sans', '#{$path-to-fonts-webshared}/att-aleck-sans/att-aleck-sans-medium', 500, normal);
+@include font-face('Aleck Sans Condensed', '#{$path-to-fonts-webshared}/att-aleck-sans-cond/att-aleck-sans-condensed-regular', 400, normal);

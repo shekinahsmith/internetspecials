@@ -1,0 +1,118 @@
+////
+// Base Default Styles
+////
+
+
+// global dependencies
+@import 'global';
+
+
+// border box
+*,
+*:before,
+*:after {
+	@include box-sizing(border-box);
+}
+
+// base defaults
+html {
+	font-size: rem(16);
+}
+
+body {
+	color: $body-color;
+	font-family: $font-family-primary;
+	font-size: rem(16);
+	padding-top: $mastheadHeight;
+	overflow-x: hidden; // for image violators
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+}
+
+// links
+a {
+	@include transition(all $transition-timing);
+	color: $link-color;
+	cursor: pointer;
+	text-decoration: $link-hover-decoration;
+
+	// hover
+	&:hover,
+	&:visited {
+		color: $link-color;
+	}
+
+} // a
+
+
+// hailo phone number styles
+.h-phone {
+	white-space: nowrap;
+
+	// mobile
+	a {
+		color: inherit; // for mobile turning phone #s into links
+		cursor: default; // so it doesn't look like a link on desktop
+		text-decoration: none;
+	}
+
+} // .h-phone
+
+
+// images
+img,
+svg {
+	max-width: 100%;
+}
+
+h1, 
+h2, 
+h3, 
+h4 {
+    line-height: $line-height-base;
+}
+
+h2 {
+	font-size: rem-calc(24);
+}// h1
+
+h3 {
+	font-size: rem-calc(20);
+	font-weight: 500;
+}// h2
+
+h4 {
+	font-size: rem-calc(16);
+	font-weight: 500;
+}// h3
+
+
+// paragraphs
+p {
+	line-height: $line-height-base;
+	margin-bottom: 30px;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	&:only-child,
+	&:only-of-type {
+		margin-bottom: 30px !important;
+	}
+
+} // p
+
+.legal {
+	font-family: $font-family-condensed;
+    font-size: rem-calc(10) !important;
+
+    &--movie-caption {
+
+        span {
+            font-style: italic;
+            font-weight: 700;
+        }
+    }// .legal--movie-caption
+    
+}// .legal

@@ -1,0 +1,407 @@
+//-----------------------------------------
+// SECTIONS
+//-----------------------------------------
+
+@import 'global';
+
+
+.section {
+    padding: 50px 0;
+    position: relative;
+    overflow: hidden;
+
+    // section devices
+    &__devices {
+        margin-bottom: 25px;
+        width: 75%;
+
+        // sections with caption
+        &--caption {
+            margin-bottom: 40px;
+        }
+    }// .section__devices
+
+    // section headline
+    &__headline {
+        line-height: 1.1;
+        margin-bottom: 15px;
+
+        // alternate styled headline
+        &--alternate {
+             color: color(functional, blue);
+            font-size: rem-calc(36);
+            font-weight: 300;
+        }
+    }// .headline
+
+    // headline
+    &__subheadline {
+        margin-bottom: 10px;
+    }
+
+    // buttons
+    .button {
+        margin-bottom: 15px;
+    }
+
+}// .section
+
+// section secondary
+.section--secondary {
+    background-color: color(accent, gray-light);
+}
+
+// section centered
+.section--centered {
+    text-align: center;
+}
+
+// section with image background (background inline)
+.section--image-cover {
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    // sections with image cover and white text
+    &-text-white {
+        color: color(primary, white);
+    }
+}// .section--image-cover
+
+// section with no bottom padding
+.section--padding-bottom-none {
+    padding-bottom: 0;
+}
+
+// bundle section
+.section--bundle {
+
+    .price-lockup {
+        margin: 10px 0 20px;
+    }
+
+    .price-point__dollars:before {
+        font-weight: 300;
+    }
+
+}// .section--bundle
+
+// switch and save
+.section--switch-save {
+    padding-bottom: 35px;
+}
+
+// help page
+.section--help {
+    padding: 20px 0 80px;
+    min-height: 482px;
+}
+
+// deals page section
+.section--deals {
+    padding-top: 30px;
+
+    .deals-sort {
+        font-weight: 500;
+        margin-bottom: 20px;
+
+        &__headline {
+            font-size: rem-calc(12);
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        &__form {
+
+            &-button {
+                display: inline-block;
+                width: 49%;
+
+                &:nth-child(-n+2) {
+                    margin-bottom: 15px;
+                }
+
+                input[type=radio] {
+                    visibility: hidden;
+                    position: absolute;
+                }
+
+                input[type=radio]:checked ~ .deals-sort__form-check {
+                    position: relative;
+
+                    &:before {
+                        background-image: url('#{$path-to-images}/icon-check-white.png');
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        content: "";
+                        height: 18px;
+                        left: 50%;
+                        margin: -9px 0 0 -9px;
+                        position: absolute;
+                        top: 50%;
+                        width: 18px;
+                    }
+
+                }
+
+            }
+
+
+            &-check {
+                border-radius: 100%;
+                display: inline-block;
+                height: 30px;
+                margin-right: 10px;
+                width: 30px;
+                vertical-align: middle;
+
+                &--show-all {
+                    background-color: #959595;
+                }
+
+                &--internet {
+                    background-color: #b5bd00;
+                }
+
+                &--tv {
+                    background-color: #702f8a;
+                }
+
+                &--bundles {
+                    background-color: #0a1f63;
+                }
+            }
+        }
+
+
+
+    }// .deals-sort
+
+    // deal boxes
+    .deal-boxes {
+        @include clearfix;
+        position: relative;
+
+        // deal boxes
+        .deal-box {
+            border: 1px solid color(accent, gray);
+            border-radius: 5px;
+            color: color(accent, gray-dark);
+            display: block;
+            margin-bottom: 25px;
+            width: 100%;
+
+            &.category-internet {
+
+                .headline-icon {
+
+                   .icon {
+                        path {
+                            fill: #b5bd00;
+                        }
+                    }
+                }
+            }
+
+            &.category-tv {
+
+                .headline-icon {
+
+                    .icon {
+                        path {
+                            fill: #702f8a;
+                        }
+                    }
+                }
+            }
+
+            &.category-bundles {
+
+                .headline-icon {
+
+                    .icon {
+                        path {
+                            fill: #0a1f63;
+                        }
+                    }
+                }
+            }
+
+            // deal box wrapper
+            &__wrapper {
+                padding: 20px;
+            }
+
+            // deal box headline
+            &__headline {
+                @include clearfix;
+
+                .headline-icon,
+                .headline {
+                     float: left;
+                }
+
+                // icon
+                .headline-icon {
+                    height: 34px;
+                    margin-right: 3%;
+                    text-align: center;
+                    width: 34px;
+
+                    .icon {
+                        display: inline-block;
+                        height: 100%;
+                        width: 100%;
+                    }
+                }// .headline-icon
+
+                // headline
+                .headline {
+                    color: color(primary, blue);
+                    font-size: 18px;
+                    font-weight: 500;
+                    line-height: 1;
+                    margin-bottom: 10px;
+                    width: 80%;
+                }// .headline
+
+            }// .deal-box__headline
+
+            p {
+                margin-bottom: rem(10);
+            }
+
+
+            // order now button
+            .button {
+                font-size: rem-calc(14);
+                height: auto;
+                line-height: 1;
+                margin-bottom: 0;
+                padding: rem-calc(15px) 1rem;
+
+            }// .button
+
+        }// .deal-box
+
+    }// .section--deal-options__deal-boxes
+
+}// .section--deal-options
+
+// section plans with perks
+.section--plans-with-perks {
+
+    // persk list
+    .perks-list {
+        margin-top: 60px;
+
+        // each perk
+        &__item {
+            background-color: color(primary, white);
+            border-radius: 8px;
+            font-size: rem-calc(14);
+            display: block;
+            margin: 0 auto 45px;
+            padding: 45px 20px 20px;
+            position: relative;
+            width: 70%;
+
+            // perks image
+            &-image {
+                background-color: color(functional, blue);
+                border-radius: 100%;
+                height: 62px;
+                left: 50%;
+                margin-left: -31px;
+                position: absolute;
+                top: -31px;
+                width: 62px;
+
+                .icon {
+                    height: 80%;
+                    margin: 6px 0 0 0;
+                    width: 80%;
+
+                    path {
+                        fill: color(primary, white);
+                    }
+                }
+
+            }// .perks-list__item-image
+
+            // perks headline
+            &-headline {
+                font-weight: 500;
+                margin-bottom: 5px;
+                text-transform: uppercase;
+
+            }// .perks-list__item-headline
+
+        }// .perks-list__item
+
+    }// .perks-list
+
+}// .section--plans-with-perks
+
+// section genie
+.section--genie {
+
+    // genie features
+    .genie-features {
+        @include linear-gradient(scale-color(color(primary, white), $lightness: 0%) 3%, scale-color(color(functional, blue), $lightness: 8%) 22%);
+        color: color(primary, white);
+        padding: 0 20px 50px;
+
+        // genie features list
+        &__list {
+
+            &-item {
+                padding-left: 50px;
+                position: relative;
+                font-size: rem-calc(12);
+
+                .icon {
+                    height: 100%;
+                    width: 100%;
+
+                    path {
+                        fill: color(primary, white);
+                    }
+                }
+
+            }// .genie-features__list-item
+
+        }// .genie-features__list
+
+        // genie feature headline
+        &__headline {
+            font-size: rem-calc(14);
+            font-weight: 500;
+            text-transform: uppercase;
+
+        }// .genie-features__headline
+
+        // genie feature icon
+        &__icon {
+            height: 40px;
+            left: 5px;
+            position: absolute;
+            top: -5px;
+            width: 40px;
+
+        }// .genie-features__icon
+
+    }// .genie-features
+
+}// .section--genie
+
+// section programming you love
+.section--programming-you-love {
+
+    .section__devices {
+        width: 70%;
+
+        .device--phone {
+            top: 20px;
+        }
+    }
+}// .section--programming-you-love

@@ -1,0 +1,552 @@
+////
+// Devices
+////
+
+
+// global dependencies
+@import 'global';
+
+
+////
+// Base styles for individual devices
+////
+.device {
+	display: inline-block;
+	max-width: 100%;
+	position: relative;
+
+	// device image
+	img {
+		display: block;
+		max-width: 100%;
+	}
+	
+	// device "screen" (frame for background image)
+	&__screen {
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		position: absolute;
+		z-index: 1;
+	}
+	
+} // .device
+
+
+// device with a shadow
+.device--shadow {
+	
+	// create shadow
+	&:before,
+	&:after {
+		@include linear-gradient(to right, transparent 5%, rgba(#000, 0.9) 20%, $fallback: transparent);
+		border-radius: 50% 0 0 50%;
+		bottom: -2px;
+		content: '';
+		height: 2px;
+		position: absolute;
+		width: 56%;
+	}
+
+	&:before {
+		left: -5%;
+	}
+
+	&:after {
+		@include transform(rotate(180deg)); // for some reason, using the same gradient with "to left" looked weird, so this ended up working better
+		right: -5%;
+	}
+
+	// devices need small tweaks when vertical because the gradient is too dark causing it not to look like it fades out
+	&[class*='vertical'] {
+		
+		&:before,
+		&:after {
+			@include linear-gradient(to right, transparent 5%, rgba(#000, 0.9) 50%, $fallback: transparent);
+			width: 62%;
+		}
+
+		&:before {
+			left: -10%;
+		}
+
+		&:after {
+			right: -10%;
+		}
+		
+	} // .device--shadow[class*='vertical']	
+		
+} // .device--shadow
+
+
+// tv
+.device--tv {
+	display: block;
+
+	// frame (use percentages so that we can size relative to device image for different screen sizes)
+	.device__screen {
+		height: 83.7%;
+		left: 0.9%;
+		top: 1%;
+		width: 98.1%;
+	}
+	
+} // .device--tv 
+
+
+// laptop
+.device--laptop {	
+	
+	// frame (use percentages so that we can size relative to device image for different screen sizes)
+	.device__screen {
+		height: 72.1%;
+		left: 13.8%;
+		top: 4.9%;
+		width: 72.5%;
+	}
+	
+} // .device--laptop 
+
+
+// tablet vertical
+.device--tablet-vertical {
+	
+	// frame (use percentages so that we can size relative to device image for different screen sizes)
+	.device__screen {
+		height: 83.5%;
+		left: 6%;
+		top: 8.3%;
+		width: 88%;
+	}
+	
+} // .device--tablet-vertical
+
+
+// tablet horizontal
+.device--tablet-horizontal {
+	
+	// frame (use percentages so that we can size relative to device image for different screen sizes)
+	.device__screen {
+		height: 87.4%;
+		left: 8.4%;
+		top: 6.5%;
+		width: 83%;
+	}
+	
+} // .device--tablet-horizontal
+
+
+// phone vertical
+.device--phone-vertical {	
+	
+	// frame (use percentages so that we can size relative to device image for different screen sizes)
+	.device__screen {
+		height: 77.9%;
+		left: 6%;
+		top: 11.3%;
+		width: 87%;
+	}
+	
+} // .device--phone-vertical
+
+
+// phone horizontal
+.device--phone-horizontal {
+	
+	// frame (use percentages so that we can size relative to device image for different screen sizes)
+	.device__screen {
+		height: 90.8%;
+		left: 10.7%;
+		top: 5.5%;
+		width: 79.5%;
+	}
+	
+} // .device--phone-horizontal
+
+
+// watch
+.device--watch {
+	
+	// frame (use percentages so that we can size relative to device image for different screen sizes)
+	.device__screen {
+		background-size: contain;
+		height: 50%;
+		left: 10%;
+		top: 25%;
+		width: 79%;
+	}
+	
+} // .device--phone-horizontal
+
+
+////
+// Base styles for device groups
+////
+.devices {
+	margin: 0 auto;
+	position: relative;
+	width: 100%;
+
+	// captions (movie titles, legal, etc.)
+	&__caption {
+		display: block;
+
+		&--positioned {
+			bottom: -20px;
+			position: absolute;
+		}
+
+		&--left {
+			left: 0;
+		}
+
+		&--right {
+			right: 0;
+		}
+		
+	} // .devices__caption
+
+	// all devices
+	[class*='device--'] {
+		margin: 0 5px;
+		position: relative;
+		vertical-align: bottom;	
+	}
+	
+	// devices pulled to the left
+	.device--pull {
+		left: -10%;
+	}
+	.device--pull-more {
+		left: -20%;
+	}
+
+	// devices pushed to the right
+	.device--push {
+		right: -10%;
+	}
+	.device--push-more {
+		right: -20%;
+	}
+
+	// tv
+	.device--tv {
+		margin: 0;
+	}
+
+	// home phone
+	.device--home-phone {
+		width: 30%;
+	}
+
+	// home phone single
+	.device--home-phone-single {
+		width: 25%;
+	}
+
+	// att mifi
+	.device--att-mifi {
+		width: 30%;
+	}
+
+	// watch
+	.device--watch {
+		width: 30%;
+	}
+
+	// dvr
+	.device--dvr {
+		width: 50%; // smaller when with other devices
+
+		// large when by itself
+		&:only-child {
+			width: 50%;
+		}
+
+		// legal
+		.legal {
+			left: 0;
+			margin-top: 5px;
+			position: absolute;
+			text-align: center;
+			top: 100%;
+			width: 100%;
+		}
+
+	} // .device--dvr
+
+	// device group when positioned on top of main device that is dictating the width/height of .devices
+	&__group {
+		font-size: 0; // handles 3px inline-block bug
+		width: 100%;
+		z-index: 1;
+
+		// stacking order left to right (can be overriden to be rtl with modifier .device__group--stacked-rtl)
+		[class*='device--'] {
+			z-index: 1;
+
+			& + [class*='device--'] {
+				z-index: 2;
+
+				& + [class*='device--'] {
+					z-index: 3;
+
+					& + [class*='device--'] {
+						z-index: 4;
+					}
+				}
+			}
+			
+		} // [class*='device--']
+
+	} // .device__group 
+
+	// device groups without TV
+	&__group:first-child {
+		
+		[class*='device--'] {
+			margin: 0;
+		}
+
+		// laptop
+		.device--laptop:first-child {
+			$tablet-size: 60%;
+			
+			// tablet
+			~ .device--tablet-horizontal {
+				left: -$tablet-size / 3;
+				margin-left: -$tablet-size;
+				width: $tablet-size;
+			}
+
+			// phone
+			~ .device--phone-horizontal {
+				$size: $tablet-size * 0.66;
+				margin-left: -$size;
+				width: $size;
+			}
+			
+			// home phone
+			~ .device--home-phone {
+				$size: 114px; // need a larger image so we don't have to hardcode this value
+				margin-left: -$size;
+				width: $size;
+			}
+			~ .device--home-phone-single {
+				$size: 18%;
+				margin-left: -$size;
+				width: $size;
+			}
+			
+			// att mifi
+			~ .device--att-mifi {
+				$size: 162px; // need a larger image so we don't have to hardcode this value
+				left: -114px - 10; // move over the size of the home phone add and 10 px space between
+				margin-left: -$size;
+				width: $size;
+			}
+
+		} // .device--laptop
+
+		// tablet horizontal
+		.device--tablet-horizontal:first-child {
+			$tablet-size: 75%;
+			width: $tablet-size;
+
+			// phone
+			~ .device--phone-horizontal {
+				$size: $tablet-size * 0.66;
+				margin-left: -$size;
+				width: $size;
+			}
+			~ .device--phone-vertical {
+				$size: $tablet-size * 0.30;
+				width: $size;
+			}
+
+			// full width
+			&.device--full-width {
+				width: 100%;	
+
+				// phone
+				~ .device--phone-vertical {
+					$size: $tablet-size * 0.30;
+					margin-left: -$size;
+					width: $size;
+				}
+
+			} // .device--tablet-horizontal.device--full-width
+
+		} // .device--tablet-horizontal
+
+		// tablet vertical
+		.device--tablet-vertical {
+			width: 65%;
+
+			// phone
+			& + .device--phone-vertical {
+				margin-left: 5px;
+				width: 35%;
+			}
+
+			// full width
+			&.device--full-width {
+				width: 100%;
+
+				// phone
+				& + .device--phone-vertical {
+					margin-left: -50%;
+					width: 50%;
+				}
+				
+			} // .device--tablet-vertical.device--full-width
+			
+		} // .device--tablet-vertical
+
+		// phone vertical
+		.device--phone-vertical {
+			$phone-size: 30%;
+			width: $phone-size;
+
+			// phones next to each other
+			& + .device--phone-vertical {
+				width: $phone-size;
+			}
+			
+		} // .device--phone-vertical
+
+	} // .devices__group:first-child
+
+	// device groups on top of TV
+	.device--tv ~ .devices__group {
+		
+		// dvr
+		.device--dvr {
+			margin-left: -50%; // have to pull over to make room for all devices (50% is width of dvr, somewhat of a magic #)
+
+			&:only-child {
+				margin-left: -5%;
+			}
+			
+		} // .device--dvr
+
+		// phone horizontal
+		.device--phone-horizontal {
+			width: 15%;
+		}
+
+		// phone vertical
+		.device--phone-vertical {
+			width: 8%;	
+		}
+
+		// tablet vertical
+		.device--tablet-vertical {
+			width: 15%;
+		}
+
+		// tablet horizontal
+		.device--tablet-horizontal {
+			width: 25%;	
+		}
+
+		// laptop
+		.device--laptop {
+			width: 45%;
+		}
+
+		// tablet horizontal
+		.device--tablet-horizontal {
+			width: 36%;
+
+			// phones
+			& + .device--phone-vertical {
+				width: 9%;
+				z-index: 3;	
+			}
+			& + .device--phone-horizontal {
+				width: 20%;	
+				z-index: 3;	
+			}
+			
+		} // .device--tablet-horizontal
+		
+	} // .device--tv + .devices__group
+
+	// device positioning
+	&__group--positioned {
+		bottom: 35px;
+		left: auto;
+		position: absolute;
+		
+		// need to adjust if we don't have a caption
+		&.devices__group--no-caption {
+			bottom: 0;
+		}
+		
+	} // .devices__group--positioned
+	
+	// overlapping devices
+	.devices__group--overlap {
+		
+		// dont want to pull first device over
+		[class*='device--'] { 
+			margin: 0 -10px;
+		}
+		[class*='device--']:first-child {
+			margin-left: 0;
+		}
+		[class*='device--']:last-child {
+			margin-right: 0;
+		}
+		
+	} // .device__group--overlap
+
+	// left aligned
+	&__group--left {
+		left: -15px;
+		text-align: left;	
+	}
+
+	// center aligned
+	&__group--center {
+		text-align: center;
+	}
+
+	// right aligned
+	&__group--right {
+		right: -15px;
+		text-align: right;	
+	}
+	
+	// pull/push groups more
+	&__group--pull {
+		left: -50px;
+	}
+	&__group--push {
+		right: -50px;
+	}
+
+	// stacking order right to left (default order is left to right and shoudln't have more than 4 devices)
+	&__group--stacked-rtl {
+		
+		[class*='device--'] {
+			z-index: 4;
+
+			& + [class*='device--'] {
+				z-index: 3;
+
+				& + [class*='device--'] {
+					z-index: 2;
+
+					& + [class*='device--'] {
+						z-index: 1;
+					}
+				}
+			}
+			
+		} // [class*='device--']
+		
+	} // .device__group-stacked-rtl 
+	
+} // .devices

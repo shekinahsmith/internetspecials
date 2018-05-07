@@ -1,0 +1,126 @@
+////
+// Foundation Settings - RV
+////
+
+////
+// This is NOT the complete list of foundation settings. Only include the foundation settings you need. The complete list of foundation settings can be found in data/assets/global/fameworks/foundation/scss/foundation/_settings.scss. The Grid and Media Query Range settings below have been modified to be RV specific.
+//
+// Use this file to contolle the Grid and Media Query Range settings for your site.
+////
+
+
+
+// Table of Contents
+// Foundation Settings
+//
+// a. Base
+// b. Grid
+// d. Media Query Ranges
+// e. Tooltips
+
+
+
+// a. Base
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+// Allows the use of rem-calc() or lower-bound() in your settings
+@import '../../global/frameworks/foundation/scss/foundation/functions';
+
+// We use this to control whether or not CSS classes come through in the gem files.
+$include-html-classes: true;
+$include-html-global-classes: false;
+
+// b. Grid
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+// Include grid classes
+$include-html-grid-classes: $include-html-classes;
+
+// Include xxl grid classes
+$include-xxl-html-grid-classes: false;
+
+// Fixed row widths - This gives you a fixed row width for medium, large and xlarge breakpoints.
+$include-fixed-row-widths: false;
+
+// Row widths
+$row-width-medium: 768px; // Tablet fixed row width - For the fixed row width grid
+$row-width-large: 960px; // Small Desktop fixed row width - For the fixed row width grid
+$row-width-xlarge: 1170px; // Desktop row width - For the fixed or fluid row width grids
+$row-width: $row-width-xlarge; // Default row width - For the fluid grid
+
+// Remove Small and Medium breakpoints - Set this to true if you want a desktop only site.
+$remove-small-and-medium-breakpoints: false;
+
+// IE8 support
+$include-ie8-support: true;
+
+// Columns
+$total-columns: 12;
+$column-gutter: 40px;
+
+// d. Media Query Ranges
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+$small-range: (0, 640px);
+$medium-range: (641px, 1024px);
+$large-range: (1025px, 1280px);
+$xlarge-range: (1281px, 1920px);
+$xxlarge-range: (1921px, 999999999px);
+
+// Fixed row width media query ranges (small, medium and large)
+$small-range-fixed-width: (0, 767px);
+$medium-range-fixed-width: (768px, 1023px);
+$large-range-fixed-width: (1024px, 1280px);
+
+$screen: "only screen";
+
+$landscape: "#{$screen} and (orientation: landscape)";
+$portrait: "#{$screen} and (orientation: portrait)";
+
+$small-up: $screen;
+$small-only: "#{$screen} and (max-width: #{upper-bound($small-range)})";
+@if $include-fixed-row-widths {
+	// Use fixed row width ranges
+	$small-only: "#{$screen} and (max-width: #{upper-bound($small-range-fixed-width)})";
+}
+
+$medium-up: "#{$screen} and (min-width:#{lower-bound($medium-range)})";
+$medium-only: "#{$screen} and (min-width:#{lower-bound($medium-range)}) and (max-width:#{upper-bound($medium-range)})";
+@if $include-fixed-row-widths {
+	// Use fixed row width ranges
+	$medium-up: "#{$screen} and (min-width:#{lower-bound($medium-range-fixed-width)})";
+	$medium-only: "#{$screen} and (min-width:#{lower-bound($medium-range-fixed-width)}) and (max-width:#{upper-bound($medium-range-fixed-width)})";
+}
+
+$large-up: "#{$screen} and (min-width:#{lower-bound($large-range)})";
+$large-only: "#{$screen} and (min-width:#{lower-bound($large-range)}) and (max-width:#{upper-bound($large-range)})";
+@if $include-fixed-row-widths {
+	// Use fixed row width ranges
+	$large-up: "#{$screen} and (min-width:#{lower-bound($large-range-fixed-width)})";
+	$large-only: "#{$screen} and (min-width:#{lower-bound($large-range-fixed-width)}) and (max-width:#{upper-bound($large-range-fixed-width)})";
+}
+
+$xlarge-up: "#{$screen} and (min-width:#{lower-bound($xlarge-range)})";
+$xlarge-only: "#{$screen} and (min-width:#{lower-bound($xlarge-range)}) and (max-width:#{upper-bound($xlarge-range)})";
+
+$xxlarge-up: "#{$screen} and (min-width:#{lower-bound($xxlarge-range)})";
+$xxlarge-only: "#{$screen} and (min-width:#{lower-bound($xxlarge-range)}) and (max-width:#{upper-bound($xxlarge-range)})";
+
+// Legacy
+$small: $small-up;
+$medium: $medium-up;
+$large: $large-up;
+
+// e. Tooltips
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+$include-html-tooltip-classes: $include-html-classes;
+
+
+$tooltip-padding: rem-calc(12);
+$tooltip-font-size: rem-calc(14);
+$tooltip-line-height: 1.3;
+$tooltip-close-font-size: rem-calc(10);
+$tooltip-font-size-sml: rem-calc(14);
+$tooltip-pip-size: 5px;
+$tooltip-max-width: 300px;

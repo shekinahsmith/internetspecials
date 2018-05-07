@@ -1,0 +1,198 @@
+//-----------------------------------------
+// MASTHEAD
+//-----------------------------------------
+
+@import 'global';
+
+.masthead {
+    background: color(primary, black);
+    color: color(primary, white);
+    height: $mastheadHeight;
+    left: 0;
+    position: relative;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: map-get($z-index, 'sticky');
+
+    // pinned sticky header
+	&.headroom--pinned {
+		@include animation(slideDown 500ms $authenticMotion both);
+	}
+
+	// unpinned sticky header (don't animate when back at top of page)
+	&.headroom--unpinned:not(.headroom--top) {
+		@include animation(slideUp 500ms $authenticMotion both);
+	}
+
+	// sticky keyframes
+	@at-root {
+
+		@include keyframes(slideUp) {
+			0% {
+				margin-top: 0;
+			}
+			100% {
+				margin-top: -100%;
+			}
+		}
+
+		@include keyframes(slideDown) {
+			0% {
+				margin-top: -100%;
+			}
+			100% {
+				margin-top: 0;
+			}
+		}
+
+	} // @at-root
+
+    &__banner {
+        padding: 13px 16px;
+    }
+
+    &__logo,
+    &__toggle {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    // authorized dealer logo
+    &__logo {
+        margin-right: 0;
+        width: 80px;
+    }
+
+    // menu toggle
+    &__toggle {
+        position: relative;
+        width: 18%;
+        
+        // creating white pointer facing down
+        &:before,
+        &:after {
+            border-left: 12px solid transparent;
+            border-right: 12px solid transparent;
+            content: '';
+            height: 0;
+            left: 6px;
+            position: absolute;
+            top: 50%;
+            width: 0;
+            z-index: 1;
+        }
+
+        &:before {
+            border-top: 12px solid color(primary, black);
+            margin: -8px 0 0 2px;
+            z-index: 2;
+        }
+
+        &:after {
+            border-top: 12px solid color(primary, white);
+            margin: -6px 0 0 2px;
+            z-index: 1;
+        }
+
+        // when nav drawer is open, roate arrow
+        &.is-rotated {
+
+            // creating white pointer facing up
+            &:before,
+            &:after {
+                border-left: 12px solid transparent;
+                border-right: 12px solid transparent;
+            }
+
+            &:before {
+                border-bottom: 12px solid color(primary, black);
+                border-top: none;
+                margin: -6px 0 0 2px;
+                z-index: 2;
+            }
+
+            &:after {
+                border-bottom: 12px solid color(primary, white);
+                border-top: none;
+                margin: -8px 0 0 2px;
+                z-index: 1;
+
+            }
+
+        }// &.is-rotated
+
+    }// .masthead__toggle
+
+    &__cta,
+    &__existing-customer {
+        text-align: right;
+    }
+
+    // masthead head cta
+    &__cta {
+        font-family: $font-family-condensed;
+        font-weight: 500;
+        padding: 0 0 5px 0;
+
+        span {
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        // call now
+        &-call-now {
+            color: color(primary, blue);
+            font-size: rem-calc(10);
+            margin-right: 5px;
+            text-align: right;
+            text-transform: uppercase;
+        }// .masthead__cta-call-now
+
+        // phone number
+        &-phone-number {
+            color: color(primary, white);
+            font-size: rem-calc(28);
+        }
+    }// .masthead__cta
+
+    // masthead drawer
+    &__drawer {
+        background: color(primary, black);
+        display: none;
+        height: 100vh;
+        left: 0;
+        padding: 5px 20px 0;
+        position: fixed;
+        top: $mastheadHeight - 1;
+        width: 100%;
+        z-index: 99;
+
+        &.is-visible {
+            display: block;
+        }
+
+        .button {
+            margin: 30px 0;
+        }
+    }// .masthead__drawer
+
+    // existing customer
+    &__existing-customer {
+        display: none;
+
+        a {
+            color: color(primary, white);
+        }
+
+        .existing-customer-icon,
+        .existing-customer-text {
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .existing-customer-icon {
+            width: 15%;
+        }
+    }
+}// .masthead

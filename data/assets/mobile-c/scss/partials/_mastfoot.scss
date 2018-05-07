@@ -1,0 +1,68 @@
+//-----------------------------------------
+// MASTFOOT
+//-----------------------------------------
+
+@import 'global';
+
+.mastfoot {
+    @include clearfix;
+    background-color: color(primary, black);
+    padding-top: 25px;
+
+    // mastfoot logo
+    &__logo {
+        float: left;
+        width: 20%;
+    }
+
+    // mastfoot legal
+    &__legal {
+        margin-top: 20px;
+    }
+}// .mastfoot
+
+// navigation mastfoot
+.mastfoot-quick-links,
+.quick-links {
+    padding: 30px 0 38px;
+
+    // navigation mastfoot list
+    &__list {
+        margin: 0 auto;
+        text-align: center;
+        width: 90%;
+
+        // navigation mastfoot list item
+        &-item {
+            border: 1px solid color(accent, gray);
+            border-radius: 5px;
+            font-size: rem-calc(14);
+            font-weight: 500;
+            display: inline-block;
+            padding: 12px 5px 20px;
+            width: 45%;
+            vertical-align: top;
+
+            &:first-child {
+                margin-right: 4%;
+            }
+
+            a {
+                color: color(primary, black);
+            }
+
+        }// .navigation-mastfoot__list-item
+
+    }// .navigation-mastfoot__list
+
+    // navigation mastfoot image
+    &__image {
+
+        // svg 
+        .icon {
+            height: 76px;
+            width: 100%;
+        }
+    }// .navigation-mastfoot__image
+
+}// .navigation-mastfoot

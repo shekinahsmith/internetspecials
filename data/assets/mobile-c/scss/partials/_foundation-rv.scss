@@ -1,0 +1,22 @@
+////
+// Foundation - RV
+////
+
+////
+// This is NOT the complete list of foundation components. Only Include the components you need. All foundation component can be found in data/assets/global/frameworks/foundation/scss/foundation/components
+////
+
+// Foundation Normalize (CSS RESET)
+@import "../../global/frameworks/foundation/scss/normalize";
+
+// Foundation Settings
+@import 'foundation-settings-rv';
+
+// Foundation Components
+@import '../../global/frameworks/foundation-rv/scss/foundation/components-rv/grid-rv';
+@import "../../global/frameworks/foundation/scss/foundation/components/block-grid";
+@import "../../global/frameworks/foundation/scss/foundation/components/visibility";
+@import "../../global/frameworks/foundation/scss/foundation/components/range-slider";
+@import "../../global/frameworks/foundation/scss/foundation/components/reveal";
+@import "../../global/frameworks/foundation/scss/foundation/components/tabs";
+@import "../../global/frameworks/foundation/scss/foundation/components/tooltips";

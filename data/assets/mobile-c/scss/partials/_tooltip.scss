@@ -1,0 +1,28 @@
+.internet-tooltip {
+    display: block !important;
+    background-color: #333;
+    z-index: 10000;
+    border-radius: 5px;
+    padding: 10px;
+    overflow: hidden;
+    border: 0;
+    .tooltip-inner {
+        border: none;
+        background-color: #333;
+    }
+    .tooltip-arrow {
+        display: none;
+    }
+    &[aria-hidden='true'] {
+        visibility: hidden;
+        background-color: #333;
+        opacity: 0;
+        transition: opacity .15s, visibility .15s;
+    }
+    &[aria-hidden='false'] {
+        background-color: #333;
+        visibility: visible;
+        opacity: 1;
+        transition: opacity .15s;
+    }
+}

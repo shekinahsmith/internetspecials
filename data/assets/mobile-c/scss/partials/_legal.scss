@@ -1,0 +1,20 @@
+//-----------------------------------------
+// LEGAL
+//-----------------------------------------
+
+@import 'global';
+
+.mastfoot__legal {
+	max-height: 300px;
+    overflow: scroll;
+
+    .page-small-business & {
+        padding-bottom: 40px;
+    }
+    color: color(primary, white);
+    font-size: rem-calc(10);
+
+    a {
+         color: color(primary, white);
+    }
+}

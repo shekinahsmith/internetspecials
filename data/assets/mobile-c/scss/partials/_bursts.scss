@@ -1,0 +1,34 @@
+//-----------------------------------------
+// BURSTS
+//-----------------------------------------
+
+@import 'global';
+
+.burst {
+    border-radius: 100%;
+    line-height: 1.1;
+    position: absolute;
+    text-align: center;
+}
+
+// data free burst
+.burst--data-free {
+    $burstSize: 82px;
+    background-color: color(functional, blue);
+    bottom: 25px;
+    color: color(primary, white);
+    height: $burstSize;
+    font-size: rem-calc(12);
+    padding: 14px 5px;
+    right: -40px;
+    width: $burstSize;
+    z-index: map-get($z-index, 'sticky') - 1;
+
+    .burst__headline {
+
+        span {
+            font-style: italic;
+            font-weight: 500;
+        }
+    }
+}// .burst--data-free

@@ -1,0 +1,15 @@
+////
+// CUSTOM FUNCTIONS
+////
+
+// return a color from our color map (set in _variables.scss) based on type and name
+//
+// @example:
+//
+//	h1 {
+//		color: color('primary', 'blue');
+//	}
+
+@function color($color-type, $color-name) {
+	@return map-get(map-get($colors, $color-type), $color-name);
+}

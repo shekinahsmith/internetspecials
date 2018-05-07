@@ -1,0 +1,82 @@
+//-----------------------------------------
+// PRICE POINTS
+//-----------------------------------------
+@import 'global';
+
+// price lockups
+.price-lockup {
+	
+	// headline
+	&__headline {
+		font-size   : rem-calc(14);
+		font-weight : 500;
+	}
+	
+	// legal
+	&__legal {
+		font-family : $font-family-condensed;
+		margin-top  : 5px;
+	}
+	
+}
+// .price-lockup
+
+// price point
+.price-point {
+	@include clearfix;
+	font-size : rem-calc(60);
+	
+	&__dollars,
+	&__frequency {
+		display : inline-block;
+	}
+	
+	// price point dollars
+	&__dollars {
+		padding-left : 10px;
+		position     : relative;
+		width        : 64px;
+		
+		// "$" sign
+		&:before {
+			content   : '$';
+			display   : block;
+			font-size : 0.3em;
+			left      : 0;
+			position  : absolute;
+			top       : 15px;
+		}
+	}
+	// .price-point__dollars
+	
+	// frequency
+	&__frequency {
+		font-size   : 0.2em;
+		font-family : $font-family-condensed;
+		margin-left : 5px;
+	}
+}
+// .price-point
+
+/*
+bit of a hack. the product rec card is quite different from the other cards
+*/
+.product-rec__result {
+	
+	.package-card .price-lockup {
+		width : 135px;
+	}//.package-card .price-lockup
+	
+	.price-point__dollars {
+		width : auto !important;
+		float : left;
+	}//.price-point__dollars
+	
+	.package-card .price-point__frequency {
+		margin-left : 0;
+		float       : left;
+		width       : 45px;
+		padding-top: 10px;
+	}//.package-card .price-point__frequency
+	
+}//.product-rec__result

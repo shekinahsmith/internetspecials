@@ -1,0 +1,34 @@
+//-----------------------------------------
+// HELPERS
+//-----------------------------------------
+
+
+
+// preventing scroll on html when nav is open
+.has-nav-drawer-open {
+    height: 100%;
+    overflow: hidden;
+}
+
+.no-scroll {
+    overflow: hidden;
+}
+
+.h-text-bold {
+    font-weight: 500;
+}
+
+.h-text-align-center {
+    text-align: center;
+}
+
+.list-disc{
+	list-style-type: disc;
+	
+	
+	li{
+		list-style-type: disc;
+		margin-left: 25px;
+		padding-left: 0;
+	}
+}

@@ -1,0 +1,36 @@
+////
+// Custom Mixins (specific to project/not in bourbon)
+////
+
+// buttons
+@mixin rv-button($background-color: color(primary, blue), $color: #fff) {
+	@include linear-gradient(scale-color($background-color, $lightness: 15%), scale-color($background-color, $lightness: -5%));
+	border: 1px solid scale-color($background-color, $lightness: 5%);
+	color: $color;
+	
+	// hover and .is-active states (.is-active would be when using js to add class)
+	&:hover,
+	&.is-active {
+		@include linear-gradient($background-color, scale-color($background-color, $lightness: 5%));
+		color: $color;
+	}
+	
+	// active
+	&:active {
+		background-color: scale-color($background-color, $lightness: -5%);
+		background-image: none;
+	}
+	
+} // @mixin rv-button
+
+
+// used to created dividers in fixed navigation toggle
+@mixin navigation-divider() {
+	background-image: linear-gradient( to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0) );
+	bottom: 16px;
+	height: 1px;
+	content: '';
+	display: block;
+	position: absolute;
+	z-index: 3;
+}

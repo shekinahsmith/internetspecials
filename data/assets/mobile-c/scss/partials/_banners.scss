@@ -1,0 +1,79 @@
+//-----------------------------------------
+// BANNERS
+//-----------------------------------------
+
+@import 'global';
+
+.banner {
+    color: color(primary, white);
+    padding: 50px 20px;
+    text-align: center;
+
+    // banner headline
+    &__headline {
+        font-size: rem-calc(24);
+        margin-bottom: 15px;
+    }
+
+    p {
+        font-size: rem-calc(14);
+    }
+}// .banner
+
+// blue banner
+.banner--blue {
+    background: color(functional, blue);
+}
+
+// gray banner
+.banner--gray {
+    background: color(functional, gray);
+}
+
+// yellow banner
+.banner--yellow {
+    background: color(functional, yellow);
+}
+
+// limited time offer - only visible on packages when 5Mbps packages are visible
+.banner--limited-offer {
+    border-radius: 8px;
+    color: color(functional, black);
+    display: none; // hidden initially, made visible by js 
+    margin-bottom: 10px;
+    padding: 10px;
+
+    .banner {
+
+        &__image,
+        &__cta {
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        // banner image
+        &__image {
+            width: 20%;
+
+            .icon {
+                height: 70%;
+                width: 70%;
+
+                path {
+                    fill: color(functional, black);
+                }
+            }
+        }// .banner__image
+
+        // banner cta
+        &__cta {
+            font-size: rem-calc(14);
+            font-weight: 500;
+            width: 78%;
+            text-align: left;
+
+        }// .banner__cta
+
+    }// .banner
+
+}// .banner--limaited-offer

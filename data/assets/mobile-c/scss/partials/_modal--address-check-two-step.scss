@@ -1,0 +1,834 @@
+// Modal Mixins
+@mixin modal-container($width, $bg-color) { // sets modal horizontal postion, width, and BG color
+	background-color: $bg-color;
+	margin-left: -($width/2);
+	width: $width;
+}// @mixin modal-container
+
+
+//-----------------------------
+// GENERAL MODAL STYLES
+//-----------------------------
+.modal {
+	background-color: rgba(#000, .5);
+	bottom: 0;
+	display: none;
+	left: 0;
+	position: fixed;
+	right: 0;
+	top: 0;
+	z-index: 99999;
+
+	// modal close - Used universally on ALL MODALS
+	&__close {
+		cursor: pointer;
+		font-size: 15px;
+		font-weight: 700;
+		height: 30px;
+		padding: 5px;
+		position: absolute;
+		right: 10px;
+		text-align: center;
+		top: 10px;
+		width: 30px;
+		z-index: 999;
+
+		&--white {
+			background-color: white;
+		}
+
+		&:before {
+			color: grey;
+			content: '\2715'; // http://htmlarrows.com/symbols/multiplication-x/
+			cursor: pointer;
+			font-family: sans-serif;
+			font-size: 18px;
+			font-weight: 300;
+			line-height: 1.1;
+			position: relative;
+		}// &:before
+
+		&--white:before {
+			color: #666;
+		}
+	}// .modal__close
+
+	.modal__container {
+		@include modal-container(900px, white); // Adjusts modal horizontal postion, width, and BG color
+		left: 50%;
+		height: 100%;
+		position: absolute;
+		top: 50%; 
+		transform: translate(0, -50%);
+		width: 100%;
+		overflow-y: scroll;
+	}// .modal__container
+
+	.modal__header {
+		padding: 1rem 0;
+	}// .modal__header
+
+	// Match Border Radius of Container
+	.modal__aside {
+		border-radius: 0 7px 7px 0;
+	}
+}// .modal
+
+ 
+//------------------------------
+// MODAL: 3-STEP ADDRESS CHECK
+//------------------------------
+.modal--address-check-two-steps {
+
+	.modal__container {
+		@include modal-container(100%, white);
+
+		&.modal-resize {
+			height: 80%;
+			// Tried to animate this, but it was a lot of trouble, so I've tabled the animation here for now. -TK
+		}// &.modal-resize
+	}// .modal-container
+
+	.modal-content {
+		height: 100%;
+		padding: 30px;
+	}// .modal-content
+
+    input[type="text"],
+    input[type="number"] {
+        background-color: #f2f2f2;
+        border: none;
+        border-radius: 5px;
+        color: #666;
+		margin: 0;
+
+		@include placeholder {
+			color: #666;
+		}
+    }
+
+	.steps-counter {
+		margin-bottom: 46px;
+
+		@media (max-width: 320px) { // iphone 5 & 4
+			margin-bottom: 1rem;
+		}
+
+		.steps-row {
+    		@include clearfix;
+			height: auto;
+			margin: 0 auto 105px;
+			width: 100%;
+
+			@media (max-width: 320px) { // iphone 5 & 4
+				margin: 0 auto 4rem;
+			}
+
+			.step-circle {
+				background-color: #009fdb;
+				border-radius: 100%;
+				color: #fff;
+				float: left;
+				font: {
+					size: 14px;
+					weight: 500;
+				}
+				height: 30px;
+				line-height: 32px;
+				position: relative;
+				text-align: center;
+				transition: background-color .25s ease;
+				width: 30px;
+
+				&.active,
+				&.complete {
+					background-color: #009fdb;
+				}// &.active, &.complete
+
+			}// .step-circle
+
+			.step-label {
+				bottom: -50px;
+				color: #666;
+				font-size: 14px;
+				font-weight: 300;
+				left: 50%;
+				line-height: 1;
+				position: absolute;
+				transform: translateX(-50%);
+				width: 200px;
+
+				@media (max-width: 320px) { // iphone 5 & 4
+					display: none;
+				}
+
+			}// .step-label
+
+			.step-bar {
+				background-color: #e2e2e2;
+                border-radius: 3px;
+				float: left;
+				height: 3px;
+				margin: 15px 8px 0 8px;
+				position: relative;
+				width: 19%;
+
+				&.active,
+				&.complete {
+					background-color: #009fdb;
+				}// &.active, &.complete
+
+				.bar-mask {
+					background-color: #009fdb;
+					border-radius: 3px;
+					bottom: 0;
+					left: 0;
+					position: absolute;
+					right: 0;
+					top: 0;
+					transition: width .8s ease;
+					width: 0;
+
+					&.active {
+						border-radius: 3px;
+						width: 50%;
+					}// &.active
+
+					&.complete {
+						width: 100%;
+					}// &.complete
+
+				}// .bar-mask
+
+			}// .step-bar
+
+		}// .steps-row
+
+	}// .steps-counter
+
+	.main-content {
+		margin-top: -2rem;
+
+		.content-box {
+			border: none;
+			border-radius: 0;
+			box-shadow: none;
+			color: #666;
+			padding: 0;
+
+			.btn {
+				background: #009fdb;
+				border: 0;
+				border-radius: 3px;
+				color: white;
+				font-weight: 500;
+				padding: 14px 15px;
+				text-transform: inherit;
+
+				@media (max-width: 320px) { // iphone 5 & 4
+					padding: 10px 10px 7px;
+					margin-bottom: 1.5rem;
+				}
+
+				&:hover {
+					background: darken(#009fdb, 5%);
+				}
+
+			}// .btn
+
+		}// .content-box
+
+		.address-check__step {
+			overflow: hidden;
+
+			&.is-hidden {
+				display: none;
+			}// &.is-hidden
+
+
+            &.step-1,
+            &.step-2 {
+
+                .content-box {
+
+                    .headline {
+                        color: #69baf4;
+                        display: block;
+                        font: {
+                            style: itallic;
+                            size: 30px;
+                            weight: 300;
+                        }
+                        margin-bottom: 5px;
+
+                        .large-text {
+                            font-weight: 500;
+                            text-transform: uppercase;
+                        }
+                    }// .headline
+
+                    .tagline {
+						font-weight: 300;
+                        margin-bottom: 1rem;
+                    }
+                }
+            }
+
+
+			&.step-1 {
+
+				label {
+					font-size: 22px;
+				} // label
+
+				.content-box {
+					float: none;
+					text-align: center;
+					width: 100%;
+
+					&:first-child {
+						margin-right: 12px;
+					}// &:first-child
+
+					.step-one-zip,
+					.btn {
+						width: 200px;
+					}
+
+
+                    .step-one-zip {
+						width: 98%;
+						margin-bottom: 0.5rem;
+						text-align: center;
+                    }
+
+                    .legal {
+                        color: #959595;
+
+                        span {
+                            color: #ff7901;
+                        }
+                    }
+
+					.customer-attributes {
+						margin-bottom: 30px;
+						padding-left: 15px;
+
+						li {
+							font: {
+								size: 20px;
+							}
+							line-height: 30px;
+
+							&::before {
+								content: '•';
+								padding-right: 4px;
+							}// &::before
+
+						}// <li>
+
+					}// .customer-attributes
+
+					.btn {
+						width: 98%;
+						margin-bottom: 1.5rem;
+					}// .btn
+
+				}// .content-box
+
+			}//&.step-1
+
+			&.step-2 {
+
+				.content-box {
+
+					.headline,
+					.tagline {
+						text-align: center;
+					}
+
+					.address-check {
+						position: relative;
+						text-align: left;
+						z-index: 2;
+
+						.btn {
+							color: #fff;
+							width: 98%;
+
+	                        &.is-hidden {
+	                            display: none;
+	                        }// &.is-hidden
+
+						}// .btn
+					}
+
+					.loader-overlay {
+						@include transition( opacity 0.75s ease-in-out);
+						background-color: #fff;
+						border-radius: 5px;
+						height: 100%;
+						left: 0;
+						opacity: 1;
+						padding-top: 8rem;
+						position: absolute;
+						text-align: center;
+						top: 0;
+						width: 100%;
+						z-index: 10;
+
+						&.is-hidden {
+							opacity: 0;
+							z-index: 1;
+						}// &.is-hidden
+
+
+						&__circles {
+							@include transform( translateY(-50%));
+							position: relative;
+							margin-top: 25%;
+
+							// loading circles
+							.circle {
+								@include animation( loaderBounce 1.4s infinite ease-in-out both);
+								background-color: #009fdb;
+								border-radius: 100%;
+								display: inline-block;
+								margin-right: 20px;
+								height: 25px;
+								width: 25px;
+
+								&.circle-1 {
+									@include animation-delay(-0.32s);
+								}
+
+								&.circle-2 {
+									@include animation-delay(-0.16s);
+								}
+							}
+
+							// loading keyframes
+							@include keyframes(loaderBounce) {
+
+								0%, 80%, 100% {
+									@include transform( scale(0) );
+							  	}
+							  	40% {
+								  	@include transform( scale(1) );
+							  	}
+							}
+						}// .loader-overlay__circles
+
+						&__headline {
+							color: #69baf4;
+	                        display: block;
+	                        font: {
+	                            style: itallic;
+	                            size: 30px;
+	                            weight: 300;
+	                        }
+	                        margin-bottom: 10px;
+
+						}
+
+					}// .loader
+
+				}// .content-box
+
+			}//&.step-2
+
+			&.step-3 {
+
+				.step-3__is-servicable {
+
+					&.is-hidden {
+						display: none;
+					}// &.is-hidden
+
+					.content-box {
+						overflow: hidden;
+					}// .content-box
+
+					.plan {
+						background-color: #eee;
+						border-radius: 4px;
+						float: left;
+						margin-bottom: 16px;
+						padding: {
+							left: 25px;
+							top: 25px;
+						}
+						position: relative;
+						width: 47%;
+
+						&.plan-1 {
+							margin-right: 2%;
+						}// &.plan-1
+
+						img {
+							position: absolute;
+							right: 12px;
+							top: 60px;
+							width: 80px;
+						}// <img>
+
+						.headline {
+							display: block;
+							font: {
+								size: 18px;
+								style: italic;
+								weight: 300;
+							}
+							margin-bottom: 22px;
+						}// .headline
+
+						.price-legal {
+							color: #666;
+							height: auto;
+							position: relative;
+							text-align: left;
+							top: 0;
+							width: auto;
+
+							.label {
+								font: {
+									size: 18px;
+								}
+								line-height: 20px;
+								top: 0;
+							}// .label
+
+							.price-wrap {
+								display: inline;
+								float: none;
+								left: 0;
+							}// .price-wrap
+
+							.price {
+								display: inline;
+								font: {
+									family: OMNES;
+								}
+								font-weight: 500;
+								left: 0;
+							}// .price
+
+							.currency {
+								color: #666;
+								float: none;
+								font: {
+									size: 18px;
+								}
+								margin: 0;
+								text-shadow: none;
+							}// .currency
+
+							.base {
+								float: none;
+								font-size: 18px;
+							}// .base
+
+							.subunit_wrap {
+								display: inline;
+								float: none;
+								font-size: 18px;
+								line-height: 20px;
+								margin: 0;
+							}// .subunit_wrap
+
+							.subunit {
+								font: {
+									size: 18px;
+								}
+							}
+
+							.frequency {
+								display: inline;
+								font: {
+									size: 18px;
+								}
+								line-height: 20px;
+							}// .frequency
+
+							.promo-info {
+								display: block;
+								font: {
+									size: 18px;
+									weight: 300;
+								}
+							}// .promo-info
+
+							small {
+								font: {
+									size: 11px;
+									weight: 300;
+								}
+								line-height: 15px;
+								margin: {
+									bottom: 22px;
+									top: 24px;
+								}
+								padding: 0;
+
+								.offer-details {
+									color: #666;
+									text-decoration: underline;
+								}// .offer-details
+
+							}// <small>
+
+						}// .price-legal
+
+						.cta {
+							display: block;
+							font: {
+								size: 18px;
+								style: italic;
+								weight: 300;
+							}
+							margin-bottom: 22px;
+						}// .cta
+
+					}// .plan
+
+					.plans-button-wrapper {
+						clear: both;
+						margin-bottom: 22px;
+						padding-right: 32px;
+						text-align: right;
+					}// .plans-button-wrapper
+
+				}// .step-3__is-servicable
+
+				.step-3__is-not-servicable {
+
+					&.is-hidden {
+						display: none;
+					}// &.is-hidden
+
+					.content-box {
+						padding: 34px 30px;
+					}// .content-box
+
+					.inner-wrapper {
+						background-color: #eee;
+						border-radius: 4px;
+						padding: 75px 0 72px;
+						width: 100%;
+					}// .inner-wrapper
+
+					.headline,
+					.sub-headline,
+					.cta {
+						display: block;
+						text-align: center;
+					}// .headline, .sub-headline, .cta
+
+					.headline {
+						font: {
+							size: 28px;
+							weight: 500;
+						}
+						line-height: 33px;
+					}// .headline
+
+					.sub-headline {
+						font: {
+							size: 20px;
+							weight: 300;
+						}
+						line-height: 38px;
+					}// .sub-headline
+
+					.cta {
+						color: #0990d2;
+						font: {
+							size: 40px;
+							style: italic;
+							weight: 500;
+						}
+						line-height: 50px;
+					}// .cta
+
+				}// .step-3__is-not-servicable
+
+			}// &.step-3
+
+		}// .address-check__step
+
+	}// .main-content
+
+	.support-link {
+		font: {
+			size: 24px;
+			weight: 300;
+		}
+		margin-top: 38px;
+		text-align: center;
+
+		&.is-hidden {
+			display: none;
+		}// &.is-hidden
+
+		a {
+			color: #666;
+		}// <a>
+
+		.large-text {
+			font-weight: 500;
+			text-decoration: underline;
+			text-transform: uppercase;
+		}// .large-text
+
+	}// .support-link
+
+	// jQuery UI Override for autocomplete in modal
+	ul.ui-autocomplete {
+	    z-index: 999999;
+	}
+
+	.address-check {
+	    background: none;
+	    font-weight: 300;
+		text-align: center;
+	    width: 100%;
+
+	    .row {
+	        width: 100%;
+	    }// .row
+
+	    .banner,
+	    .headline {
+	        display: none;
+	    }// .banner, .headline
+
+	    .btn-close {
+	        display: none;
+	    }// .btn-close
+
+	    .address-check-form {
+	        @include clearfix;
+            float: none;
+	        margin: 0.5rem auto 0;
+	        text-align: center;
+	        width: 100%;
+
+			input[type="text"],
+			select {
+				margin-bottom: 0.5rem;
+
+				@include placeholder {
+					color: #666;
+				}
+			}
+
+	        .form-subline {
+	            display: none;
+	        }// .form-subline
+
+	        .zip {
+	            &.complete {
+	                background: {
+	                    image: url('/assets/desktop-a/images/modals/check-mark.png');
+	                    position: 91% 50%;
+	                    repeat: no-repeat;
+	                }
+	            }// &.complete
+	        }// .zip
+
+	        .city,
+			.zip,
+			.state,
+			.street,
+			.unit-type,
+			.unit {
+	            width: 98%;
+	        }// .city, etc... 
+
+	        .unit {
+	            display: none;
+
+	            &.is-visible {
+	                display: inline-block;
+	            }// &.is-visible
+
+	        }// .unit
+
+	        .state,
+	        .unit-type {
+	           @include appearance(none);
+	           @include transition(all .3s);
+	            background: url('/assets/desktop-a/images/address-check/arrow-light.png') 90% center no-repeat #eee;
+	            border: 0;
+	            border-radius: 4px;
+	            color: #666;
+	            font: {
+	                size: 18px;
+	                weight: 300;
+	            }
+	            height: 50px;
+	            padding: 0 15px;
+
+				@media (max-width: 320px) { // iphone 5 & 4
+					height: 35px;
+				}
+
+	            &.error {
+	                border: 2px solid;
+				    border-color: #f00;
+			    }// &.error
+	        }// .state, .unit-type
+
+	        input[type="text"] {
+	         	@include transition( all 0.3s);
+	            background-color: #eee;
+	            border: none;
+	            border-radius: 5px;
+	            color: #666;
+	            font: {
+	                size: 18px;
+	                weight: 300;
+	            }
+	            height: 50px;
+	            padding: 0 15px;
+	            transition: none;
+
+				@media (max-width: 320px) { // iphone 5 & 4
+					height: 35px;
+				}
+
+	            &.error {
+	                border: 2px solid;
+				    border-color: #f00;
+			    }// &.error
+
+	        }// input=["text"]
+
+	        input[type="text"]:focus {
+	            border: 3px solid #0990d2;
+	            box-shadow: none;
+	        }// input[type="text"]:focus
+
+	        input::-webkit-calendar-picker-indicator {
+	            background: none;
+	        }// onput::-webkit-calendar-picker-indicator
+
+	        .spin-wrapper {
+	            display: none;
+	        }// .spin-wrapper
+
+	    }// .address-check-form
+
+	    .promo-content {
+	        display: none;
+	    }// .promo-content
+
+	}// .address-check
+
+}// .modal-address-check-three-steps
+
+.ui-autocomplete.ui-front { // Jquery UI z-index fix for drop down... Needs refactor
+    z-index: 99999;
+}// .ui-autocomplete.ui-front
+
+//END 3 STEP ADDRESS CHECK
