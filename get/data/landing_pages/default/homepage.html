@@ -1,1 +1,0 @@
-<? include_once(RV_Web_Redirect::as_301('index.html')); ?>
