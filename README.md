@@ -1,12 +1,13 @@
 # Internetspecials
 Mobile Site Rebuild - https://www.internetspecials.com/?lp=2100
 
-Responsible for coding site layout and styling, creating interactive package grids and bundle comparison tools. Also, created the address the lookup. 
+This repository was created prior to me joining the team and follows the structure previously used for our legacy sites for A/B testing. 
 
-The package recommendation tool was created by another teammate.
+I was responsible for coding site layout and styling, creating interactive package grids and bundle comparison tools. Also, created the address the lookup. 
 
+The webpack setup and the configuration for Vue was handled by another member of the team, as well as, the package recommendation tool.
 
-Tech Stack
+## Tech Stack
 - PHP
 - jQuery/Javascript
 - Vue
