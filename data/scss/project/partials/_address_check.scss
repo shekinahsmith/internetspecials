@@ -1,0 +1,163 @@
+// jQuery UI Override for autocomplete in modal
+ul.ui-autocomplete {
+    z-index: 999999;
+}
+
+.address-check {
+    background: none;
+    font-family: OMNES;
+    font-weight: 300;
+    width: 100%;
+
+    .row {
+        width: 100%;
+    }// .row
+
+    .banner,
+    .headline {
+        display: none;
+    }// .banner, .headline
+
+    .btn-close {
+        display: none;
+    }// .btn-close
+
+    .address-check-form {
+        @include clearfix;
+        margin: 8px auto;
+        text-align: left;
+        width: 650px;
+
+        .form-subline {
+            display: none;
+        }// .form-subline
+
+        .street,
+        .unit-type,
+        .unit {
+            margin: {
+                bottom: 10px;
+            }
+        }// .zip, .city, .state
+
+        .zip,
+        .city,
+        .street,
+        .unit-type {
+            margin-right: 5px;
+        }// .zip, .city, .street, .unit-type
+
+        .zip {
+            width: 130px;
+
+            &.complete {
+                background: {
+                    image: url('/assets/desktop-a/images/modals/check-mark.png');
+                    position: 91% 50%;
+                    repeat: no-repeat;
+                }
+            }// &.complete
+        }// .zip
+
+        .city {
+            width: 295px;
+        }// .city
+
+        .state {
+            width: 210px;
+        }// .zip, .state
+
+        .street {
+            width: 305px;
+        }// .street
+
+        .unit-type {
+            width: 165px;
+        }// .unit-type
+
+        .unit {
+            display: inline;
+            opacity: 0;
+            width: 165px;
+
+            &.is-visible {
+                display: inline;
+            }// &.is-visible
+
+        }// .unit
+
+        .state,
+        .unit-type {
+            @include appearance(none);
+            @include transition(all .3s);
+            background: url('/assets/desktop-a/images/address-check/arrow-light.png') 90% center no-repeat #eee;
+            border: 0;
+            border-radius: 4px;
+            color: #969696;
+            font: {
+                size: 18px;
+                weight: 300;
+            }
+            height: 60px;
+            padding: 0 15px;
+            &.error {
+                border: 2px solid;
+			    border-color: #f00;
+		    }// &.error
+        }// .state, .unit-type
+
+        input[type="text"] {
+            @include transition( all 0.3s);
+            background-color: #eee;
+            border: none;
+            border-radius: 4px;
+            color: #969696;
+            font: {
+                size: 18px;
+                weight: 300;
+            }
+            height: 60px;
+            padding: 0 15px;
+            transition: none;
+            &.error {
+                border: 2px solid;
+			    border-color: #f00;
+		    }// &.error
+        }// input=["text"]
+
+        input[type="text"]:focus {
+            border: 3px solid $color-blue;
+            box-shadow: none;
+        }// input[type="text"]:focus
+
+        ::-webkit-input-placeholder {
+            color: #969696;
+        }// ::-webkit-input-placeholder
+
+        :-moz-placeholder { /* Firefox 18- */
+           color: #969696;
+        }// :-moz-placeholder
+
+        ::-moz-placeholder {  /* Firefox 19+ */
+           color: #969696;
+        }// ::-moz-placeholder
+
+        :-ms-input-placeholder {
+           color: #969696;
+        }// :-ms-input-placeholder
+
+        input::-webkit-calendar-picker-indicator {
+            background: none;
+        }// onput::-webkit-calendar-picker-indicator
+
+        .spin-wrapper {
+            display: none;
+        }// .spin-wrapper
+
+    }// .address-check-form
+
+    .promo-content {
+        display: none;
+    }// .promo-content
+
+}// .address-check

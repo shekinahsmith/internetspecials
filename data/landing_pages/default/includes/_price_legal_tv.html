@@ -1,0 +1,24 @@
+
+
+
+<div class="price-legal price-burst" style="background-color: #ff7200; width: 295px; height: 295px;top: 1px;">
+
+	<div class="label"><span class="label-top">U-verse TV</span> <span class="label-bottom">Starting At</span></div>
+
+	<div class="group price-wrap">
+		<div class="price">
+			<span class="currency">$</span>
+			<span class="base">35</span>
+			<div class="subunit_wrap">
+				<span class="frequency" style="font-size: 10px;"><?= $attProductsTVUFamily->Price->FrequencyShort; ?></span>
+				<?// I'm sorry its during culture fest and I needed to do this quickly... Yell at me later --TK ?>
+			</div>
+			<!-- END .subunit_wrap -->
+		</div>
+		<!-- END .price -->
+	</div>
+	<!-- END .price-wrap -->
+	<small><?= $attProductsTVUFamily->Language->English->Legal->PricePoint; ?></small>
+
+</div>
+<!-- END .price-legal -->

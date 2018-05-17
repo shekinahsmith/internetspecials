@@ -1,0 +1,27 @@
+<?
+	include(RV_LandingPage::find($site_settings['path']['includes'] . '/base/_header.php'));
+	include(RV_LandingPage::find($site_settings['path']['includes'] . '/masthead/_masthead.php'));
+?>
+
+<main role="main">
+
+    <section class="section">
+
+        <div class="row">
+
+            <div class="small-12 columns">
+
+                <? include(RV_Web_SharedInclude::include_shared_file('ds/legal', 'legal.html')); ?>
+
+            </div><!-- /.columns -->
+
+        </div><!-- /.row -->
+
+    </section>
+
+</main><!-- /main -->
+
+<?
+	include(RV_LandingPage::find($site_settings['path']['includes'] . '/mastfoot/_mastfoot.php'));
+	include(RV_LandingPage::find($site_settings['path']['includes'] . '/base/_footer.php'));
+?>

@@ -1,0 +1,33 @@
+.tooltipster-small {
+	border-radius: 5px; 
+	background-color: #6e6e6e; // IE fallback
+	background-color: rgba(#6e6e6e, 0.9);
+	color: $color-white;
+	max-width: 300px;
+
+	//@media (max-width: $mq-mobile) {
+		//width: 100%;
+	//}
+
+	.tooltipster-content {
+		font-size: 10px;
+		line-height: 16px;
+		padding: 8px 10px;
+		text-align: center;
+
+		p {
+			margin-bottom: 10px;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+			// &:last-child
+
+		}
+		// p
+
+	}
+	// .tooltipster-content
+
+}
+// .tooltipster-custom

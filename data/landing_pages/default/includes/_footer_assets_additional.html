@@ -1,0 +1,10 @@
+<?
+    include(RV_LandingPage::find('includes/modals/_modal-address-check-three-steps.php'));
+
+    // remove from Small Business page
+    if ($_SERVER['SCRIPT_NAME'] != '/small-business.html' && $_SERVER['SCRIPT_NAME'] != '/digital-life.html') {
+
+        include_once(RV_LandingPage::find('includes/banners/_agents-available.php'));
+
+    }
+?>

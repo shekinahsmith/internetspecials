@@ -1,0 +1,1 @@
+<? include_once('/usr/share/www/webshared/data/articulate/v2/att/chat/module/desktop/_reactive.php'); ?>

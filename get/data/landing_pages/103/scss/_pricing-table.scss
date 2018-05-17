@@ -1,0 +1,364 @@
+// VARIABLES
+
+$white-color: #ffffff;
+$grey-light: #f3f3f3;
+$grey-dark: #ebebeb;
+$purple-dark: #81017e;
+$purple-light: #fa00a1;
+$green-dark: #6ebb1f;
+$green-light: #c4d82d;
+$blue-dark: #0c2577;
+$blue-med: #067ab4;
+$blue-light: #7cc6ff;
+$orange-dark: #ff7200;
+$orange-light: #fcb314;
+
+// MIXINS
+
+@mixin att {
+  	font-family: OATTLI;
+}
+
+@mixin helvetica {
+  	font-family: helvetica, arial, sans-serif;
+	font-weight: bold;
+}
+
+@mixin priceicon($iconimage) {
+	background: url(/images/#{$iconimage}.png) no-repeat 30px center;
+
+	@media only screen and (max-width: 1199px) {
+		background: none;
+	}
+}
+
+@mixin priceheaders($grad1, $grad2) {
+	@include linear-gradient(#{$grad1}, #{$grad2});
+	width: 179px;
+	border: 1px solid #{$grad2};
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+
+	@media only screen and (max-width: 1199px) {
+		width: 154px;
+	}
+
+	.price-header {
+		background: #{$grad2};
+	}
+
+	a.button {
+		border: 2px solid #{$grad1};
+
+		&:hover {
+			color: #{$grad2};
+		}
+	}
+}
+
+// PRICING FEATURES SIDEBAR
+
+.price-grid .row {
+	overflow: visible;
+}
+.price-grid .legal {
+	clear:both;
+	margin-top: 0px;
+}
+.pricing-table {
+	&.group {
+		margin-bottom: 20px;
+	}
+
+	.features, .plans {
+		float:left;
+	}
+
+	.features {
+		width: 280px;
+		font-size: 17px;
+		@include att;
+		padding: 0;
+		margin: 170px 0 0 0;
+		color: $white-color;
+		text-align: left;
+		border-top-left-radius: 5px;
+		background: #459cda;
+		border-top: 1px solid #3981c7;
+		border-bottom: 1px solid #3981c7;
+		border-left: 1px solid #3981c7;
+		list-style-type: none;
+		position: relative;
+
+		@media only screen and (max-width: 1199px) {
+			margin-top: 145px;
+			width: auto;
+			@include helvetica;
+			font-size: 12px;
+			text-align: right;
+		}
+
+		.services {
+			@include linear-gradient(#4ba4e0, #317dc4);
+
+			.ie8 & {
+				background: #317dc4;
+			}
+			@media only screen and (max-width: 1199px) {
+				background: #317dc4;
+			}
+		}
+
+		h3 {
+			position: absolute;
+			top: 347px;
+			left: -212px;
+			width: 374px;
+			height: 50px;
+			line-height: 50px;
+			text-align:center;
+			background: #459cda;
+			border-top-left-radius: 5px;
+			border-top-right-radius: 5px;
+			border-top: 1px solid #3981c7;
+			border-right: 1px solid #3981c7;
+			border-left: 1px solid #3981c7;
+			border-bottom: solid 1px #88c7f1;
+			@include transform(rotate(-90deg));
+
+			.ie8 & {
+				display:none;
+			}
+
+			@media only screen and (max-width: 1199px) {
+				display: none;
+			}
+		}
+
+		li {
+			height: 62px;
+			width: 100%;
+			line-height: 62px;
+			border-bottom: solid 1px #88c7f1;
+			padding: 0 50px 0 75px;
+			overflow: hidden;
+			margin-top: 0;
+
+			@media only screen and (max-width: 1199px) {
+				padding: 0 20px;
+				font-size: 12px;
+			}
+
+			&:last-child {
+				border-bottom: none;
+			}
+		}
+		.voice {
+			@include priceicon(161/icon-voice);
+		}
+		.tv {
+			@include priceicon(161/icon-tv);
+		}
+		.internet {
+			@include priceicon(161/icon-internet);
+		}
+		.email {
+			@include priceicon(102/email);
+		}
+		.web {
+			@include priceicon(102/laptop);
+		}
+		.music {
+			@include priceicon(102/music);
+		}
+		.sd-video {
+			@include priceicon(102/video);
+		}
+		.file {
+			@include priceicon(102/file);
+		}
+		.game {
+			@include priceicon(102/game);
+		}
+		.hd-video {
+			@include priceicon(102/video);
+		}
+	}
+
+	.plans {
+		
+		.price-col {
+			float: left;
+			width: 180px;
+
+			@media only screen and (max-width: 1199px) {
+				width: 155px;
+			}
+
+			li {
+				display: block;
+				background: #EEE;
+				border-top: 1px solid $white-color;
+				border-right: 1px solid $white-color;
+				height: 62px;
+				line-height: 62px;
+
+				&.service {
+					background: #ececec;
+				}
+
+				&:last-child {
+					border-bottom: none;
+					height: 64px;
+				}
+			}
+		}
+	}
+
+	.price-plan {
+		height:170px;
+
+		@media only screen and (max-width: 1199px) {
+			height: 145px;
+		}
+		
+
+		a.button {
+			display: inline-block;
+			font-size: 13px;
+			color: $white-color;
+			border-radius: 5px;
+			padding: 7px 22px;
+			margin: 5px 10px;
+			text-transform: uppercase;
+
+			&:hover {
+				background: $white-color;
+				border: 1px solid $white-color;
+			}
+
+		}
+	}
+
+	.price-header {
+		color: $white-color;
+		padding: 5px;
+		font-size: 11px;
+		text-transform: uppercase;
+	}
+
+	.price-intro {
+		font-size: 11px;
+		color: $white-color;
+		margin-top: 10px;
+		font-weight: bold;
+	}
+
+	.price {
+		margin-top: 5px;
+		left: 20px;
+		color: $white-color;
+		@include helvetica;
+
+		.currency {
+			text-shadow: none;
+			margin-top: 20px;
+		}
+
+		.dollars {
+			font-size: 70px;
+			letter-spacing: -2px;
+
+			@media only screen and (max-width: 1199px) {
+				font-size: 50px;
+			}
+		}
+
+		.price-secondary {
+			text-shadow: none;
+			margin-left: 10px;
+
+			@media only screen and (max-width: 1199px) {
+				font-size: 16px;
+				margin-left: 5px;
+			}
+
+			span {
+				display: block;
+			}
+		}
+		
+	}
+
+	.price-purple {
+		@include priceheaders($purple-light, $purple-dark);
+	}
+	.price-green {
+		@include priceheaders($green-light, $green-dark);
+	}
+	.price-navy {
+		@include priceheaders($blue-med, $blue-dark);
+	}
+	.price-blue {
+		@include priceheaders($blue-light, $blue-med);
+	}
+	.price-orange {
+		@include priceheaders($orange-light, $orange-dark);
+	}
+
+}
+
+// PACKAGES BAR
+
+.packages-banner .row .grad-secondary {
+	color: $white-color;
+	@include linear-gradient(#67baf3, #0c7eb8);
+	border: 1px solid #0a7db7;
+	margin: 0 0 20px 10px;
+
+	.phone {
+		font-size: 32px;
+		@include att;
+		padding: 20px 50px;
+		float: left;
+	}
+
+	.line {
+		background: $white-color;
+		height: 50px;
+		width: 1px;
+		float: left;
+		margin: 18px 0 0 0;
+
+		@media only screen and (max-width: 1199px) {
+			margin: 18px 35px 0 0;
+		}
+	}
+
+	.package {
+		font-size: 20px;
+		@include att;
+		padding: 0 40px;
+		float: left;
+		margin: 31px 0 0 0;
+
+		@media only screen and (max-width: 1199px) {
+			display: none;
+		}
+	}
+	
+	ul {
+		margin: 13px 0 0 0;
+		float: left;
+
+		li {
+			font-size: 14px;
+			@include att;
+			line-height: 1.5;
+			background: url(/images/102/bullet.png);
+			background-repeat: no-repeat;
+			background-position: center left;
+			padding: 0 0 0 15px;
+		}
+	}
+}

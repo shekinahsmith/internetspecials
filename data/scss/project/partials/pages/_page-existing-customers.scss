@@ -1,0 +1,163 @@
+////
+// EXISTING CUSTOMERS PAGE
+////
+
+.page-existing-customers {
+
+	small {
+		display: block;
+		margin-top: 30px;
+		font-size: 10px;
+	}// small
+
+	.existing-customers {
+
+		.txt-block {
+			text-align: left;
+
+			p {
+				padding: 0;
+				font-weight: 200;
+			}// p
+
+			h2 {
+				font-family: OATTL;
+				font-style: italic;
+			}// h2
+
+			h3 {
+				font-weight: 200;
+			}// h3
+		}// .txt-block
+
+	}// existing-customers
+
+
+	.inner-hero {
+		h2 {
+			color: $orange;
+			font-family: OATTL;
+			font-size: 60px;
+			font-weight: 200;
+			font-style: italic;
+			max-width: 475px;
+		}// h2
+
+		h4 {
+		    color: $blue;
+		    font-size: 18px;
+		    font-weight: 200;
+		    line-height: 1.25;
+			margin-top: 35px;
+			margin-left: 45px;
+
+			span {
+				color: $dark;
+				display: block;
+			}// span
+
+			img {
+			    margin-left: -35px;
+			    padding-right: 15px;
+			}// img
+		}// h4
+
+		&.existing-customers .grid-16 {
+			background-image: url(/assets/desktop-a/images/experiences/443/hero-existing-customers.png);
+			height: 370px;
+			margin-bottom: 5rem;
+		}// .existing-customers .grid-16
+	}// inner-hero
+
+
+	.add-directv {
+		background-color: $blue;
+		border-radius: 7px;
+		color: $white-color;
+		font-weight: 200;
+		padding: 40px 0 20px 60px;
+
+		.grad-tertiary {
+			color: $dark;
+		}// grad-tertiary
+
+		img {
+			right: -100px;
+			position: relative;
+		}// img
+
+		h2 {
+			color: $white-color;
+			font-family: OATTL;
+			font-weight: 200;
+			font-style: italic;
+			margin-top: 55px;
+		}// h2
+
+		h3 {
+			color: $white-color;
+			font-weight: 200;
+		}// h3
+
+		p {
+			font-weight: 200;
+		}// p
+	}// .add-directv
+
+
+	.save-more-bundles {
+		padding: 85px 55px 75px 35px;
+
+		h2 {
+			font-family: OATTL;
+			font-weight: 200;
+			font-style: italic;
+		}// h2
+
+		h3 {
+			font-weight: 200;
+		}// h3
+
+		p {
+			font-weight: 200;
+		}// p
+	}// .save-more-bundles
+
+
+	.technical-support {
+		padding: 10px 55px 75px 35px;
+		text-align: center;
+
+		h2 {
+			font-family: OATTL;
+			font-weight: 200;
+			font-style: italic;
+		}// h2
+
+		h3 {
+			font-weight: 200;
+		}// h3
+
+		p {
+			font-weight: 200;
+		}// p
+	}// .technical-support
+
+	.callout-uverse-difference.movers,
+	.callout-uverse-difference.my-att {
+		background-size: auto 100%;
+		max-height: 335px;
+		height: 335px;
+		h2 {
+			font-family: OATTL;
+			font-weight: 200;
+			font-style: italic;
+		}// h2
+
+		p {
+			font-weight: 200;
+		}// p
+	}// .callout-uverse-difference.movers
+
+
+}// page-existing-customers

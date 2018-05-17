@@ -1,0 +1,38 @@
+<section class="price-grid">
+	<div class="row">
+		<div class="grid-16 unserviceable">
+		
+			<? if ($_SESSION['ATTServiceability']['EnteredZip']) { ?>
+			
+				<? if ($_SESSION['ATTServiceability']['Serviceable']) { ?>
+				
+					<div class="txt-block">
+						<h2>AT&T is available in your area!<br />Call now! <span class="h-phone"><?=$sitePhone?></span></h2>
+					</div>
+					<!-- END .txt-block -->
+					
+					<? include_once(RV_LandingPage::find('includes/plans/_pricing_table.html')); ?>
+					
+				<? } else { ?>
+				
+					<div class="txt-block">
+						<h2>Internet is available in your area!</h2>
+						<p>Call now for special offers on high-speed, high-quality Internet for your home!</p>
+						<p><span class="h-phone"><?=$sitePhone?></span></p>
+					</div>
+					<!-- END .txt-block -->
+				
+				<? } ?>
+				
+			<? } else { ?>
+			
+				<? include_once(RV_LandingPage::find('includes/plans/_pricing_table.html')); ?>
+				
+			<? } ?>
+			
+		</div>
+		<!-- END .grid-16 -->
+	</div>
+	<!-- END .row -->
+</section>
+<!-- END .price-grid -->

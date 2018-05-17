@@ -1,0 +1,39 @@
+<? include_once(RV_LandingPage::find('includes/header.php')); ?>
+
+<? include_once(RV_LandingPage::find('includes/_masthead.html')); ?>
+
+<? include(RV_LandingPage::find('includes/banners/_urgency_banner.html')); ?>
+
+<div class="row">
+	<div class="grid-16 txt-block">
+
+		<? 
+							
+			/*
+			*	ADA Legal located in webshared
+			*
+			*	@vars $adaPolicyEmail,
+			*
+			*	@since 3/15/2017 - Shekinah Smith
+			*/
+			$adaPolicyEmail = 'att.accessibilityteam7@gmail.com';
+		
+			
+			include(RV_Web_SharedInclude::include_shared_file('att', 'ada-legal.html'));
+		?>
+
+	</div>
+	<!-- END .grid-16 -->
+</div>
+<!-- END .row -->
+
+<div class="row">
+
+	<? include_once(RV_LandingPage::find('includes/callouts/_callout_get_online.html')); ?>
+
+</div>
+<!-- END .row -->
+
+<? include(RV_LandingPage::find('includes/banners/_urgency_banner.html')); ?>
+
+<? include_once(RV_LandingPage::find('includes/footer.php')); ?>

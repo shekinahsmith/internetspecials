@@ -1,0 +1,239 @@
+////
+// Prices
+////
+
+.price-legal {
+
+	.offer-details {
+		display: none;
+	}
+	// .offer-details
+
+	.label {
+		display: inline-block;
+		font-size: 11px;
+		font-weight: 700;
+		margin-top: 6px;
+		width: 100%;
+		text-align: center;
+	}
+	// .label
+
+}
+// .price-legal
+
+.price-burst {
+	border-radius: 100%;
+
+	.label {
+		display: block;
+		line-height: 1;
+
+		span {
+			display: block;
+		}
+		// span
+	}
+	// .label
+
+	small {
+		font-family: OATTL;
+
+		.offer-details {
+			color: $color-white;
+			display: block;
+			text-decoration: underline;
+
+			&:hover {
+				text-decoration: none;
+			}
+			// &:hover
+
+		}
+		// .offer-details
+
+	}
+	// small
+
+}
+// .price-burst
+
+.price-burst.is-small {
+	height: 190px;
+	width: 190px;
+	padding-top: 10px;
+
+	.label {
+		font-family: OATTRI;
+		font-size: 16px;
+		font-weight: normal;
+
+		margin-bottom: 5px;
+	}
+	// .label
+
+	.price {
+		font-family: OATTR;
+		margin-bottom: 5px;
+
+		.currency {
+			font-size: 40px;
+			margin-top: 10px;
+		}
+		// .currency
+
+		.base {
+			font-size: 65px;
+		}
+		// .base
+
+		.subunit_wrap {
+			margin: 16px 0 0 8px;
+
+			.frequency {
+				font-size: 17px;
+			}
+
+		}
+		// .subunit_wrap
+
+	}
+	// .price
+
+	small {
+		font-size: 12px;
+
+		.offer-details {
+			font-size: 13px;
+		}
+		// .offer-details
+
+	}
+	// small
+
+}
+// .price-burst.is-small
+
+.price-burst.is-large {
+	height: 245px;
+	width: 245px;
+	padding-top: 18px;
+
+	.label {
+		font-family: OATTM;
+		font-size: 20px;
+		margin-bottom: 2px;
+		text-transform: uppercase;
+	}
+	// .label
+
+	.price {
+		font-family: OATTMI;
+		margin-bottom: 5px;
+
+		.currency {
+			font-size: 55px;
+			margin-top: 21px;
+		}
+		// .currency
+
+	}
+	// .price
+
+	small {
+		font-size: 15px;
+
+		.offer-details {
+			font-size: 14px;
+			margin-top: 1px;
+		}
+		// .offer-details
+
+	}
+	// small
+
+}
+// .price-burst.is-large
+
+.price-burst.is-purple {
+	background-color: $color-purple;
+}
+// .price-burst.is-purple
+
+.price-burst.is-orange {
+	background-color: $color-orange;
+}
+// .price-burst.is-orange
+
+.page-small-business {
+	.work-smarter {
+		.price-legal {
+			small {
+				font-family: helvetica, arial;
+			    font-size: 11px;
+			    position: relative;
+			    right: 15px;
+			    width: 270px;
+			}
+		}
+	}
+}
+
+
+// ADDED FOR 4/23/16 OFFER CHANGE TO ADD PROXIMITY LEGAL TO CHECKMARK GRID
+.plans_graph {
+
+	.price-point-legal {
+		color: $color-white;
+		display: block;
+		float: left;
+		padding: 10px 15px 10px;
+	}// .price-point-legal
+
+	.sidebar {
+		margin-top: 269px;
+	}// .sidebar
+
+	.price-grid-green,
+	.price-grid-orange,
+	.price-grid-purple,
+	.price-grid-blue {
+		height: 270px;
+	}// .price-grid-green
+
+	.price {
+		margin-left: 0 !important; // This is so we don't need to change EVERY experience
+		text-align: center;
+		width: 100%;
+
+		.price-secondary {
+			padding-top: 20px;
+		}// .price-secondary
+
+	}// .price
+
+	.price-wrap {
+	    float: none;
+	    left: 17%;
+	    position: relative;
+	    margin: 0 auto;
+	    text-align: center;
+	}
+
+
+}// .plans_graph
+
+//OVERIDE FOR CSS I COULDN'T FIND. SERIOUSLY.
+.ih-internet,
+.ih-phone,
+.ih-order {
+	.price-legal {
+		.base {
+			font-size: 80px;
+		}// .price-legal .base
+
+		.price .currency {
+			margin-top: 28px;
+		}// .price .currency
+	}// .price-legal
+}// .ih-internet

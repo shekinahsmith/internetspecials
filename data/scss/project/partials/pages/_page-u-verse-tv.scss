@@ -1,0 +1,46 @@
+////
+// Page - U-verse TV
+////
+
+.page-u-verse-tv {
+
+	.box-row-1 {
+		height: 440px;
+	}
+	// .box-row-1
+
+	.box-row-2 {
+		height: 510px;
+	}
+	// .box-row-2
+
+	.box-row-3 {
+		height: 524px;
+	}
+	// .box-row-3
+
+	.box-row-4 {
+		height: 600px;
+	}
+	// .box-row-4
+
+	.experience-u-verse-image {
+		background-image: url('/images/sections/section-box-experience.jpg');
+	}
+	// .experience-u-verse-image
+
+	.box-tv-w-price-point {
+
+		.price-burst {
+			@extend .price-burst.is-small;
+			@extend .price-burst.is-orange;
+			position: absolute;
+			top: -60px;
+			left: -30px;
+		}
+
+	}
+	// .box-tv-w-price-point
+
+}
+// .page-u-verse-tv

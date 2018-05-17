@@ -1,0 +1,184 @@
+<?
+	include(RV_LandingPage::find($site_settings['path']['includes'] . '/base/_header.php'));
+	include(RV_LandingPage::find($site_settings['path']['includes'] . '/masthead/_masthead.php'));
+    include(RV_LandingPage::find($site_settings['path']['includes'] . '/heroes/_hero-directv.php'));
+?>
+
+    <main class="main-content" role="main">
+
+        <section class="section section--centered">
+
+            <div class="row">
+
+                <div class="small-12 columns">
+
+                    <h2 class="section__headline h-text-bold">Choose from our most popular DIRECTV packages</h2>
+
+                    <div class="package-cards package-cards--directv js-package-cards--directv">
+
+                        <?
+
+                            // contains all of the package information
+                            include(RV_LandingPage::find($site_settings['path']['includes'] . '/packages/_packages-summary.php'));
+
+                            // creating arry of all packages to be used
+                            $directvPlans = array(
+                                $packageDirectvSelect,
+                                $packageDirectvEntertainment,
+                                $packageDirectvChoice,
+                                $packageDirectvXtra,
+                                $packageDirectvUltimate,
+                                $packageDirectvPremier,
+                            );
+
+                            // looping through each package array and outputing business cards
+                            foreach ($directvPlans as $businessCard):
+
+                                // set the column template your products should use
+                                render_template(RV_LandingPage::find($site_settings['path']['includes'] . '/templates/packages/_package-expanded.php'), $businessCard, $site_settings);
+
+                            endforeach;
+
+                        ?>
+
+                    </div><!-- /.package-careds--directv -->
+
+                    <div class="button button--secondary button--block js-toggle-packages js-track" data-filter="*" data-tracker='<?= rv_tracker_attrs($trackPage, "Banner", "Show More"); ?>'>Show More Packages</div>
+
+                </div><!-- /.columns -->
+
+            </div><!-- /.row -->
+
+        </section><!-- /.section -->
+
+        <section class="section section--secondary section--programming-you-love">
+
+            <div class="row">
+
+                <div class="small-12 columns">
+
+                    <div class="devices section__devices section__devices--caption">
+
+                        <div class="devices__group devices__group--left">
+
+                            <div class="device device--tablet device--tablet-horizontal device--full-width">
+                                <img src="<?= $site_settings['path']['assets']?>/images/devices/tablet-hz-black.png" alt="Laptop">
+
+                                <div class="device__screen" style="background-image: url(<?= $site_settings['movie']['featured']['4']['image']['src']; ?>);"></div><!-- /.device__screen -->
+
+                            </div><!-- /.device -->
+
+                            <div class="devices__group devices__group--positioned devices__group--no-caption">
+
+                                <div class="device device--phone device--phone-vertical device--pull-more device--shadow">
+                                    <img src="<?= $site_settings['path']['assets']?>/images/devices/phone-vt-black.png" alt="Phone">
+
+                                    <div class="device__screen" style="background-image: url(<?= $site_settings['ui']['featured']['2']['image']['src']; ?>);">
+
+                                    </div><!-- /.device__screen -->
+
+                                </div><!-- /.device -->
+
+                            </div><!-- /.devices__group -->
+
+                        </div><!-- /.devices__group -->
+
+                        <div class="devices__caption devices__caption--positioned devices__caption--right legal legal--movie-caption"><?=$site_settings['movie']['featured']['4']['image']['caption']; ?></div>
+
+                        <div class="burst burst--data-free">
+
+                            <div class="burst__headline"><span>Data Free</span> streaming now with AT&T<sup>*</sup></div>
+
+                        </div>
+
+                    </div><!-- /.devices -->
+
+                    <h2 class="section__headline">The programming<br>you love on the go.</h2>
+                    <h4 class="section__subheadline">Get your must see shows and movies with the top technology and unbeatable value of DIRECTV.</h4>
+
+                    <p class="legal"><?= $attPromoDataFreeTV->Language->English->Legal; ?></p>
+
+                    <div class="button button--primary button--block js-track" data-tracker='<?= rv_tracker_attrs($trackPage, "click", "Data Order Now"); ?>'><span class="h-phone" data-c2c-parent="button">Call <?php echo $sitePhone; ?> to order</span> </div>
+
+                </div><!-- /.columns -->
+
+            </div><!-- /.row -->
+
+        </section><!-- /.section -->
+
+        <section class="section section--genie section--padding-bottom-none">
+
+            <div class="row">
+
+                <div class="small-12 columns">
+
+                    <h2 class="section__headline">Genie grants<br>your every wish</h2>
+                    <p>Record and store more shows with Genie, DIRECTV’s most advanced HD DVR.</p>
+
+                </div><!-- /.columns -->
+
+            </div><!-- /.row -->
+
+            <div class="row collapse">
+
+                <div class="small-12 columns">
+
+                    <div class="genie-features">
+
+                        <div class="genie-features__image"><img src="<?= $site_settings['path']['assets']; ?>/images/equipment/genie.png" alt="Genie"></div>
+
+                        <ul class="genie-features__list">
+
+                            <li class="genie-features__list-item genie-features__list-item--record">
+
+                                <div class="genie-features__icon"><svg class="icon icon-flat--record" width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg"> <title>icon-flat/record</title> <path d="M11.106 15.952c.215.204.323.487.323.85 0 .346-.11.626-.33.837-.219.212-.514.318-.884.318H8.928v-2.31h1.287c.377 0 .674.1.89.305zm15.08 6.523c-.831 0-1.562-.183-2.188-.553a3.687 3.687 0 0 1-1.433-1.524c-.329-.643-.494-1.374-.494-2.192 0-.85.183-1.598.548-2.249a3.831 3.831 0 0 1 1.48-1.497c.621-.35 1.318-.526 2.088-.526.48 0 .944.06 1.386.183.447.123.84.294 1.186.514l-.496 1.474a4.258 4.258 0 0 0-.924-.354 4.093 4.093 0 0 0-.939-.105c-.732 0-1.32.231-1.764.695-.446.464-.666 1.087-.666 1.865 0 .77.224 1.389.672 1.858.448.468 1.034.702 1.758.702.692 0 1.337-.174 1.934-.519l.509 1.486c-.765.495-1.648.742-2.656.742zm-5.448-.14h-5.486v-8.259h5.368v1.57h-3.516v1.757h2.832v1.57h-2.832v1.793h3.634v1.568zm-9.108 0l-1.557-2.808H8.928v2.807H7.076v-8.258h3.14c.973 0 1.732.237 2.275.708.544.471.814 1.129.814 1.97 0 .542-.123 1.024-.372 1.445-.247.42-.6.747-1.056.974l1.888 3.161H11.63zM18 2C9.163 2 2 9.164 2 18c0 8.837 7.163 16 16 16s16-7.163 16-16c0-8.836-7.163-16-16-16z" fill="#009FDB" fill-rule="evenodd" /> </svg></div>
+
+                                <div class="genie-features__headline">Record</div>
+                                <p>Record up to 5 shows at the same time.</p>
+
+                            </li>
+                            <li class="genie-features__list-item genie-features__list-item--store">
+
+                                <div class="genie-features__icon"><svg class="icon icon-flat--cloud-upload" width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg"><title>icon-flat/cloud-upload</title><path d="M24.21 21.769h-2.671v6.328a.512.512 0 0 1-.511.511h-5.067a.513.513 0 0 1-.512-.511v-6.328h-2.671c-.628 0-.807-.391-.398-.868l1.105-1.29 4.452-5.193a.713.713 0 0 1 1.115 0l4.452 5.193 1.105 1.29c.41.477.23.868-.399.868m5.164-5.551c.008-.111.025-.22.025-.332a4.926 4.926 0 0 0-4.925-4.925c-.298 0-.591.031-.875.082a7.642 7.642 0 0 0-14.794 1.863 6.694 6.694 0 0 0-5.773 5.996 5.2 5.2 0 0 0-.032.547l.002.045-.002.044a6.698 6.698 0 0 0 6.698 6.698h3.751v1.861a2.515 2.515 0 0 0 2.512 2.511h5.067a2.514 2.514 0 0 0 2.511-2.511v-1.861h4.989a5.043 5.043 0 1 0 .846-10.018" fill="#009FDB" fill-rule="evenodd"/></svg></div>
+
+                                <div class="genie-features__headline">Store</div>
+                                <p>Store up to 200 hours of HD programming.</p>
+
+                            </li>
+                            <li class="genie-features__list-item genie-features__list-item--rewind">
+
+                                <div class="genie-features__icon"><svg class="icon icon-flat--rewind" width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg"><title>icon-flat/rewind</title><path d="M32.344 11.71v12.566c0 1.476-1.069 2.122-2.376 1.435l-10.3-5.412v3.976c0 1.477-1.07 2.123-2.376 1.436L4.98 19.24c-1.307-.686-1.307-1.81 0-2.496l12.312-6.47c1.306-.687 2.376-.04 2.376 1.435v3.977l10.3-5.412c1.307-.687 2.376-.04 2.376 1.435" fill="#009FDB" fill-rule="evenodd"/></svg></div>
+
+                                <div class="genie-features__headline">Rewind</div>
+                                <p>Pause and rewind live/streaming TV in any room.</p>
+
+                            </li>
+                            <li class="genie-features__list-item genie-features__list-item--favorites">
+
+                                <div class="genie-features__icon"><svg class="icon icon-flat--favorite-channels-2" width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg"><title>icon-flat/favorite-channels-2</title><path d="M27 28.069c.191 0 .373.041.511.113l1.407.74c.11.058.203.062.246.011.035-.042.045-.115.029-.21l-.268-1.569c-.055-.314.087-.749.314-.97l1.139-1.111c.08-.077.115-.153.097-.209-.019-.056-.092-.097-.202-.113l-1.573-.228c-.316-.046-.686-.316-.826-.602l-.705-1.425c-.097-.199-.241-.198-.339 0l-.702 1.426a1.22 1.22 0 0 1-.827.601l-1.574.228c-.11.016-.184.057-.201.113-.018.056.017.132.096.209l1.139 1.111c.228.221.369.656.317.97l-.271 1.569c-.015.095-.006.169.029.21.044.052.137.047.245-.011l1.409-.74c.137-.072.318-.113.51-.113m0-8.12a6 6 0 1 1 0 12 6 6 0 0 1 0-12m-14.29-.246a6.281 6.281 0 0 1-1.785.252c-1.047 0-1.962-.239-2.744-.717a4.787 4.787 0 0 1-1.807-1.96c-.423-.828-.633-1.771-.633-2.829 0-1.077.228-2.038.686-2.881.457-.845 1.077-1.492 1.86-1.945.783-.452 1.663-.679 2.638-.679.59 0 1.162.076 1.716.229.554.153 1.05.366 1.487.641l-.503 1.418c-.834-.427-1.673-.641-2.517-.641-1.077 0-1.944.353-2.6 1.061-.655.706-.983 1.638-.983 2.797 0 .783.155 1.467.465 2.052.31.584.734 1.031 1.273 1.342.539.309 1.154.464 1.845.464.458 0 .89-.055 1.297-.167a5.58 5.58 0 0 0 1.296-.564l.519 1.418a5.192 5.192 0 0 1-1.51.709M27.705 5H3.296A1.3 1.3 0 0 0 2 6.296v16.308A1.3 1.3 0 0 0 3.296 23.9h16.496a7.511 7.511 0 0 1 3.714-4.564v-4.139h-4.941v4.59h-1.753V9.112h1.753v4.483h4.941V9.112h1.754v9.566l.207-.069a7.451 7.451 0 0 1 1.533-.16c.694 0 1.363.103 2 .28V6.296A1.3 1.3 0 0 0 27.705 5" fill="#009FDB" fill-rule="evenodd"/></svg></div>
+
+                                <div class="genie-features__headline">Favorites</div>
+                                <p>Create a list of all your favorite channels.</p>
+
+                            </li>
+
+                        </ul><!-- /.genie-features__list -->
+
+                        <div class="legal">Requires one TV connected to a Genie HD DVR and a Wireless Genie Mini for each additional TV. Limit 3 remote viewings at a time. Rewind/Restart features not available on all channels/programs. Internet-connected HD DVR (model HR20 or later) required.</div>
+
+                    </div><!-- /.genie-features -->
+
+                </div><!-- /.columns -->
+
+            </div><!-- /.row -->
+
+        </section><!-- /.section -->
+	
+        <? include(RV_LandingPage::find($site_settings['path']['includes'] . '/banners/_banner--discover-directv.php')); ?>
+
+    </main><!-- /.main-content -->
+
+<?
+	include(RV_LandingPage::find($site_settings['path']['includes'] . '/mastfoot/_mastfoot.php'));
+	include(RV_LandingPage::find($site_settings['path']['includes'] . '/base/_footer.php'));
+?>

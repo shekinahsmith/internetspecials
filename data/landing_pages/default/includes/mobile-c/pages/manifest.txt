@@ -1,0 +1,1 @@
+/bundles.html,/customer-support.html,/deals.html,/directv.html,/full-offer-details.html,/help.html,/index.html,/internet.html,/privacy-policy.html,/small-business.html,/terms-conditions.html,/terms.html,/why-att.html

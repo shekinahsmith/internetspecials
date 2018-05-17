@@ -1,0 +1,57 @@
+input[type="number"] {
+    border: 1px solid #ddd;
+    color: #878787;
+    font-size: 16px;
+    padding: 15px;
+}
+
+.callout-request-call input[type="number"] {
+    float: left;
+    margin-bottom: 10px;
+}
+
+/* REMOVING SPINNER ON NUMBER INPUTS IN REQUEST CALL CALLOUT FORM AND AVAILABILITY BANNER */
+.availability-banner,
+.callout-request-call {
+    input[type=number]::-webkit-outer-spin-button,
+    input[type=number]::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    input[type=number] {
+        -moz-appearance:textfield;
+    }
+
+}
+/* END REMOVING SPINNER */
+
+
+
+.is-uverse-app .txt-block .legal {
+    display: block;
+    margin-top: 15px; }
+
+
+.is-total-home-dvr .txt-block .legal {
+    display: block;
+    margin-top: 15px; }
+
+.callout-uverse-difference {
+    position: relative;
+}
+
+.callout-uverse-difference .legal {
+    bottom: 18px;
+    color: #fff;
+    left: 20px;
+    position: absolute;
+    z-index: 1;
+}
+
+// .internet-features .row { padding: 50px 0 10px }
+
+.internet-feature .legal {
+    display: block;
+    margin-top: 8px;
+}

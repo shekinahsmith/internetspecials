@@ -1,0 +1,69 @@
+.inner-hero {
+	&.ih-wifi {
+		position: relative;
+
+		.grid-16 {
+			background: url(/images/inner-hero-wifi.jpg) no-repeat center right;
+		}
+
+		.price-legal {
+			position: absolute;
+			right: 75px;
+			top: 20px;
+
+			a {
+				color:#fff;
+				text-decoration:underline;
+			}
+		}
+	}
+}
+
+.inner-hero h2 {
+	@media only screen and (max-width: 1199px) {
+	    font-size: 40px;
+    }
+}
+
+.inner-hero h3 {
+	@media only screen and (max-width: 1199px) {
+		font-size: 26px;
+	    width: 200px;
+    }
+}
+
+.txt-block h2 {
+	@media only screen and (max-width: 1199px) {
+		font-size: 40px;
+    }
+}
+
+.banner-which-plan {
+	@media only screen and (max-width: 1199px) {
+		padding: 15px 8%;
+    }
+}
+
+.mobile-txt {
+	@media only screen and (max-width: 1199px) {
+		margin-top: -35px !important;
+		width: 325px;
+    }
+}
+
+.mobile-img {
+	@media only screen and (max-width: 1199px) {
+		margin-left: 25px;
+    }
+}
+
+.call-out {
+	@media only screen and (max-width: 1199px) {
+		margin-top: 65px;
+		padding: 60px 5px;
+    }
+}
+
+.wifi-bundle {
+	padding: 20px 0 40px 0;
+}

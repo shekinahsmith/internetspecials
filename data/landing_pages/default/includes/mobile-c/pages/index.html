@@ -1,0 +1,123 @@
+<?
+	include(RV_LandingPage::find($site_settings['path']['includes'] . '/base/_header.php'));
+	include(RV_LandingPage::find($site_settings['path']['includes'] . '/masthead/_masthead.php'));
+    include(RV_LandingPage::find($site_settings['path']['includes'] . '/heroes/_hero-landing.php'));
+    include(RV_LandingPage::find($site_settings['path']['includes'] . '/navigation/_navigation-shelf.php'));
+?>
+
+<main class="main-content" role="main">
+
+    <section class="section section--secondary section--bundle">
+
+        <div class="row">
+
+            <div class="small-12 columns">
+
+                <div class="devices section__devices">
+
+                    <div class="device device--tv">
+                        <img src="<?= $site_settings['path']['assets']?>/images/devices/tv.png" alt="TV">
+
+                        <div class="device__screen" style="background-image: url(<?= $site_settings['path']['assets']; ?>/images/movies/movie-parts/junglebook-tv.jpg)"></div><!-- /.device__screen -->
+
+                    </div><!-- /.device -->
+
+                    <div class="devices__group devices__group--positioned devices__group--no-caption devices__group--right">
+
+                        <div class="device device--shadow device--laptop device--push">
+                            <img src="<?= $site_settings['path']['assets']?>/images/devices/laptop.png" alt="Laptop">
+
+                            <div class="device__screen" style="background-image: url(<?= $site_settings['path']['assets']; ?>/images/movies/movie-parts/junglebook-laptop.jpg)"></div><!-- /.device__screen -->
+
+                        </div><!-- /.device -->
+
+                    </div><!-- /.devices__group -->
+
+                    <div class="devices__group devices__group--positioned devices__group--no-caption">
+
+                        <div class="device device--dvr device--pull">
+                            <img src="<?= $site_settings['path']['assets']?>/images/equipment/hd-dvr.png" alt="Home DVR">
+                        </div><!-- /.device--dvr -->
+
+                    </div><!-- /.devices__group -->
+
+                </div><!-- /.devices -->
+
+            </div><!-- /.columns -->
+
+        </div><!-- /.row -->
+
+        <div class="row">
+
+            <div class="small-12 columns">
+
+                <h2 class="section__headline">Get more with a bundle</h2>
+
+                <div class="price-lockup">
+
+                    <div class="price-lockup__headline">DIRECTV SELECT<sup>&trade;</sup> All-Included + Internet 50</div>
+                    <? include(RV_LandingPage::find($site_settings['path']['includes'] . '/price-points/_price-point-bundle.php')); ?>
+                    <div class="price-lockup__legal legal"><?= $attProductsTVInternetAllIncluded->Language->English->Legal->PricePoint; ?></div>
+
+                </div><!-- /.price-point__lockup -->
+
+                <a class="button button--primary button--block button--centered js-track" data-tracker='
+                <?= rv_tracker_attrs($trackPage, "click", "shopbundles"); ?>' href="/bundles.html">Shop Bundles</a>
+
+                <div class="legal legal--movie-caption"><?=$site_settings['movie']['featured']['2']['image']['caption']; ?></div>
+
+            </div><!-- /.columns -->
+
+        </div><!-- /.row -->
+
+    </section><!-- /.section -->
+
+    <section class="section section--switch-save">
+
+        <div class="row">
+
+            <div class="small-12 columns">
+
+                <div class="devices section__devices">
+
+                    <div class="device device--shadow device--laptop">
+                        <img src="<?= $site_settings['path']['assets']?>/images/devices/laptop.png" alt="Laptop">
+
+                        <div class="device__screen" style="background-image: url(<?= $site_settings['movie']['featured']['3']['image']['src']; ?>);">
+
+                        </div><!-- /.device__screen -->
+
+                    </div><!-- /.device -->
+
+                </div><!-- /.devices -->
+
+            </div><!-- /.columns -->
+
+        </div><!-- /.row -->
+
+        <div class="row">
+
+            <div class="small-12 columns">
+
+                <h2 class="section__headline">Switch and save<br>more than money</h2>
+
+                <p>Get AT&T for fast internet, bundles that really save and 99% signal reliable. So you can stream, surf and download worry-free.</p>
+
+                <p class="legal">Claim based on U-verse High Speed Internet service.</p>
+
+                <div class="button button--primary button--block button--centered js-track" data-tracker='<?= rv_tracker_attrs($trackPage, "c2c", "footer"); ?>'>Call <span class="h-phone" data-c2c-parent="button"><?= $sitePhone; ?></span> to order</div>
+
+                <p class="legal legal--movie-caption"><?=$site_settings['movie']['featured']['3']['image']['caption']; ?></p>
+
+            </div><!-- /.columns -->
+
+        </div><!-- /.row -->
+
+    </section><!-- /.section -->
+
+</main><!-- /.main-content -->
+
+<?
+	include(RV_LandingPage::find($site_settings['path']['includes'] . '/mastfoot/_mastfoot.php'));
+	include(RV_LandingPage::find($site_settings['path']['includes'] . '/base/_footer.php'));
+?>

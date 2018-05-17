@@ -1,0 +1,62 @@
+$aio-button-height: 40px;
+$aio-button-width: 169px; 
+$aio-modal-height: auto;
+$aio-modal-width: 450px; 
+$aio-media-query-mobile: 700px;
+
+@media only screen and (min-width: $aio-media-query-mobile) {
+
+	#aio-container {
+		@include transition(background-color 500ms);
+
+		.aio-is-open & {
+
+			&.is-modal {
+				background-color: rgba(#0c2577, 0.4);
+			}
+			// &.is-modal 
+
+		}
+		// .aio-is-open &
+
+		&.is-modal {
+			bottom: 0;
+			display: none;
+			left: 0;
+			position: fixed;
+			right: 0;
+			top: 0;
+		}
+		// &.is-modal 
+
+	}
+	// #aio-container 
+
+	.aio-application-minimized {
+
+		.is-modal & {
+			display: none !important; // why is this needed? fix if possible
+		}
+		// .is-modal & 
+
+	}
+	// .aio-application-minimized
+
+	.aio-application-container {
+
+		.is-modal & {
+			@include transform( translate(0, -50%) );
+			display: block;
+			height: $aio-modal-height;
+			left: 50%;
+			margin-left: -($aio-modal-width/2);
+			position: fixed;
+			top: 50%;
+			width: $aio-modal-width;
+		}
+		// .is-modal & 
+
+	} // .aio-application-container
+
+}
+// @media only screen and (min-width: $aio-media-query-mobile) 

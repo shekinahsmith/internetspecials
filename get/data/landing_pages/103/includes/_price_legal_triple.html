@@ -1,0 +1,22 @@
+<div class="price-legal price-legal-bundle">
+
+	<strong class="label">TV + Internet + Phone starting at just</strong>
+
+	<div class="group price-wrap">
+		<div class="price">
+			<span class="currency">$</span>
+			<span class="base"><?= $attProductsTVInternetPhone->Price->Dollars; ?></span>
+			<div class="subunit_wrap">
+				<span class="subunit"><?= $attProductsTVInternetPhone->Price->Cents; ?></span>
+				<span class="frequency">/mo</span>
+			</div>
+			<!-- END .subunit_wrap -->
+		</div>
+		<!-- END .price -->
+	</div>
+	<!-- END .price-wrap -->
+
+	<small><?= $attProductsTVInternetPhone->Language->English->Legal->PricePoint; ?></small>
+
+</div>
+<!-- END .price-legal -->

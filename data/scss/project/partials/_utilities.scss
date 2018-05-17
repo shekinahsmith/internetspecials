@@ -1,0 +1,72 @@
+/*-----------------------
+  @TEXT
+------------------------*/
+
+// Font Weights
+%has-weight-light {
+    font-weight: 300;
+}
+.has-weight-light {
+    @extend %has-weight-light;
+}
+%has-weight-normal {
+    font-weight: 400;
+}
+.has-weight-normal {
+    @extend %has-weight-normal;
+}
+%has-weight-bold {
+    font-weight: 700;
+}
+.has-weight-bold {
+    @extend %has-weight-bold;
+}
+
+
+// Font Style
+%has-italic {
+    font-style: italic;
+}
+.has-italic {
+    @extend %has-italic;
+}
+
+
+// Text Decoration
+%has-underline {
+    text-decoration: underline;
+}
+.has-underline {
+    @extend %has-underline;
+}
+
+
+// Line Breaks
+%has-break {
+    display: block;
+}
+.has-break {
+    @extend %has-break;
+}
+
+
+/*-----------------------
+  @TOOLTIPS
+------------------------*/
+
+.tooltipster-content {
+    font: {
+        family: OMNES;
+        style: italic;
+        weight: 400;
+    }
+}// .tooltipster-content
+
+
+.subunit_wrap--fix { /// TEMP FIX FOR WEIRD SUBUNIT LEGAL
+    width: 60px;
+    float: right;
+    top: 20px;
+    position: relative;
+    right: -5px;
+}

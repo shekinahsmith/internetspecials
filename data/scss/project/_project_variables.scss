@@ -1,0 +1,38 @@
+// Project Variables
+
+
+// New
+$color-orange: #ef6f00;
+$color-orange-light: #fcb314;
+$color-white: #fff;
+$color-purple: #81017e;
+$color-grey-dark: #333;
+$color-grey-light: #efefef;
+$color-grey: #666;
+$color-blue: #067ab4;
+$color-blue-light: #44c8f5;
+$color-green: #4ca90c;
+
+// Depreicated
+$light-grey: $color-grey-light;
+$grey: $color-grey;
+$dark-grey: $color-grey-dark;
+$white-color: $color-white;
+$grey-light: #f3f3f3;
+$grey-dark: #ebebeb;
+$orange: $color-orange;
+$light-orange: $color-orange-light;
+$green: $color-green;
+$light-green: #c4d82d; // AT&T Green Highlight
+$purple: $color-purple;
+$light-blue: $color-blue-light;
+$blue: $color-blue;
+$dark-blue: #0c2577;  // AT&T Dark Blue
+
+// Border color
+$border-color: #efefef; // light grey
+
+// Media Query Breakpoints
+
+$desktop: "(max-width: 1199px)";
+$large-desktop: "(min-width: 1200px)";

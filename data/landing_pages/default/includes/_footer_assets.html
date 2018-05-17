@@ -1,0 +1,27 @@
+<script src="js/jquery.tipTip.minified.js"></script>
+<script src="/global_js/jQuery/tooltipster/js/jquery.tooltipster.min.js"></script>
+<script src="/js/master.min.js"></script>
+<script src="/assets/desktop-a/js/project.min.js"></script>
+<?= RV_LandingPage::try_find_web_tag('js/experience.min.js', '<script src="/##PATH##"></script>', RV_LandingPage::try_find_web_tag('js/experience.js','<script src="/##PATH##">')); ?>
+
+<!--[if lt IE 9]>
+<script src="/js/selectivizr-min.js"></script>
+<![endif]-->
+<!--[if lt IE 10]>
+<script src="/js/placeholder.js"></script>
+<![endif]-->
+
+
+<?
+	include(RV_LandingPage::find('includes/modals/_modal-order-now.php'));
+
+	if ($_SERVER['SCRIPT_NAME'] == '/wireless.html') { //ONLY INCLUDE iPhone modals on wireless page
+		// Wireless Modals - POPS WHEN "SEE DETAILS" BUTTON IS CLICKED FOR A WIRELESS DEVICE
+		include(RV_LandingPage::find('desktop-a/includes/modals/_modal-wireless-device--iphone7.php'));
+		include(RV_LandingPage::find('desktop-a/includes/modals/_modal-wireless-device--iphone7-plus.php'));
+		include(RV_LandingPage::find('desktop-a/includes/modals/_modal-wireless-device--iphone-se.php'));
+		include(RV_LandingPage::find('desktop-a/includes/modals/_modal-wireless-device--samsung-s7.php'));
+		include(RV_LandingPage::find('desktop-a/includes/modals/_modal-wireless-device--samsung-s7-edge.php'));
+		include(RV_LandingPage::find('desktop-a/includes/modals/_modal-wireless-device--samsung-s7-active.php'));
+	};
+?>

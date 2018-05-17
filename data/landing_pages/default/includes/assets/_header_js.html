@@ -1,0 +1,23 @@
+<script src="/global_js/jQuery/jquery-1.8.3.min.js"></script>
+<script src="/global_js/modernizr.js"></script>
+<script src="/global_js/jQuery/active-menu/jquery.active-menu.min.js"></script>
+<script src="/js/css3-mediaqueries.js"></script>
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
+<script src="https://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+
+<script>
+	$(function() {
+	  $('a[href*=#]:not([href=#])').click(function() {
+	    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+	      var target = $(this.hash);
+	      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+	      if (target.length) {
+	        $('html,body').animate({
+	          scrollTop: target.offset().top
+	        }, 1000);
+	        return false;
+	      }
+	    }
+	  });
+	});
+</script>

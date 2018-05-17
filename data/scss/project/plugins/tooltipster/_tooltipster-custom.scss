@@ -1,0 +1,32 @@
+.tooltipster-custom {
+	border-radius: 5px; 
+	border: 2px solid #ccc;
+	background: $color-white;
+	color: $color-black;
+	width: 500px;
+
+	//@media (max-width: $mq-mobile) {
+		//width: 100%;
+	//}
+
+	.tooltipster-content {
+		font-size: 10px;
+		line-height: 16px;
+		padding: 8px 10px;
+
+		p {
+			margin-bottom: 10px;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+			// &:last-child
+
+		}
+		// p
+
+	}
+	// .tooltipster-content
+
+}
+// .tooltipster-custom

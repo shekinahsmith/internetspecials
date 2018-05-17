@@ -1,0 +1,72 @@
+////
+// helpers
+////
+
+.has-color-grey-dark {
+	color: $color-grey-dark;
+}
+// .has-color-grey-dark
+
+.has-color-blue {
+	color: $color-blue;
+}
+// .has-color-blue
+
+.has-background-blue {
+	background-color: $color-blue;
+}
+// .has-background-blue
+
+.has-background-green {
+	background-color: $color-green;
+}
+// .has-background-green
+
+.has-background-grey-light {
+	background-color: $color-grey-light;
+}
+// .has-background-grey-light
+
+.is-right {
+	float: right;
+}
+
+.is-left {
+	float: left;
+}
+
+.is-locked {
+	overflow: hidden;
+}
+
+
+// Mixins
+@mixin att {
+  	font-family: OATTL;
+  	font-weight: normal;
+}
+
+@mixin att-italic {
+  	font-family: OATTLI;
+  	font-weight: normal;
+}
+@mixin att-reg {
+  	font-family: OATTR;
+  	font-weight: normal;
+}
+@mixin att-med {
+  	font-family: OATTM;
+  	font-weight: normal;
+}
+@mixin helvetica {
+  	font-family: helvetica, arial, sans-serif;
+	font-weight: bold;
+}
+
+@mixin priceicon($iconimage) {
+	background: url(/images/#{$iconimage}.png) no-repeat 30px center;
+
+	@media only screen and (max-width: 1199px) {
+		background: none;
+	}
+}

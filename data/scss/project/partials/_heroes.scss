@@ -1,0 +1,1339 @@
+////
+// Heroes
+////
+
+//For all clickable hero's
+.js-hero-content-click { //Because it should only happen when this class is present
+	cursor: pointer;
+}//.js-hero-content-click
+
+//FIX FOR VRC HERO
+.grid-16 .uverse-inner-hero .hero-message .price-point span sup {
+	font-size: 60%;
+}// .uverse-inner-hero .hero-message .price-point span sup
+
+.hero {
+
+    .price-burst {
+        @include linear-gradient(#e12895, #8f198c);
+        border-radius: 100%;
+    }
+    // .price-burst
+
+}
+// .hero
+
+
+// Compare Hero
+.hero-compare {
+    padding-bottom: 5px;
+
+    .row {
+
+        .grid-16 {
+            background-image: url('/assets/desktop-a/images/heroes/inner-hero-compare.jpg');
+            background-position: 50% 50%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-radius: 10px;
+            float: none;
+            height: auto;
+            padding: 125px 50px 175px;
+
+            @media(max-width: $mq-desktop-large){
+                background-position: 73% 50%;
+                padding-left: 10px;
+            }
+
+            .button {
+                border: none;
+                border-radius: 10px;
+                font-family: $font-secondary;
+                font-size: 18px;
+                font-weight: 400;
+                margin-top: 0;
+                padding: 18px 28px;
+            }// .button
+
+            .hero-subtitle {
+                color: $color-gray-darkest;
+                font-style: normal;
+                font-weight: 300;
+                margin-bottom: 35px;
+
+                @media(max-width: $mq-desktop-large){
+                    font-size: 28px;
+                }
+
+                span {
+                    font-weight: 400;
+                }
+
+            }// .hero-subtitle
+
+            .hero-title {
+                color: #0079b7;
+                font-weight: 300;
+                margin-bottom: 4px;
+
+                @media(max-width: $mq-desktop-large){
+                    font-size: 50px;
+                }
+
+            }// .hero-title
+
+            // Price Burst
+            .price-legal {
+                background-color: #0079b7;
+                border-radius: 10px;
+                font-family: $font-secondary;
+                height: auto;
+                max-width: 290px;
+                padding: 10px 10px 15px;
+                right: 15px;
+                width: auto;
+
+                @media(max-width: $mq-desktop-large){
+                    max-width: 260px;
+                    right: 12px;
+                    top: 12px;
+                }
+
+                .price-wrap {
+                    float: none;
+                    left: auto;
+
+                    .price {
+                        left: 65px;
+
+                        @media(max-width: $mq-desktop-large){
+                            left: 60px;
+                            margin: 3px 0;
+                        }
+
+                        .base {
+                            font-size: 90px;
+                            margin-top: -10px;
+
+                            @media(max-width: $mq-desktop-large){
+                                font-size: 75px;
+                            }
+
+                        }// .base
+
+                        .currency {
+                            font-size: 60px;
+                            margin: 0;
+                            position: relative;
+                            top: 10px;
+
+                            @media(max-width: $mq-desktop-large){
+                                font-size: 45px;
+                            }
+
+                        }// .currency
+
+                        .subunit_wrap {
+                            margin-left: 12px;
+
+                            .frequency {
+                                font-family: $font-secondary;
+                                font-size: 22px;
+                                padding-right: 5px;
+
+                                @media(max-width: $mq-desktop-large){
+                                    font-size: 18px;
+                                }
+
+                            }// .frequency
+
+                        }// .subunit_wrap
+
+                    }// .price
+
+                }// .price-wrap
+
+                small {
+                    font-size: 14px;
+                    font-weight: 300;
+                    line-height: 15px;
+                    padding: 0;
+
+                    @media(max-width: $mq-desktop-large){
+                        font-size: 12px;
+                    }
+
+                    a {
+                        color: $color-white;
+                        text-decoration: underline;
+                    }
+
+                }
+
+                strong {
+                    font-size: 20px;
+                    font-weight: 400;
+                    top: 0;
+
+                    @media(max-width: $mq-desktop-large){
+                        font-size: 18px;
+                    }
+                }
+
+            }// .price-legal
+
+        }// .grid-16
+
+    }// .row
+
+}// .hero-compare
+
+.hero-movers-and-upgrades {
+
+    .grid-16 {
+
+        > * {
+            position: relative;
+            z-index: 30;
+        }
+        // > *
+
+    }
+    // .grid-16
+
+    .price-legal {
+        position: absolute;
+        right: 50px;
+        z-index: 20;
+    }
+    // .price-legal
+
+    .prop-devices {
+        position: absolute;
+        right: 180px;
+        top: 90px;
+        width: 300px;
+        z-index: 10;
+
+        @media only screen and (min-width: $mq-desktop-large) {
+            top: 40px;
+            width: 450px;
+        }
+        // $mq-desktop-large
+
+    }
+    // .prop-devices
+
+    h2 {
+        color: #333333;
+        font-size: 59px;
+        margin-bottom: 10px;
+        line-height: 1;
+    }
+    // h2
+
+    h3 {
+        color: #666666;
+        font-size: 25px;
+        line-height: 1;
+    }
+    // h3
+
+}
+// .hero-movers-and-upgrades
+
+
+
+// HOME
+.hero-directv-wrapper {
+    margin-bottom: 20px;
+    height: auto;
+}
+// hero - DIRECTV
+.hero-directv {
+    background: url('../assets/desktop-a/images/pages/directv/hero-rounded-rectangle-grey.png') center center no-repeat;
+    border-radius: 7px;
+    height: 270px;
+    margin-top: 20px;
+
+    @media only screen and (max-width: 1199px) {
+        background-position: -60px center;
+    }
+
+    // hero-message
+    .hero-message {
+        color: #000;
+        float: left;
+        left: 45px;
+        position: relative;
+        top: 55px;
+        // h2
+        h2 {
+            font-family: $font-secondary; font-weight: 500; font-style: italic;
+            font-style: normal;
+            line-height: 0.9;
+
+            span {
+                display: block;
+            }
+        }// h2
+
+        // hero-message-directv
+        &_directv {
+            font-size: 60px;
+
+            @media (min-width: $mq-desktop-large) {
+                font-size: 80px;
+            }
+        }
+
+        // hero-message-sub
+        &_sub {
+            font-size: 60px;
+            font-weight: 100;
+
+            @media (min-width: $mq-desktop-large) {
+                font-size: 80px;
+            }
+        }
+
+		// p
+        p {
+            font-family: OMNES;
+            font-size: 22px;
+            font-weight: 100;
+            line-height: 1;
+            margin-top: 20px;
+        }
+		.btn {
+			border-radius: 7px;
+		    font-family: OMNES;
+		    font-weight: bold;
+		    background-color: #067ab4;
+		    margin-top: 20px;
+		    text-shadow: none;
+		    text-transform: uppercase;
+		}//.btn
+    }// hero-message
+
+    // pricing
+    .price-legal {
+        border-radius: 100%;
+        height: 240px;
+        position: relative;
+        width: 240px;
+		margin: 0 auto;
+
+		.price-directv-content {
+			position: relative;
+			top: 8px;
+		}// .price-directv-content
+
+        // directv price
+        &.price-directv {
+            background-color: #65005A;
+        }
+
+        // price headline
+        .label {
+            display: block;
+            font-family: OMNES;
+            font-size: 11px;
+            font-weight: 100;
+            line-height: 1;
+            margin-bottom: 10px;
+            padding: 0 40px;
+            top: 20px;
+						width: auto;
+
+            // bolded text
+            span {
+                font-family: OMNES;
+                font-size: 16px;
+                font-weight: 500;
+            }
+        }// .label
+
+        // price point
+        .price {
+            font-family: OMNES;
+            font-weight: 400;
+            margin: 5px 0;
+			font-style:italic;
+
+            // currency
+            .currency {
+                font-size: 46px;
+                margin-top: 30px;
+                text-shadow: none;
+            }
+
+            // base
+            .base {
+                font-size: 98px;
+            }
+
+            // subunit wrap
+            .subunit_wrap {
+                margin-top: 20px;
+                margin-left: 15px;
+
+                .subunit,
+                .frequency {
+                    font-family: OMNES;
+                    font-weight: 400;
+                }
+            }// .subunit_wrap
+        }// .price
+
+        small {
+            font-size: 10px;
+			font-weight: 100;
+            color: #fff;
+            margin-bottom: 15px;
+			position: relative;
+			top: -25px;
+            a {
+                color: #ffcc99;
+                text-decoration: underline;
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+        }// small
+
+        .link-plans {
+            color: #ffffff;
+            text-decoration: underline;
+            font-size: 14px;
+            &:hover {
+                text-decoration: none;
+            }
+        }// .link-plans
+    }// .price-legal
+
+	.hero-directv-tv {
+		bottom: 215px;
+		float: right;
+		position: relative;
+		right: 50px;
+		width: 370px;
+	}
+}// .hero-directv
+
+
+// uverse hero (usually on packages page)
+.uverse-inner-hero {
+	background: #d5e6f2 url(/images/160/bg-inner-hero-uverse-plans.jpg) no-repeat 400px center;
+	border-radius: 10px;
+	height: 196px;
+	overflow: hidden;
+	margin: 15px 0;
+
+	.title-wrap {
+		float: left;
+		margin: 45px 0 0 60px;
+
+		h2 {
+			color: #3a9cd6;
+			font-family: OMNES;
+			font-weight: 400;
+			font-style: italic;
+			font-size: 60px;
+
+			strong {
+				font-family: OMNES;
+				font-weight: 500;
+				font-style: normal;
+			}
+
+			sup {
+				font-family: OMNES;
+				font-weight: 300;
+				font-size: 60%;
+			}
+
+			@media only screen and (max-width: 1199px) {
+				font-size: 40px;
+			}
+		}
+
+		p {
+			color: #999;
+			font-size: 18px;
+			margin-top: 0;
+
+			@media only screen and (max-width: 1199px) {
+				font-size: 15px;
+				width: 200px;
+			}
+		}
+
+		.plans-hero-span {
+			line-height: 1.15;
+			margin-top: 10px;
+		}
+
+		@media only screen and (max-width: 1199px) {
+			margin: 50px 0 0 45px;
+		}
+	}
+
+	.hero-message {
+		background: #3a9cd6;
+		border-radius: 10px;
+		float: right;
+		height: 180px;
+		margin: 8px 20px 0 0;
+		position: relative;
+		width: 250px;
+
+		&:after {
+			border: 12px solid transparent;
+			border-right-color: #3a9cd6;
+			content: '';
+			height: 0;
+			left: -22px;
+			margin-top: -22px;
+			position: absolute;
+			top: 50%;
+			width: 0;
+		}
+
+		.price-point {
+			color: #fff;
+			float: left;
+			font-family: OMNES;
+			font-size: 16px;
+			font-weight: bold;
+			margin: 14px 0 0 30px;
+			text-align: center;
+			text-transform: uppercase;
+			width: 200px;
+
+			span {
+				display: block;
+				font-family: OMNES;
+				font-weight: 300;
+				font-size: 82px !important;
+
+				sup {
+					font-size: 40px;
+					padding-top: 20px;
+					top: -7px;
+				}
+			}
+
+			em {
+				float: right;
+				font-family: helvetica, arial, sans-serif;
+				font-style: normal;
+				font-size: 13px;
+				line-height: 1.25;
+				padding-top: 9px;
+				width: 70px;
+			}
+
+		}
+
+		& > img {
+			float: right;
+			margin-top: 20px;
+
+			@media only screen and (max-width: 1199px) {
+				width: 30%;
+				margin-top: 30px;
+			}
+		}
+
+		& > small {
+			clear: both;
+			color: #e5f5ff;
+			display: block;
+			font-size: 10px;
+			line-height: 1.25;
+			padding: 5px 10px 0 10px;
+			position: relative;
+			text-align: center;
+			top: -5px;
+
+			@media only screen and (max-width: 1199px) {
+				font-size: 9px;
+			}
+		}
+	}
+
+	@media only screen and (max-width: 1199px) {
+		background-position: 245px center;
+	}
+} // .uverse-inner-hero
+
+
+// digital life
+.hero-digital-life {
+
+    .grid-16 {
+        background: {
+            image: url('/assets/desktop-a/images/heroes/hero-digital-life.png');
+            repeat: no-repeat;
+        }
+        border-radius: 10px;
+        color: $color-gray-darkest;
+        font-family: OMNES;
+        height: 455px;
+        margin: {
+            bottom: 10px;
+            top: 10px;
+        }
+        padding: {
+            left: 80px;
+            top: 75px;
+        }
+        @media (max-width: $mq-desktop-large - 1) {
+            background-position: 68% 50%;
+            height: 420px;
+            padding: {
+                left: 20px;
+                top: 35px;
+            }
+        }
+
+        .headline {
+            font: {
+                size: 55px;
+                weight: 300;
+            }
+            margin-bottom: 18px;
+        }// .headline
+
+        .sub-headline {
+            font: {
+                size: 22px;
+                weight: 300;
+            }
+            margin-bottom: 16px;
+            max-width: 320px;
+
+            sup {
+                position: relative;
+                top: -3px;
+            }// <sup>
+
+        }// .sub-headline
+
+        .legal-text {
+            display: block;
+            font: {
+                size: 11px;
+                weight: 300;
+            }
+            line-height: 1.1;
+            margin-bottom: 26px;
+            max-width: 395px;
+
+            .offer-details {
+                color: $color-gray-darkest;
+                text-decoration: underline;
+            }// .offer-details
+
+        }// .legal-text
+
+        .divider {
+            background-color: $color-gray-darker;
+            height: 3px;
+            margin-bottom: 28px;
+            width: 55px;
+        }// .divider
+
+        .cta {
+            display: block;
+            font: {
+                size: 18px;
+                weight: 300;
+            }
+            max-width: 320px;
+
+            .h-phone {
+                color: $color-blue;
+                display: block;
+                font: {
+                    size: 35px;
+                    weight: 400;
+                }
+                margin-top: 5px;
+            }// .h-phone
+
+        }// .cta
+
+    }// .grid-16
+
+}// .hero-digital-life
+
+
+// VRC P&P HERO FIX
+//Hack so each VRC hero doesn't need this fix individually
+// Problem with VRC Card Image sitting on top of a tool-top link
+.uverse-inner-hero {
+
+	.title-wrap {
+	    display: block;
+	    z-index: 10;
+	    position: relative;
+	}// .title-wrap
+
+	.vrc-image {
+	    display: block;
+	    z-index: 0;
+	}
+
+}//.uverse-inner-hero
+
+
+
+.hero-slide {
+	display: block;
+	.label {
+		font-size: 13px;
+		display: block;
+    margin: 0 auto;
+		top: 10px;
+		@media only screen and (max-width: 1199px) {
+			font-size: 11px;
+		}
+	} // END .label
+	.price {
+		margin-top: 5px;
+	}
+	.currency {
+		font-size: 34px !important;
+		font-family: OATTLI;
+		text-shadow: 0 1px 0 rgba(0,0,0,0.7);
+		margin: 30px 0 0 10px;
+	}
+	.base {
+		font-size: 110px !important;
+		font-family: OATTLI;
+		text-shadow: 0 1px 0 rgba(0,0,0,0.7);
+		@media only screen and (max-width: 1199px) {
+			font-size: 80px !important;
+		}
+	}
+
+	.price-legal {
+		top: 15px;
+		right: 55px;
+		small {
+			font-size: 9px;
+			top: -5px;
+			position: relative;
+			padding: 0 35px;
+			@media only screen and (max-width: 1199px) {
+				padding: 0 50px;
+			}
+		}
+		@media only screen and (max-width: 1199px) {
+			top: 45px;
+			right: 0px;
+			.ie7 &, .ie8 & {
+				top: 25px;
+				right: 20px;
+			}
+		}
+	} // END .price-legal
+
+	.price-legal-bundle .frequency {
+		font-size: 12px;
+	}
+
+} // END .hero-slide
+
+.hero-wrapper {
+	height: 380px;
+}
+
+// SLIDE 1
+.slide-uverse {
+	.hero-img {
+		background: url(/images/slides/slide-uverse.jpg) no-repeat;
+
+		@media only screen and (max-width: 1199px) {
+			background: url(/images/slides/slide-uverse-960.jpg) no-repeat;
+		}
+	}
+
+	.label {
+		@media only screen and (max-width: 1199px) {
+			font-size: 13px;
+		}
+	} // END .label
+	.base {
+		@media only screen and (max-width: 1199px) {
+			font-size: 110px !important;
+		}
+	}
+
+	.price-legal-bundle .frequency {
+		font-size: 12px;
+	}
+
+	.price-legal {
+		right: 537px;
+		top: 112px;
+
+		@media only screen and (max-width: 1199px) {
+			right: 383px;
+			top: 118px;
+		}
+	}
+
+	.tv-promo {
+		position: absolute;
+		top: 180px;
+		left: 294px;
+		width: 165px;
+		height: 165px;
+		padding: 40px 0 0 0;
+		color: #fff;
+		text-align: center;
+
+		@media only screen and (max-width: 1199px) {
+			left: 274px;
+		}
+
+		.base {
+			font-size: 50px !important;
+		}
+
+		.currency {
+			font-size: 25px !important;
+			margin: 0 0 0 15px;
+		}
+
+		.price {
+			color: #fff;
+			left: 0;
+		}
+
+		.subunit_wrap {
+			margin-top: 10px;
+		}
+
+		small {
+			float: left;
+			font-family: arial, sans-serif;
+			font-size: 9px;
+			line-height: 1.25;
+			font-style: normal;
+			padding: 5px 22px;
+			text-align: center;
+		}
+	}
+} // END .slide-uverse
+
+// SLIDE 2
+.slide-double {
+	.hero-img {
+		background: url('/images/159/slide-double.jpg') no-repeat;
+		@media only screen and (max-width: 1199px) {
+			background-size: 107%;
+			background-position: center center;
+		}
+		.ie7 &, .ie8 & {
+			filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+			src='/images/159/slide-double.jpg',
+			sizingMethod='scale');
+			-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader( src='/images/159/slide-double.jpg', sizingMethod='scale')";
+			background-image: none !important;
+		}
+	} // END .hero-img
+	.hero-info {
+		padding-top: 25px;
+	}
+	@media only screen and (max-width: 1199px) {
+		h2 {
+			padding-right: 200px;
+		}
+	}
+} // END .slide-double
+
+// SLIDE 3
+.slide-triple {
+	.hero-img {
+		background: url('/images/159/slide-triple.jpg') no-repeat;
+		@media only screen and (max-width: 1199px) {
+			background-size: 107%;
+			background-position: center center;
+		}
+		.ie7 &, .ie8 & {
+			filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+			src='/images/159/slide-triple.jpg',
+			sizingMethod='scale');
+			-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader( src='/images/159/slide-triple.jpg', sizingMethod='scale')";
+			background-image: none !important;
+		}
+	} // END .hero-img
+	&.hero-slide {
+		.price-legal {
+			top: 25px;
+			@media only screen and (max-width: 1199px) {
+				top: 58px;
+			}
+		}
+		.price {
+			margin-top: 0;
+		}
+		.label {
+			padding: 0 50px;
+			font-size: 12px;
+			@media only screen and (max-width: 1199px) {
+				font-size: 10px;
+			}
+		}
+	} // END .hero-slide
+	.hero-info {
+		padding-top: 30px;
+		p {
+			padding-right: 150px;
+		}
+	} // END .hero-info
+	@media only screen and (max-width: 1199px) {
+		.hero-info {
+			padding-top: 20px;
+			h3 {
+				padding-right: 200px;
+			}
+			p {
+				padding-right: 200px;
+			}
+		}
+	}
+} // END .slide-triple
+
+
+
+// wireless hero (kept the hero-slide naming convention because i needed inherited styles and dont have time to start from scratch
+.hero-wrapper--wireless {
+	height: auto !important;
+	margin-bottom: 0;
+}
+.hero-slide--wireless {
+	background: url(/assets/desktop-a/images/heroes//hero-samsung-galaxy.png) no-repeat right bottom;
+	padding-bottom: 89px;
+
+	.btn {
+		cursor: pointer;
+		background-color: #ff7900;
+		border-radius: 5px;
+		font-family: OATTM;
+		padding: 14px 36px;
+		text-shadow: none;
+		text-transform: none;
+
+		&.is-tertiary {
+			background-color: $color-blue;
+		}// &.is-tertiary
+	}// .btn
+
+	// i dont understand why there are so many absolutely positioned elements on this site
+	.hero-info-wrapper {
+		position: static;
+	}
+
+	// content
+	.hero-info {
+		padding: 80px 0 0 30px;
+		position: static;
+		width: 50%;
+
+		h2 {
+			font-size: 32px;
+
+			@media (min-width: $mq-desktop-large ) {
+				font-size: 36px;
+			}
+		}
+		p {
+			color: #7f7f7f;
+			font-size: 18px;
+			line-height: 1.3;
+			margin-top: 5px;
+			padding-right: 0;
+		}
+		.legal {
+			font-size: 10px;
+		}
+
+	} // .hero-info
+
+} // .hero-slide--wireless
+
+//-----------------------------
+// HERO: WIRELESS IPHONE
+//-----------------------------
+.hero--wireless-iphone {
+
+    .hero-wrapper {
+        background: #000 url(/assets/desktop-a/images/heroes/hero-iphone7-front-back.png);
+        background: {
+            position: 150px bottom;
+            repeat: no-repeat;
+            size: 330px;
+        }
+        border-radius: 10px;
+        height: 400px;
+        margin: 20px 0;
+
+    }// .hero-wrapper
+
+    // hero message
+    .hero__message {
+		color: $color-white;
+		font-size: 60px;
+		font-weight: 300;
+		line-height: 1;
+        margin: 120px 50px 0 0;
+        padding: 0;
+        text-align: left;
+
+		p {
+			line-height: 1;
+		}// p
+
+		.call-now {
+			font-size: 22px;
+			padding-top: 1rem;
+
+			.phone-number {
+				color: $color-blue;
+			}// .phone-number
+		}// .call-now
+    }// .hero__message
+
+}// .hero--wireless
+
+
+// Slick Slider Customizations
+
+.slick { // fix the flash of unstyled content that appears
+	display: none;
+
+	&-initialized {
+		display: block;
+	}// .slick-initialized
+
+}// .slick
+
+.slick-slider {
+	margin-bottom: 0;
+}// .slick-slider
+
+.slick-dots {
+	bottom: 3rem;
+	width: 100%;
+	position: absolute;
+	margin-left: 0;
+	text-align: center;
+
+	li {
+		display: inline-block;
+
+		button {  // Reseting many of the base styles from slick
+			font-size: 0;
+			line-height: 0;
+			display: block;
+			width: 20px;
+			height: 20px;
+			padding: 5px;
+			cursor: pointer;
+			color: transparent;
+			border: 0;
+			outline: none;
+			background: transparent;
+		}// button
+	}// li
+
+	li button:before { // Reseting many of the base styles from slick
+		font-family: slick;
+		font-size: 40px;
+		line-height: 20px;
+		top: 0px;
+		left: 0px;
+		width: 20px;
+		height: 20px;
+		content: "•";
+		text-align: center;
+		opacity: 1;
+		color: $color-gray-darker;
+		-webkit-font-smoothing: antialiased;
+	}//li button:before
+
+	li.slick-active button:before {
+		color: $color-blue;
+	}// li .slick-active button:before
+}// .slick-dots
+
+
+//-------------------------------- 
+// DTV In-Body Price Point Legal
+//-------------------------------- 
+// This styles ONLY the extended price point legal implemented for 3/29/17 offer change
+.inner-hero {
+	.extended-legal-in-body {
+		display: block;
+		position: absolute;
+		left: -41rem;
+		bottom: 0;
+		color: black;
+        max-width: 15rem;
+	}// .extended-legal-in-body
+}// .hero 
+
+.hero-directv-wrapper {
+    .extended-legal-in-body {
+		display: block;
+        position: absolute;
+        left: -16rem;
+        bottom: -1rem;
+        color: black;
+        max-width: 16rem;
+	}// .extended-legal-in-body
+}// .hero-directv-wrapper
+
+
+.ih-plans .price-legal {  // Overriding unfound CSS
+    top: 10px;
+}// .ih-plans .price-legal
+
+
+// HERO OVERLAY
+
+@include keyframes(bounceDown) {
+	0% {
+		top: -534px;
+	}
+	37%  {
+		top: 192px;
+	}
+	55%  {
+		top: -8px;
+	}
+	73%  {
+		top: 192px;
+	}
+	82%  {
+		top: 142px;
+	}
+	91%  {
+		top: 192px;
+	}
+	96%  {
+		top: 182px;
+	}
+	100% {
+		top: 197px;
+	}
+}
+
+.is-primary-alt {
+	background-color: #000;
+}
+
+.hero-overlay {
+	.overlay-close {
+        border: 1px solid #fff;
+        border-radius: 100%;
+		color: #fff;
+		cursor: pointer;
+		position: absolute;
+		top: 10px;
+		right: 10px;
+		z-index: 9999;
+        width: 25px;
+        height: 25px;
+        font-size: 20px;
+
+        b {
+            position: relative;
+            right: -7px;
+        }
+	}
+
+	.row {
+		overflow: visible;
+
+		.hero-content {
+            font-family: 'OATTL';
+			@include clearfix;
+			position: absolute;
+			top: -100%;
+			height: 380px;
+			z-index: 9999;
+			width: 1180px;
+			padding: 95px 30px;
+			background-size: cover;
+			@include linear-gradient(to left, #0176ad 0%, #3ac7f5 100%);
+			border-radius: 7px;
+			margin-top: 109px;
+			@include animation( bounceDown 1000ms ease-in forwards);
+			@include animation-delay(3000ms);
+			@include animation-timing-function(ease-in);
+
+			@media only screen and (max-width: 1199px) {
+				width: 940px;
+				margin-top: 80px;
+				padding: 95px 30px;
+			}
+
+			&.is-closed {
+				display: none;
+			}
+
+			.vrc {
+				left: -100px;
+				float: left;
+				position: relative;
+				top: 9px;
+
+				@media only screen and (max-width: 1199px) {
+					left: -50px;
+				}
+
+				img {
+					display: block;
+				}
+			}
+
+            &__message {
+                color: $white-color;
+
+                span {
+                    display: block;
+                    font-size: 50px;
+
+                    @media only screen and (max-width: 1199px) {
+        				font-size: 45px;
+        		    }
+                }// span
+
+                .legal-text {
+                    display: block;
+                    line-height: 1.25;
+                    max-width: 55%;
+                    padding-top: 30px;
+
+					span {
+						display: inline-block;
+						font-size: 10px;
+					}
+                }// .legal-text
+            } // &__message
+
+            &__vrc-offer {
+                color: $white-color;
+                padding-top: 20px;
+
+                .vrc-image {
+                    float: left;
+                }// vrc-image
+
+                .vrc-offer-content {
+                    float: left;
+                    font-size: 19px;
+                    font-style: italic;
+                    max-width: 60%;
+                    padding-left: 20px;
+
+                    @media only screen and (max-width: 1199px) {
+        				font-size: 15px;
+                        max-width: 49%;
+        		    }
+
+                    .btn {
+                        background-color: $orange;
+                        border-radius: 7px;
+                        font-style: normal;
+                        margin-top: 10px;
+                    }
+
+                    p {
+                        line-height: 1.25;
+                    }//p
+                }// vrc-offer-content
+
+            }// &__vrc-offer
+
+		}// .hero-content
+	}
+
+	.hero-price {
+		position: absolute;
+		top: 20px;
+		right: 20px;
+		border-radius: 7px;
+		padding: 20px;
+		width: 270px;
+		height: 230px;
+
+		.label {
+			display: block;
+			color: $white-color;
+			font-size: 12px;
+			text-align: center;
+		}
+
+		small {
+			display: block;
+			clear: both;
+			text-align: center;
+			font-size: 10px;
+			line-height: 1.25;
+			color: #ccc;
+			margin-bottom: 15px;
+			@media only screen and (max-width: 1199px) {
+				padding: 0 25px;
+			}
+		}
+
+		a {
+			color: #fff;
+			text-decoration: underline;
+
+			&:hover {
+				text-decoration: none;
+			}
+		}
+
+		.link-plans {
+			display: block;
+			text-align: center;
+		}
+	}
+
+	.price {
+		color: $white-color;
+		font-style: normal;
+
+		.currency {
+			text-shadow: none;
+			font-size: 40px;
+			margin-top: 30px;
+		}
+
+		.base {
+			font-size: 105px;
+		}
+
+		.subunit_wrap {
+			font-size: 35px;
+		  	font-weight: lighter;
+			margin-top: 20px;
+			margin-left: 15px;
+		}
+
+		a {
+			text-align: center;
+			color: $white-color;
+			text-decoration: underline;
+		}
+	}
+}// hero-overlay

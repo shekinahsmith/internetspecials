@@ -1,0 +1,86 @@
+////
+// Buttons
+////
+
+.button {
+	@include transition(all 500ms);
+	display: inline-block;
+	font-family: OATTM;
+	font-size: 20px;
+	line-height: 50px;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 0 !important;
+	padding-bottom: 0 !important;
+	text-transform: uppercase;
+	border-radius: 10px;
+	border: none;
+	text-shadow: none !important;
+}
+// .button
+
+.button.is-wide {
+	padding-left: 40px;
+	padding-right: 40px;
+}
+// .button.is-wide
+
+.button.is-orange {
+	color: $color-white;
+	background-color: $color-orange;
+
+	&:hover {
+		background-color: lighten($color-orange, 10%);
+	}
+}
+// .button.is-orange 
+
+.button.is-white {
+	color: $color-grey-dark;
+	background-color: $color-white;
+
+	&:hover {
+		background-color: $color-grey-light;
+	}
+}
+// .button.is-white 
+
+.button.is-blue {
+	color: $color-white;
+	background-color: $color-blue;
+
+	&:hover {
+		background-color: lighten($color-blue, 10%);
+	}
+}
+// .button.is-blue 
+
+.button.is-blue-light {
+	color: $color-white;
+	background-color: #089be5;
+
+	&:hover {
+		background-color: lighten(#089be5, 5%);
+	}
+}
+// .button.is-blue-light 
+
+.button.is-grey-light {
+	color: $color-grey-dark;
+	background-color: $color-grey-light;
+
+	&:hover {
+		background-color: darken($color-grey-light, 5%);
+	}
+}
+// .button.is-grey-light
+
+.button.is-grey-dark {
+	color: $color-white;
+	background-color: $color-grey-dark;
+
+	&:hover {
+		background-color: $color-grey;
+	}
+}
+// .button.is-grey-dark

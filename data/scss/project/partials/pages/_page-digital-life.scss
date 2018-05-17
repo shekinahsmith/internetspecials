@@ -1,0 +1,522 @@
+////
+// Page - Digital Life
+////
+
+.page-digital-life {
+
+    .tooltip-plus {
+        border: 1px solid $color-gray-darkest;
+        border-radius: 100%;
+        color: $color-gray-darkest;
+        cursor: pointer;
+        display: block;
+        font: {
+            family: OMNES;
+            size: 14px;
+        }
+        height: 18px;
+        line-height: 10px;
+        padding-top: 2px;
+        text-align: center;
+        width: 18px;
+        &:hover, &:focus {
+            background-color: $color-gray-darkest;
+            color: $color-white;
+        }// &:hover, &:focus
+    }//.tooltip-plus
+
+    .section-digital-benefits {
+        @include linear-gradient(#fff, #f1f1f1);
+        height: 255px;
+        padding: 40px 0 32px;
+
+        @media (max-width: $mq-desktop-large - 1) {
+            width: 100%;
+        }
+
+        .row,
+        .grid-16 {
+            height: 100%;
+        }// .row, .grid-16
+
+        .benefit {
+            float: left;
+            height: 100%;
+            padding-top: 25px;
+            text-align: center;
+            width: 33.33333%;
+
+            &.monitoring,
+            &.notifications {
+                border-right: 1px solid #c3c3c3;
+            }// &.monitoring, &.notifications
+
+        }// .benefit
+
+        .icon {
+            margin-bottom: 24px;
+        }// .icon
+
+        .headline {
+            color: $color-gray-darkest;
+            font: {
+                family: OMNES;
+                size: 22px;
+                weight: 300;
+            }
+        }// .headline
+
+    }// .section-digital-benefits
+
+    .section-digital-slider {
+        // height: 800px;
+        padding: 80px 0;
+
+        .slider {
+
+            .ipad-slider {
+                background: {
+                    image: url('/assets/desktop-a/images/pages/digital-life/ipad.png');
+                    repeat: no-repeat;
+                }
+                height: 490px;
+                margin: 0 auto;
+                position: relative;
+                width: 830px;
+            }// .ipad-slider
+
+            .slick-carousel--digital-life {
+                left: 164px;
+                position: absolute;
+                top: 20px;
+                width: 464px;
+            }// .slick-carousel--digital-life
+
+            .slick--next,
+            .slick--prev {
+                cursor: pointer;
+                position: absolute;
+                top: 45%;
+            }// .slick--next, .slick--prev
+
+            .slick--next {
+                right: -125px;
+            }// .slick--next
+
+            .slick--prev {
+                left: -125px;
+            }// .slick--prev
+
+            .slick-dots {
+                $d-dots: 17px;
+                bottom: -90px;
+                margin-bottom: .5em;
+
+                li {
+                    margin: 0 2px;
+                    width: $d-dots;
+
+                    button {
+                        width: $d-dots;
+                    }// button
+
+                    button:before {
+                        color: #8a8a8a;
+                        font-family: sans-serif;
+                        font-size: 35px;
+                        opacity: 1;
+                        width: $d-dots;
+
+                        .reversed & {
+                            color: #000;
+                        }// .reversed &
+
+                    }// button:before
+
+                    &.slick-active button:before {
+                        color: $color-blue;
+                        opacity: 1;
+                    }//&.slick-active button:before
+
+                }// <li>
+
+            }// .slick-dots
+
+        }// .slider
+
+        .content {
+
+            .headline {
+                color: $color-gray-darkest;
+                font: {
+                    family: OMNES;
+                    size: 42px;
+                    weight: 300;
+                }
+                line-height: 54px;
+                margin: 0 auto 20px;
+                max-width: 810px;
+                text-align: center;
+
+                .tooltip-plus {
+                    border-color: $color-gray-darkest;
+                    display: inline-block;
+                    position: relative;
+                    right: -5px;
+                    top: -18px;
+                }// .tooltip-plus
+
+                .h-phone {
+                    color: $color-blue;
+                }
+
+            }// .headline
+
+            .text {
+                color: $color-gray-darkest;
+                font: {
+                    size: 16px;
+                    weight: 300;
+                }
+                margin: 0 auto 15px;
+                padding: 0 160px;
+                text-align: center;
+            }// .text
+
+            .legal-text {
+                color: $color-gray-darkest;
+                display: block;
+                font: {
+                    size: 11px;
+                    weight: 300;
+                }
+                margin: 0 auto 28px;
+                max-width: 860px;
+                text-align: center;
+
+                .offer-details {
+                    color: $color-gray-darkest;
+                    text-decoration: underline;
+                }// .offer-details
+
+            }// .legal-text
+
+            .order-button-wrapper {
+                text-align: center;
+
+                .btn {
+                    background: $color-orange;
+                    border: 0;
+                    border-radius: 5px;
+                    font: {
+                        family: OMNES;
+                        size: 18px;
+                        weight: 400;
+                    }
+                    padding: 18px 43px;
+                    text-shadow: none;
+                }// .btn
+
+            }// .order-button-wrapper
+
+        }// .content
+
+    }// .section-digital-slider
+
+    .section-digital-grid {
+        background-color: #f2f2f2;
+        padding: 75px 0 55px;
+
+        @media (max-width: $mq-desktop-large - 1) {
+            width: 100%;
+        }
+
+        .price-grid-wrapper {
+            margin-bottom: 44px;
+            overflow: hidden;
+        }// .price-grid-wrapper
+
+        .price-grid {
+            margin: 0 auto;
+            width: 1030px;
+
+            .plan {
+                background-color: #fff;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                color: $color-gray-darkest;
+                float: left;
+                font-family: OMNES;
+                height: 1000px;
+                position: relative;
+                text-align: center;
+                width: 320px;
+
+                @media (max-width: $mq-desktop-large - 1) {
+                    width: 305px;
+                }
+
+                &.smart-security,
+                &.smart-security-and-automation {
+                    margin-right: 35px;
+
+                    @media (max-width: $mq-desktop-large - 1) {
+                        margin-right: 12px;
+                    }
+                }// &.smart-security, &.smart-security-and-automation
+
+                &.smart-security-and-automation {
+
+                    .name .headline {
+                        padding: 0 65px;
+                    }// .name .headline
+
+                }// &.smart-security-and-automation
+
+                .tooltip-plus {
+                    border-color: $color-gray-darkest;
+                    position: absolute;
+                    right: 8px;
+                    top: 8px;
+                    z-index: 999;
+                }
+
+            }// .plan
+
+            .name {
+                height: 90px;
+
+                .headline {
+                    font: {
+                        size: 26px;
+                    }
+                    padding: 0 50px;
+                    position: relative;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    @media (max-width: $mq-desktop-large - 1) {
+                        padding: 0 40px;
+                    }
+                }// .headline
+
+            }// .name
+
+            .benefits {
+                background-color: $color-blue;
+                color: #fff;
+                height: 76px;
+                padding-top: 18px;
+
+                .large-text {
+                    display: block;
+                    font: {
+                        size: 22px;
+                        weight: 300;
+                    }
+                    margin-bottom: 4px;
+                }// .large-text
+
+                .small-text {
+                    font: {
+                        size: 15px;
+                        weight: 300;
+                    }
+                }// .small-text
+
+            }// .benefits
+
+            .rate {
+                border-bottom: 1px solid #ccc;
+                font: {
+                    size: 26px;
+                    weight: 300;
+                }
+                height: 157px;
+                line-height: 40px;
+                margin: 0 auto;
+                padding-top: 20px;
+                width: 90%;
+
+                .monthly-rate {
+                    display: block;
+
+                    .bold {
+                        font-weight: 500;
+                    }
+                }// .monthly-rate
+
+                .bill-credit {
+                    display: inherit;
+                    font-size: 18px;
+                    font-weight: 500;
+                    position: relative;
+                    top: -5px;
+                }
+
+            }// .rate
+
+            .features {
+                font: {
+                    size: 18px;
+                    weight: 300;
+                }
+                line-height: 30px;
+                padding: {
+                    left: 35px;
+                    top: 25px;
+                }
+                text-align: left;
+                @media (max-width: $mq-desktop-large - 1) {
+                    padding-left: 25px;
+                }
+
+                .italic {
+                    font-style: italic;
+                }// .italic
+
+                .features-list {
+                    font: {
+                        weight: 300;
+                    }
+                    margin-bottom: 20px;
+
+                    li::before {
+                        content: '•';
+                        padding-right: 3px;
+                    }// li::before
+
+                }// .features-list
+
+            }// .features
+
+            .legal-text {
+                bottom: 0;
+                font: {
+                    size: 13px;
+                    weight: 300;
+                }
+                line-height: 15px;
+                margin-bottom: 33px;
+                padding: 0 10px;
+                position: absolute;
+
+                @media (max-width: $mq-desktop-large - 1) {
+                    padding: 0 15px;
+                }
+
+                a {
+                    color: #333;
+                    text-decoration: underline;
+                }
+
+                .offer-details {
+                    color: $color-gray-darkest;
+                    //display: block; // Based on requested change 10/16/15
+                    font-weight: 300;
+                    text-decoration: underline;
+                }// .offer-details
+
+            }// .legal-text
+
+        }// .price-grid
+
+        .call-now {
+            color: $color-blue;
+            font: {
+                family: OMNES;
+                size: 30px;
+                weight: 300;
+            }
+            text-align: center;
+
+            .h-phone {
+                font: {
+                    size: 44px;
+                    weight: 500;
+                }
+                position: relative;
+                top: 4px;
+            }// .h-phone
+
+        }// .call-now
+
+    }// .section-digital-grid
+
+    .banner-custom-package {
+        margin-top: 35px;
+
+        .grid-16 {
+            font-size: 30px;
+            padding-top: 12px;
+
+            @media (max-width: $mq-desktop-large - 1) {
+                font-size: 24px;
+            }
+        }
+
+        .bold {
+            font-weight: 500;
+        }
+    }// .banner-custom-package
+
+    .banner-digital-life-bill-credit-offer {
+        .grid-16 {
+            background-color: $color-orange;
+            border-radius: 10px;
+            color: #fff;
+            font-family: OMNES;
+            font-size: 30px;
+            font-weight: 100;
+            height: 70px;
+            line-height: 1.33333;
+            padding-top: 15px;
+            text-align: center;
+
+            @media (max-width: $mq-desktop-large - 1) {
+                font-size: 24px;
+                padding-top: 20px;
+            }
+
+            .bold {
+                font-weight: 500;
+            }
+        }
+    }// .banner-digital-life-holiday-offer
+
+    .banner-digital-life-bill-credit-legal {
+        margin: 10px 0;
+
+        .grid-16 {
+            color: #333;
+            display: block;
+            font-size: 11px;
+            font-weight: 300;
+            text-align: center;
+        }
+
+        a {
+            color: #333;
+            text-decoration: underline;
+        }
+    }// .banner-digital-life-holiday-legal
+
+    .banner-custom-package-legal {
+        margin: 33px 0;
+
+        .grid-16 {
+            color: #aaa;
+            display: block;
+            font-size: 11px;
+            line-height: 1.5;
+            font-weight: 300;
+            text-align: left;
+        }
+
+        a {
+            color: #aaa;
+            text-decoration: underline;
+        }
+    }// .banner-digital-life-holiday-legal
+
+
+}// .page-digital-life

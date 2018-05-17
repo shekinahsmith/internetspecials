@@ -1,0 +1,22 @@
+// covering the agent name with the att logo since the name generated in the header does not match the name in the chat window all the time
+
+#aio-container {
+	.aio-chat-component-header-agent {
+
+		&-name{ 
+				// att logo in chat header
+				&:before {
+				background-color: rgba(249, 249, 249, 1);
+				background-image: url("/images/logo-att.png");
+				background-repeat: no-repeat;
+				background-size: contain;
+				content: " ";
+				height: 44px;
+				left: 5px;
+				position: absolute;
+				top: 0;
+				width: 200px;
+			}
+		}
+	}// .aio-chat-compoenent-header-agent
+}// #aio-container

@@ -1,0 +1,94 @@
+<?
+	include(RV_LandingPage::find($site_settings['path']['includes'] . '/base/_header.php'));
+	include(RV_LandingPage::find($site_settings['path']['includes'] . '/masthead/_masthead.php'));
+    include(RV_LandingPage::find($site_settings['path']['includes'] . '/heroes/_hero-customer-support.php'));
+?>
+
+    <main class="main-content" role="main">
+
+        <section class="section">
+
+            <div class="row">
+
+                <div class="small-12 columns">
+
+                    <div class="devices section__devices">
+
+                        <div class="device device--tv">
+                            <img src="<?= $site_settings['path']['assets']?>/images/devices/tv.png" alt="TV">
+
+                            <div class="device__screen" style="background-image: url(<?= $site_settings['path']['assets']?>/images/movies/movie-parts/everest-tv.jpg);"></div>
+
+                        </div><!-- /.device -->
+
+                        <div class="devices__group devices__group--positioned devices__group--no-caption">
+
+                            <div class="device device--laptop device--pull-more">
+                                <img src="<?= $site_settings['path']['assets']?>/images/devices/laptop.png" alt="Home DVR">
+
+                                <div class="device__screen" style="background-image: url(<?= $site_settings['path']['assets']?>/images/movies/movie-parts/everest-laptop.jpg);"></div>
+                            </div><!-- /.device--dvr -->
+
+                            <div class="device device--shadow device--tablet-horizontal device--push-more">
+                                <img src="<?= $site_settings['path']['assets']?>/images/devices/tablet-hz-black.png" alt="Laptop">
+
+                                <div class="device__screen" style="background-image: url(<?= $site_settings['path']['assets']?>/images/movies/movie-parts/everest-tablet.jpg);"></div>
+
+                            </div><!-- /.device -->
+
+                        </div> <!-- /.devices__group -->
+
+                    </div><!-- /.devices -->
+
+                </div><!-- /.columns -->
+
+            </div><!-- /.row -->
+
+            <div class="row">
+
+                <div class="small-12 columns">
+
+                    <h2 class="section__headline">Get more from AT&T</h2>
+                    <h4 class="section__subheadline">Upgrade your Internet plan or add DIRECTV</h4>
+                    
+                    <p>Get enhanced entertainment options, faster Internet and reliable service all in one place!</p>
+
+                    <div class="button button--primary button--block button--centered js-track" data-tracker='<?= rv_tracker_attrs($trackPage, "Sub1", "Upgrade"); ?>'><span class="h-phone" data-c2c-parent="button">Call for details</span></div>
+
+                    <p class="legal legal--movie-caption"><?=$site_settings['movie']['featured']['5']['image']['caption']; ?></p>
+
+                </div><!-- /.columns -->
+
+            </div><!-- /.row -->
+
+        </section><!-- /.section -->
+
+        <section class="section section--secondary section--image-cover" style="background-image: url(<?= $site_settings['path']['assets']; ?>/images/sections/woman-sitting-with-boxes.png); background-position: bottom center; padding-bottom: 248px;">
+
+            <div class="row">
+
+                <div class="small-12 columns">
+
+                    <h2 class="section__headline">Moving? Get AT&T or<br>DIRECTV in your new place.</h2>
+
+                    <p>Transfer current AT&T services and get standard professional installation at no additional charge. Check to make sure you can get internet or TV service at your new place.</p>
+
+                    <div class="button button--secondary button--block button--centered js-track" data-tracker='<?= rv_tracker_attrs($trackPage, "Sub2", "Moving"); ?>'><span class="h-phone" data-c2c-parent="button">Call Now</span></div>
+
+                </div><!-- /.columns -->
+
+            </div><!-- /.row -->
+
+        </section><!-- /.section -->
+
+    <?
+        include(RV_LandingPage::find($site_settings['path']['includes'] . '/banners/_banner--my-account.php'));
+	    include(RV_LandingPage::find($site_settings['path']['includes'] . '/banners/_banner--get-help.php'));
+    ?>
+
+    </main><!-- /.main-content -->
+
+<?
+	include(RV_LandingPage::find($site_settings['path']['includes'] . '/mastfoot/_mastfoot.php'));
+	include(RV_LandingPage::find($site_settings['path']['includes'] . '/base/_footer.php'));
+?>

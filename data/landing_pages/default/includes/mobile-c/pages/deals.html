@@ -1,0 +1,204 @@
+<?
+	include(RV_LandingPage::find($site_settings['path']['includes'] . '/base/_header.php'));
+	include(RV_LandingPage::find($site_settings['path']['includes'] . '/masthead/_masthead.php'));
+    include(RV_LandingPage::find($site_settings['path']['includes'] . '/heroes/_hero-deals.php'));
+?>
+
+<main role="main">
+
+    <section class="section section--deals">
+
+        <div class="row">
+
+            <div class="columns small-centered small-12">
+
+                <div class="deals-sort">
+
+                    <div class="deals-sort__headline">Filter deals by:</div>
+
+                    <form name="dealsCategory" class="deals-sort__form js-deals-sort__form">
+
+                        <div class="deals-sort__form-button deals-sort__form-button--show-all">
+
+                            <label class="deals-sort__form-label js-track" for="deals-sort-all" onclick="" data-tracker='
+                            <?= rv_tracker_attrs($trackPage, "DealsFilter", "All"); ?>'>
+
+                                <input type="radio" name="deal" value="all" id="deals-sort-all" data-filter="*" checked>
+                                <div class="deals-sort__form-check deals-sort__form-check--show-all"></div>
+
+                                All
+                            </label>
+
+                        </div><!-- /.deals-sort__form-button -->
+
+                        <div class="deals-sort__form-button deals-sort__form-button--internet">
+
+                            <label class="deals-sort__form-label js-track" for="deals-sort-internet" onclick="" data-tracker='
+                            <?= rv_tracker_attrs($trackPage, "DealsFilter", "Internet"); ?>'>
+
+                                <input type="radio" name="deal" value="internet" id="deals-sort-internet" data-filter=".category-internet">
+                                <div class="deals-sort__form-check deals-sort__form-check--internet"></div>
+
+                                Internet
+                            </label>
+
+                        </div><!-- /.deals-sort__form-button -->
+
+                        <div class="deals-sort__form-button deals-sort__form-button--tv">
+
+                            <label class="deals-sort__form-label js-track" for="deals-sort-tv" onclick="" data-tracker='
+                            <?= rv_tracker_attrs($trackPage, "DealsFilter", "TV"); ?>'>
+
+                                <input type="radio" name="deal" value="tv" id="deals-sort-tv" data-filter=".category-tv">
+                                <div class="deals-sort__form-check deals-sort__form-check--tv"></div>
+
+                                TV
+                            </label>
+
+                        </div><!-- /.deals-sort__form-button -->
+
+                        <div class="deals-sort__form-button deals-sort__form-button--bundles">
+
+                            <label class="deals-sort__form-label js-track" for="deals-sort-bundles" onclick="" data-tracker='
+                            <?= rv_tracker_attrs($trackPage, "DealsFilter", "Bundles"); ?>'>
+
+                                <input type="radio" name="deal" value="bundles" id="deals-sort-bundles" data-filter=".category-bundles">
+                                <div class="deals-sort__form-check deals-sort__form-check--bundles"></div>
+
+                                Bundles
+                            </label>
+
+                        </div><!-- /.deals-sort__form-button -->
+
+                    <form><!-- /.deals-sort__form -->
+
+                </div><!-- /.deals-sort -->
+
+                <div class="deal-boxes js-deal-boxes">
+
+                    <div class="deal-box deal-box--unlimited-data category-bundles">
+
+                        <div class="deal-box__wrapper">
+
+                            <div class="deal-box__headline">
+
+                                <div class="headline-icon"><svg class="icon icon-flat--bundle-internet-phone" width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg"><title>icon-flat/bundle-internet-phone</title><path d="M32.185 22.604a.658.658 0 0 1-.679.669H13.453v-7.828a.863.863 0 0 0-.874-.859H9.57v-4.2c0-.382.291-.668.68-.668h21.353c.389 0 .68.286.68.668v12.218h-.098zM12.19 15.541c.195 0 .291.19.291.286v9.927c0 .191-.096.288-.291.288H3.26c-.194 0-.29-.097-.29-.288v-9.927c0-.19.096-.286.29-.286h8.93zm-.68 12.504c-.485.096-.873-.286-.776-.763a.87.87 0 0 1 .582-.573c.486-.096.874.287.777.764a.867.867 0 0 1-.583.572zm-1.844-.382H8.504c-.196 0-.39-.19-.39-.381s.194-.382.39-.382h1.163c.194 0 .388.19.388.382 0 .191-.194.381-.388.381zM32.38 8H9.376c-.872 0-1.65.763-1.65 1.623v4.963H2.873a.863.863 0 0 0-.873.86v12.408c0 .478.388.86.873.86h9.706a.863.863 0 0 0 .874-.86v-2.767h6.502v1.91h-4.27a.861.861 0 0 0-.873.857c0 .478.388.86.873.86h10.483a.862.862 0 0 0 .873-.86.861.861 0 0 0-.873-.858h-4.271v-1.909h10.58c.873 0 1.65-.764 1.65-1.624V9.623C34.028 8.763 33.253 8 32.378 8z" fill="#00AFEB" fill-rule="evenodd"/></svg></div>
+
+                                <span class="headline">Unlimited data<br>allowance</span>
+
+                            </div><!-- /.deal-box__headline -->
+
+                            <p>Get an unlimited data allowance (a $30/mo. value at no add'l cost‡) by bundling AT&T Internet with DIRECTV.</p>
+
+                            <p class="legal">&dagger;Must maintain a bundle of TV and Internet on a combined bill in order to receive unlimited data allowance at no add’l charge.</p>
+
+                            <div class="button button--primary button--block js-track" data-tracker='<?= rv_tracker_attrs($trackPage, "click", "unlim data"); ?>'><span class="h-phone" data-c2c-parent="button">Call now to get this deal</span></div>
+
+                        </div><!-- /.deal-box__wrapper -->
+
+                    </div><!-- /.deal-box--unlimited-data -->
+
+                    <div class="deal-box deal-box--wireless-gateway category-internet">
+
+                        <div class="deal-box__wrapper">
+
+                            <div class="deal-box__headline">
+
+                                <div class="headline-icon"><svg class="icon icon-flat--laptop" width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg"><title>icon-flat/laptop</title><path d="M26.554 21.436c0 .396-.324.72-.72.72H9.461a.722.722 0 0 1-.72-.72V11.74c0-.396.324-.72.72-.72h16.373c.396 0 .72.324.72.72v9.697zm-7.643 3.591h-2.53a.75.75 0 0 1 0-1.5h2.53a.75.75 0 0 1 0 1.5zm11.882-1.697H28.55V11.041a2.043 2.043 0 0 0-2.042-2.04H8.783a2.041 2.041 0 0 0-2.039 2.04V23.33H4.5a1.5 1.5 0 1 0 0 3h26.293a1.5 1.5 0 1 0 0-3z" fill="#009FDB" fill-rule="evenodd"/></svg> </div>
+
+                                <span class="headline">AT&T Wi-Fi<br>Gateway router at no extra cost</span>
+                            </div>
+
+                            <p>Connect your devices with the included Wi-Fi Gateway plus enjoy professional installation.</p>
+
+                            <p class="legal">Use of Wi-Fi at home will count towards your Internet service data plan.</p>
+
+                            <div class="button button--primary button--block js-track" data-tracker='<?= rv_tracker_attrs($trackPage, "click", "wifi router"); ?>'><span class="h-phone" data-c2c-parent="button">Call now to get this deal</span></div>
+
+                        </div>
+                        <!-- /.deal-box__wrapper -->
+
+                    </div><!-- /.deal-box--wireless-gateway -->
+
+                    <div class="deal-box deal-box--mobile-data category-internet">
+
+                        <div class="deal-box__wrapper">
+
+                            <div class="deal-box__headline">
+
+                                <div class="headline-icon"><svg class="icon icon-flat--laptop" width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg"><title>icon-flat/laptop</title><path d="M26.554 21.436c0 .396-.324.72-.72.72H9.461a.722.722 0 0 1-.72-.72V11.74c0-.396.324-.72.72-.72h16.373c.396 0 .72.324.72.72v9.697zm-7.643 3.591h-2.53a.75.75 0 0 1 0-1.5h2.53a.75.75 0 0 1 0 1.5zm11.882-1.697H28.55V11.041a2.043 2.043 0 0 0-2.042-2.04H8.783a2.041 2.041 0 0 0-2.039 2.04V23.33H4.5a1.5 1.5 0 1 0 0 3h26.293a1.5 1.5 0 1 0 0-3z" fill="#009FDB" fill-rule="evenodd"/></svg> </div>
+
+                                <span class="headline">Save on<br>mobile data</span>
+
+                            </div>
+
+                            <p>Access to the national AT&T Wi-Fi Hot Spot network is included at no extra charge with an AT&T Internet plan.</p>
+
+                            <p class="legal">Wi-Fi enabled device required. Other restrictions apply. See www.attwifi.com for details and locations.</p>
+
+                            <div class="button button--primary button--block js-track" data-tracker='<?= rv_tracker_attrs($trackPage, "click", "mobi data"); ?>'><span class="h-phone" data-c2c-parent="button">Call now to get this deal</span></div>
+
+                        </div><!-- /.deal-box__wrapper -->
+
+                    </div><!-- /.deal-box--mobile-data -->
+
+                    <div class="deal-box deal-box--two-year-guarantee category-tv">
+
+                        <div class="deal-box__wrapper">
+
+                            <div class="deal-box__headline">
+
+                                <div class="headline-icon"><svg class="icon icon-flat--tv" width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg"><title>icon-flat/tv</title><path d="M30.012 22.36c0 .397-.324.72-.72.72H5.72a.722.722 0 0 1-.72-.72V8.72c0-.396.324-.72.72-.72h23.572c.396 0 .72.324.72.72v13.64zm.2-16.36H4.8C3.81 6 3 6.81 3 7.8v15.48c0 .99.81 1.8 1.8 1.8h11.706v2.09h-4.761a1 1 0 0 0 0 2h11.522a1 1 0 1 0 0-2h-4.761v-2.09h11.706c.99 0 1.8-.81 1.8-1.8V7.8c0-.99-.81-1.8-1.8-1.8z" fill="#009FDB" fill-rule="evenodd"/></svg></div>
+
+                                <span class="headline">2 Year Price<br>Guarantee</span>
+
+                            </div>
+
+                            <p>Get DIRECTV at the same monthly price for two years when you bundle with qualifying AT&T service.</p>
+
+                            <p class="legal"><?= $attPromoTwoYearPriceGuarantee->Language->English->Legal; ?></p>
+
+                            <div class="button button--primary button--block js-track" data-tracker='<?= rv_tracker_attrs($trackPage, "click", "year price"); ?>'><span class="h-phone" data-c2c-parent="button">Call now to get this deal</span></div>
+
+                        </div><!-- /.deal-box__wrapper -->
+
+                    </div><!-- /.deal-box--two-year-guarantee -->
+
+                    <div class="deal-box deal-box--data-free-tv category-tv">
+
+                        <div class="deal-box__wrapper">
+
+                            <div class="deal-box__headline">
+
+                                <div class="headline-icon"><svg class="icon icon-flat--tv" width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg"><title>icon-flat/tv</title><path d="M30.012 22.36c0 .397-.324.72-.72.72H5.72a.722.722 0 0 1-.72-.72V8.72c0-.396.324-.72.72-.72h23.572c.396 0 .72.324.72.72v13.64zm.2-16.36H4.8C3.81 6 3 6.81 3 7.8v15.48c0 .99.81 1.8 1.8 1.8h11.706v2.09h-4.761a1 1 0 0 0 0 2h11.522a1 1 0 1 0 0-2h-4.761v-2.09h11.706c.99 0 1.8-.81 1.8-1.8V7.8c0-.99-.81-1.8-1.8-1.8z" fill="#009FDB" fill-rule="evenodd"/></svg></div>
+
+                                <div class="headline">Data<br>Free TV</div>
+                            </div>
+
+                            <p>You can stream DIRECTV on your devices, anywhere—without using your data. Now with AT&T.</p>
+
+                            <p class="legal"><?= $attPromoDataFreeTV->Language->English->Legal; ?></p>
+
+                            <div class="button button--primary button--block js-track" data-tracker='<?= rv_tracker_attrs($trackPage, "click", "data free tv"); ?>'><span class="h-phone" data-c2c-parent="button">Call now to get this deal</span></div>
+
+                        </div><!-- /.deal-box__wrapper -->
+
+                    </div><!-- /.deal-box--data-free-tv -->
+
+                </div><!-- /.section--deal-options__deal-boxes -->
+
+            </div><!-- /.columns -->
+
+        </div><!-- /. row -->
+
+    </section><!-- /.section -->
+
+    <? include(RV_LandingPage::find($site_settings['path']['includes'] . '/banners/_banner--att-home-today.php')); ?>
+
+</main><!-- /main -->
+
+
+<?
+	include(RV_LandingPage::find($site_settings['path']['includes'] . '/mastfoot/_mastfoot.php'));
+	include(RV_LandingPage::find($site_settings['path']['includes'] . '/base/_footer.php'));
+?>

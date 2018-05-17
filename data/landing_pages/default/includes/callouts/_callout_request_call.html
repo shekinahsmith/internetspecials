@@ -1,0 +1,37 @@
+<div class="grid-10 grad-tertiary callout-request-call">
+	<form name="contact_form" action="/contact_form_post2.php" method="post">
+		<h2><span>Or </span>Request a Call</h2>
+		<p>Fill out the following form and one of our AT&T experts will get in touch.</p>
+		<?
+			if( !empty($_SESSION['form_rmsg']) ) {
+		?>
+				<div class="errors">
+		<?
+					print $_SESSION['form_rmsg'];
+					unset($_SESSION['form_rmsg']);
+					unset($_SESSION['bad_fields']);
+		?>
+				</div>
+		<?
+			}
+		?> 
+		<input type="hidden" name="action" value="<?=r3e('create_lead')?>" />
+		<input type="hidden" name="ref" value="<?=r3e($_SERVER['REQUEST_URI'])?>" />
+		<input type="hidden" name="PageID" value="<?=RV_WebTools::set_pageid_form_value($_SESSION['Tracker']->pageId)?>" />
+		
+		<input type="text" name="FirstName" class="FirstName" value="<?= !$_SESSION['ContactArray']['FirstName'] ? '' : $_SESSION['ContactArray']['FirstName']; ?>" placeholder="First Name" required />
+		
+		<input type="text" name="LastName" class="LastName" value="<?= !$_SESSION['ContactArray']['LastName'] ? '' : $_SESSION['ContactArray']['LastName']; ?>" placeholder="Last Name" required />
+		
+		<input type="number" name="Phone1" class="Phone1" value="<?= !$_SESSION['ContactArray']['Phone1'] ? '' : $_SESSION['ContactArray']['Phone1']; ?>" placeholder="Phone Number" required />
+		
+		<input type="number" name="ZipCode" class="ZipCode half_width" value="<?= !$_SESSION['ContactArray']['ZipCode'] ? '' : $_SESSION['ContactArray']['ZipCode']; ?>" placeholder="ZIP Code" required pattern="(\d{5}([\-]\d{4})?)" title="enter a valid five-digit ZIP code" />
+		<input type="submit" value="Call Me" class="grad-secondary" />
+		<small>All fields required.</small>
+		<? include_once(RV_LandingPage::find('includes/consent_disclosure.php')); ?>
+			
+	<span class="form-legal"><?=$disclosureText?></span>
+	</form>
+	<!-- END form -->
+</div>
+<!-- END .callout-request-call -->

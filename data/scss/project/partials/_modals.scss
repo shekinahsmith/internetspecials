@@ -1,0 +1,1870 @@
+$font-secondary: OATTR;
+
+.js-modal {
+	display: none;
+}// .js-modal
+
+.modal {
+	background-color: rgba(#000, 0.5);
+	bottom: 0;
+	display: none;
+	left: 0;
+	position: fixed;
+	right: 0;
+	top: 0;
+	z-index: 99999;
+
+	// modal close
+	&-close {
+		background-color: #067ab4;
+		border-radius: 100%;
+		border: 2px solid #fff;
+		color: #fff;
+		cursor: pointer;
+		font-size: 15px;
+		font-weight: 700;
+		height: 30px;
+		padding: 5px;
+		position: absolute;
+		right: -15px;
+		top: -15px;
+		width: 30px;
+
+	}// .modal-close
+}
+// .modal
+
+// Limited VISA Rewards Card Modal
+.modal-limited-vrc {
+	background-color: rgba(#000,0.8);
+	bottom: 0;
+	height: 100%;
+	left: 0;
+	position: fixed;
+	right: 0;
+	text-align: left;
+	top: 0;
+	width: 100%;
+	z-index: 9999;
+
+	.modal-container {
+		-moz-transform: translateY(-50%);
+		-ms-transform: translateY(-50%);
+		-o-transform: translateY(-50%);
+		-webkit-transform: translateY(-50%);
+		margin: 0 auto;
+		max-width: 900px !important;
+		min-width: 900px !important;
+		position: relative;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 900px !important;
+	}// .modal-container
+
+	.modal-close {
+		-webkit-box-shadow: 2px 4px 15px rgba(0,0,0,.25); /* Android 2.3+, iOS 4.0.2-4.2, Safari 3-4 */
+		background-color: $color-white;
+		box-shadow: 2px 4px 15px rgba(0,0,0,.25);
+	    border-radius: 100%;
+	    color: $color-gray-darkest;
+	    cursor: pointer;
+	    font-family: OMNES;
+	    font-size: 21px;
+	    font-weight: 400;
+	    height: 30px;
+	    line-height: 17px;
+	    padding-left: -1px;
+	    position: absolute;
+	    right: -13px;
+	    text-align: center;
+	    top: -13px;
+	    width: 30px;
+	    z-index: 1;
+	}// .modal-close
+
+	.main-content {
+		background-color: #009fdb;
+		background-image: none !important;
+		border-radius: 0 !important;
+		padding: 10% !important;
+		overflow: visible !important;
+		height: auto !important;
+
+		.sublead {
+
+			&__title {
+				font-size: 30px;
+				font-weight: 400;
+				margin-bottom: 5px;
+			}
+
+			&__copy {
+				font-size: 22px;
+				font-weight: lighter;
+				line-height: 1.2;
+				padding-bottom: 0;
+			}
+
+		}
+
+		.modal-text {
+			color: $color-white;
+			font-family: OMNES;
+			font-size: 18px;
+			font-weight: 300;
+
+			.modal__heading {
+				padding-bottom: 1rem;
+
+				span {
+					display: inline-block;
+
+					&.large-text {
+						font-size: 88px;
+						font-weight: 500;
+
+						a {
+							color: $color-white !important;
+						}
+					}// &.large-text
+
+					&.small-text {
+						font-size: 36px;
+					}// &.small-text
+				}// span
+			}// .modal__heading
+
+			.call-now {
+				padding-top: 2rem;
+
+				.phone-number {
+					color: $color-white;
+					font-size: 48px;
+					font-weight: 500;
+
+					.h-phone {
+						color: $color-white;
+					}// .h-phone
+				}// .phone-number`
+
+			}// .call-now
+
+		}// .modal-text
+
+		.modal__image {
+			float: right;
+			margin-top: -15rem;
+			margin-right: -2.95rem;
+			img {
+				width: 95%;
+			}
+		}// .modal__image
+
+	}// .main-content
+
+}// .modal-limited-vrc
+
+
+
+// Mobile Address Check modal
+.modal-address-check-mobile {
+	background-color: rgba(#333, .75);
+	bottom: 0;
+	height: 100%;
+	left: 0;
+	position: fixed;
+	right: 0;
+	top: 0;
+	width: 100%;
+	z-index: 999;
+
+	.modal-container {
+		margin: 0 auto;
+		position: relative;
+		top: 50%;
+		transform: translateY(-50%);
+		-ms-transform: translateY(-50%);
+		-moz-transform: translateY(-50%);
+		-o-transform: translateY(-50%);
+		-webkit-transform: translateY(-50%);
+		width: 850px;
+		z-index: 2;
+
+		/* @media (max-width: 980px) {
+			@include transform(scale(1.5) translateY(-300px) translateZ(0));
+		} */
+	}// .modal-container
+
+	.modal-close {
+		cursor: pointer;
+		height: 60px;
+		position: absolute;
+		right: 45px;
+		text-align: center;
+		top: 45px;
+		width: 60px;
+		z-index: 1;
+		/* @media (max-width: 980px) {
+			@include transform(scale(1.75) translateZ(0));
+		} */
+
+		img {
+			width: 100%;
+		}// img
+
+	}// .modal-close
+
+	.modal-content {
+		background-color: #fff;
+		border-radius: 5px;
+		box-shadow: 0 0 79px 0 rgba(#001d2d, 1);
+		height: auto;
+		overflow: hidden;
+		padding: 62px 0 96px;
+	}// .main-content
+
+}// .modal-address-check-mobile
+
+
+.modal {
+	background-color: rgba(#000, 0.5);
+	bottom: 0;
+	display: none;
+	left: 0;
+	position: fixed;
+	right: 0;
+	top: 0;
+	z-index: 99999;
+}
+// .modal
+
+.modal-button {
+	@include transition(none);
+	border-radius: 3px;
+	cursor: pointer;
+	display: block;
+	font-family: $font-secondary;
+	font-size: 19px;
+	font-weight: 300;
+	line-height: 1.2;
+	padding: 15px 0;
+	width: 100%;
+
+	&.is-left {
+		float: left;
+		width: 48%;
+	}
+	// &.is-left
+
+	&.is-right {
+		float: right;
+		width: 48%;
+	}
+	// &.is-right
+
+	&.is-primary {
+		@include linear-gradient(#0ba0e8, #067ab4);
+		color: $color-white;
+
+		&:hover {
+			background: #067ab5;
+		}
+		// &:hover
+
+	}
+	// &.is-primary
+
+	&.is-secondary {
+		@include linear-gradient(#ef8c00, #ef6f00);
+		color: $color-white;
+
+		&:hover {
+			background: #ef6f00;
+		}
+		// &:hover
+
+	}
+	// &.is-secondary
+
+}
+// .modal-button
+
+
+// Original AT&T Modal Style (exp 1004)
+.modal-style-1 {
+
+	.modal-container {
+		$width: 910px;
+		background-color: $color-white;
+		border: 18px solid #d7d7d7;
+		left: 50%;
+		margin-left: -($width/2);
+		position: absolute;
+		top: 50%;
+		width: $width;
+	}
+	// .modal-container
+
+	.modal-content {
+		@include clearfix();
+		color: #333333;
+		font-family: $font-secondary;
+		font-weight: 300;
+		margin: 64px 30px 0;
+		padding: 60px 30px 0;
+		position: relative;
+		text-align: center;
+
+		&:before {
+			background-color: #d7d7d7;
+			content: "";
+			height: 2px;
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+		}
+		// &:before
+
+		.has-font-size-large {
+			font-size: 42px;
+		}
+		// .has-font-size-large
+
+	}
+	// .modal-content
+
+	.modal-close {
+		position: relative;
+
+		&:before {
+			cursor: pointer;
+			color: #333333;
+			content: "X";
+			position: absolute;
+			top: 30px;
+			right: 40px;
+			font-size: 30px;
+			font-weight: 300;
+		}
+		// &:before
+
+	}
+	// .modal-close
+
+}
+// .modal-style-1
+
+.modal-existing-customer-movers {
+
+	.modal-container {
+		$height: 470px;
+		height: $height;
+		margin-top: -($height/2);
+	}
+	// .modal-container
+
+	.modal-left,
+	.modal-right {
+		border: 1px dashed #d7d7d7;
+		margin-top: 40px;
+		padding: 5px 15px 15px;
+
+		p {
+			font-size: 60px;
+			font-weight: 500;
+			line-height: 1;
+			margin-bottom: 10px;
+			text-transform: uppercase;
+		}
+		// p
+
+	}
+	// .modal-left, .modal-right
+
+	.modal-left {
+		float: left;
+		width: 480px;
+
+		p {
+			color: #067ab4;
+		}
+		// p
+
+	}
+	// .modal-left
+
+	.modal-right {
+		float: right;
+		width: 250px;
+
+		p {
+			color: #ef6f00;
+		}
+		// p
+
+	}
+	// .modal-right
+
+}
+// .modal-existing-customer-movers
+
+
+// READY TO BUY MODAL (EXP 235)
+.modal-ready-to-buy {
+	a.button {
+		background-color: $color-blue;
+		font-size: 22px;
+		margin: 20px 0 5px;
+		padding: 30px !important; // More Important that Default
+
+		@media (max-width: 320px) {
+			font-size: 30px;
+		}
+
+
+		&:hover, &:focus {
+			background-color: lighten($color-blue, 5);
+		}// &:hover, &:focus
+
+	}// a.button
+
+	.modal-container {
+		background-color: #fff;
+		border-radius: 15px;
+	    left: 50%;
+		max-width: 953px;
+		padding-bottom: 20px;
+	    position: absolute;
+	    top: 50%;
+		transform: translate(-50%, -50%);
+	    width: 95%;
+	} //.modal-container
+
+	.modal-content {
+		color: #333333;
+	    font-family: OMNES;
+	    font-weight: 300;
+	    position: relative;
+	    text-align: center;
+
+
+		.modal-left,
+		.modal-right {
+			display: inline-block;
+			margin: 0 0 25px 0;
+			vertical-align: top;
+			width: 49%;
+		}// .modal-left, .modal-right
+
+		.modal-right {
+			position: relative;
+			.modal-section-heading {
+				margin-bottom: 10px;
+			}// .modal-section-heading
+			a.button {
+				margin: 23px 0 0;
+			} // a.button
+			&:before {
+				border-left: 1px #e1e1e1 solid;
+				content: '';
+				height: 300px;
+				left: 15px;
+				position: absolute;
+				top: 35px;
+			} // &:before
+		}//.modal-right
+
+		.modal-left {
+			a.button {
+				background-color: $color-green;
+				&:hover, &:focus {
+					background-color: lighten($color-green, 5);
+				}// &:hover, &:focus
+			}// a.button
+			.phone-number-display {
+				font-size: 2.25em;
+				font-weight: 700;
+			}// .phone-number-display
+		}// .modal-left
+
+		.modal-section-heading {
+			font-size: 40px;
+			margin: 0 auto;
+			padding: 30px 35px 40px;
+			text-align: center;
+
+			@media (max-width: 320px) {
+				font-size: 50px;
+				padding: 30px 65px 40px;
+			}
+		}// .modal-section-heading
+	}// .modal-content
+
+	.modal-header {
+		background-color: #e1e1e1;
+		font-size: 3.5em;
+		padding: 25px;
+		width: 100%;
+	}// .modal-header
+}//.modal-ready-to-buy
+
+
+
+//--------------------------------
+// MODAL: BASIC WIRELESS DEVICES
+//--------------------------------
+// This was ported over from desktop-b which is why its weird/differnet/sloppy
+
+.modal--wireless-device {
+	overflow: scroll;
+
+	//----------------------------------------
+	//RANDOM HELPER CLASSES FROM DESKTOP-B
+	.h-float-left {
+		float: left;
+	}// .h-float-left
+
+	.h-float-right {
+		float: right;
+	}// .h-float-right
+
+	.h-padding-top-xlarge {
+		padding-top: 3.5rem;
+	}// .h-padding-top-large
+
+	// END HELPERS
+	//----------------------------------------
+
+	.modal__container {
+		background-color: #fff;
+		border-radius: 5px;;
+		left: 50%;
+		margin-left: -450px;
+		position: absolute;
+		top: 10%;
+		width: 975px;
+	}// .modal__container
+
+	.modal__close {
+		background-color: rgba(210,210,210,0.7);
+		backface-visibility: hidden; // Promote .modal__close to it's own layer in the stacking context
+		border-radius: 100%;
+		border: none;
+		box-shadow: 0 0 0 1px rgba(210,210,210,0.8);
+		color: #000;
+		margin-right: -50px;
+		padding: .35rem .55rem;
+		position: fixed;
+		right: 50%;
+		top: 11%;
+		width: 30px;
+		height: 30px;
+
+		&:before {
+			color: $color-white;
+			content: '\2715'; // http://htmlarrows.com/symbols/multiplication-x/
+			cursor: pointer;
+			font-family: sans-serif;
+			font-size: 18px;
+			font-weight: 300;
+			line-height: 1.1;
+			position: relative;
+		}// &:before
+
+	}// .modal-close
+
+	.wireless-info {
+		padding: 90px 90px 50px;
+
+		&__image {
+			text-align: center;
+
+			img {
+				display: inline-block;
+			}// img
+		}// &__image
+
+		// description section
+		&__description {
+
+			.headline {
+				font-size: 30px;
+				font-weight: 400;
+			}// .headline
+
+			.description {
+				margin-top: 20px;
+				padding-bottom: 0;
+			}// .description
+		}// .wireless-info__description
+
+		&__feature-headline {
+			font-size: 18px;
+			font-weight: 400;
+			margin-top: 20px;
+			padding-bottom: 0;
+
+		}// .wireless-info__feature-headline
+
+		&__feature-colors,
+		&__feature-storage {
+			list-style: none;
+			margin: 10px 0 0 0;
+
+			li {
+				border-radius: 3px;
+				display: inline-block;
+				height: 30px;
+				margin: 0 10px 0 0;
+				width: 50px;
+
+				&:last-child {
+					margin-right: 0;
+				}// &:last-child
+			}// li
+		}// .wireless-info__feature-colors, .wireless-info__feature-storage
+
+		&__feature-storage {
+
+			li {
+				background-color: #f2f2f2;
+				font-size: 10px;
+				padding: 10px 0;
+				text-align: center;
+			}// li
+
+		}// .wireless-info__feature-storage
+
+		&__feature-colors {
+
+			.rose-gold {
+				background-color: #efc5c0;
+			}// .rose-gold
+
+			.gold {
+				background-color: #f1e0cb;
+			}// .gold
+
+			.grey {
+				background-color: #dcdedd;
+			}// .grey
+
+			.space-grey {
+				background-color: #a8a7ac;
+			}// .space-grey
+
+			.black {
+				background-color: #5c5c5c;
+			}// .black
+
+			.jet-black {
+				background-color: #231f20;
+			}// .jet-black
+
+			.samsung-gold {
+				background-color: #d2ccb4;
+			}// .samsung-gold
+
+			.samsung-black {
+				background-color: black;
+			}// .samsung-black
+
+			.samsung-grey {
+				background-color: #a2a2a2;
+			}// .samsung-grey
+
+			.samsung-tan {
+				background-color: #d2c3af;
+			}// .samsung-tan
+
+			.samsung-green {
+				background-color: #344e26;
+			}// .samsung-green
+
+			.samsung-grey-dark {
+				background-color: #696969;
+			}// .samsung-grey-dark
+		}// .wireless-info__feature-colors
+
+
+		&__cta {
+			font-size: 18px;
+			margin-top: 40px;
+
+			.h-phone {
+				color: $color-orange;
+				font-weight: 500;
+			}// .h-phone
+		}// &__cta
+
+	}// .wireless-info
+
+
+	.wireless-promo {
+		padding-bottom: 4rem;
+
+		&__container {
+
+			&--samsung {
+				padding: 0 2rem;
+			}// &--samsung
+
+			&--legal { // formatting legal text at the bottom of the modal
+				height: 200px;
+				margin: 3rem 0;
+				padding: 0 8.5rem;
+			}// &--legal
+		}// &__container
+
+		&__title {
+			font-size: 30px;
+			padding: 4rem 0;
+			text-align: center;
+
+			&--bottom-collapse {
+				padding-bottom: 0;
+			}// &--bottom-collapse
+		}// .wireless-promo__title
+
+		&__message {
+			font-size: 14px;
+			padding-top: 3.5rem;
+
+			&-pre-title {
+				font-size: 12px;
+				padding-bottom: .5rem;
+			}// &-pre-title
+
+			&-title {
+				font-size: 20px;
+			}// &-title
+
+			p {
+				font-size: 14px;
+				padding: 1.5rem 0;
+			}// p
+
+			ul {
+				li {
+					padding: 0;
+					padding-bottom: 0.5rem;
+				}// li
+			}// ul
+		}// &__message
+
+		&-border { // simply to control what content has a border around it inside the modal
+			border: 1px solid #cdced0;
+			border-radius: 5px;
+			margin: 0 auto;
+			width: 73%;
+
+			&--samsung {
+				padding-bottom: 4rem;
+				width: 80%;
+			}// &-samsung
+		}//.wireless-promo-border
+
+		.margin-top-collapse {
+			margin-top: -1.5rem;
+		}// .margin-top-collapse
+
+		.hr-dotted {
+			border-bottom: 1px dotted #cdced0;
+			height: 1px;
+			margin: 0 auto 1.5rem;
+			width: 90%;
+
+			&--padded {
+				padding-bottom: 2.5rem;
+			}// &-padded
+		}// .hr-dotted
+
+	}// .wireless-promo
+
+}// modal--wireless-device
+
+
+//-----------------------------------
+// MODAL: DEVICES WIRELESS IPHONE 7
+//-----------------------------------
+.modal--wireless-device-iphone7,
+.modal--wireless-device-iphone7-plus {
+
+	.wireless-promo {
+
+		&__container {
+			background-size: cover;
+			background-repeat: no-repeat;
+
+			&--main {
+				background-image: url('/assets/desktop-a/images/modals/wireless-promo--iphone/modal-promo-bg--main.jpg');
+				height: 1318px;
+			}// &--main
+
+			&--splash {
+				background-image: url('/assets/desktop-a/images/modals/wireless-promo--iphone/modal-promo-bg--splash.jpg');
+				height: 1024px;
+			}// &--splash
+
+			&--camera {
+				background-image: url('/assets/desktop-a/images/modals/wireless-promo--iphone/modal-promo-bg--camera.jpg');
+				height: 956px;
+			}// &--camera
+
+			&--two-cameras {
+				background-image: url('/assets/desktop-a/images/modals/wireless-promo--iphone/modal-promo-bg--two-cameras.jpg');
+				height: 1022px;
+			}// &--two-cameras
+
+			&--display {
+				background-image: url('/assets/desktop-a/images/modals/wireless-promo--iphone/modal-promo-bg--display.jpg');
+				height: 932px;
+			}// &--display
+
+			&--chip {
+				background-image: url('/assets/desktop-a/images/modals/wireless-promo--iphone/modal-promo-bg--chip.jpg');
+				height: 1104px;
+			}// &--chip
+
+			&--stereo {
+				background-image: url('/assets/desktop-a/images/modals/wireless-promo--iphone/modal-promo-bg--stereo.jpg');
+				height: 906px;
+			}// &--stereo
+
+			&--lte {
+				background-image: url('/assets/desktop-a/images/modals/wireless-promo--iphone/modal-promo-bg--lte.jpg');
+				height: 1208px;
+			}// &--lte
+
+			&--software {
+				background-image: url('/assets/desktop-a/images/modals/wireless-promo--iphone/modal-promo-bg--software.png');
+				height: 1000px;
+			}// &--software
+		}// .wireless-promo__container
+
+	}// .wireless-promo
+
+}//.modal--wireless-device-iphone-se
+
+
+//-----------------------------------
+// MODAL: DEVICES WIRELESS IPHONE SE
+//-----------------------------------
+.modal--wireless-device-iphone-se {
+
+	.wireless-promo {
+
+		&__container {
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: center center;
+
+			&--main {
+				background-image: url('/assets/desktop-a/images/modals/wireless-promo--iphone-se/device-iphone-se--main.jpg');
+				height: 564px;
+			}
+			&--more-to-love {
+				background-image: url('/assets/desktop-a/images/modals/wireless-promo--iphone-se/device-iphone-se--more-to-love.jpg');
+				height: 570px;
+			}
+			&--pwerful-chip {
+				background-image: url('/assets/desktop-a/images/modals/wireless-promo--iphone-se/device-iphone-se--powerful-chip.jpg');
+				height: 553px;
+			}
+			&--cemera {
+				background-image: url('/assets/desktop-a/images/modals/wireless-promo--iphone-se/device-iphone-se--camera.jpg');
+				height: 440px;
+			}
+			&--features {
+				background-image: url('/assets/desktop-a/images/modals/wireless-promo--iphone-se/device-iphone-se--photo-features.jpg');
+				height: 602px;
+			}
+			&--finger-print {
+				background-image: url('/assets/desktop-a/images/modals/wireless-promo--iphone-se/device-iphone-se--finger-print.jpg');
+				height: 388px;
+			}
+			&--apple-pay {
+				background-image: url('/assets/desktop-a/images/modals/wireless-promo--iphone-se/device-iphone-se--apple-pay.jpg');
+				height: 559px;
+			}
+			&--wifi {
+				background-image: url('/assets/desktop-a/images/modals/wireless-promo--iphone-se/device-iphone-se--wifi.jpg');
+				height: 270px;
+			}
+			&--hardware-software {
+				background-image: url('/assets/desktop-a/images/modals/wireless-promo--iphone-se/device-iphone-se--hardware-software.jpg');
+				height: 1027px;
+			}
+			&--siri {
+				background-image: url('/assets/desktop-a/images/modals/wireless-promo--iphone-se/device-iphone-se--siri.jpg');
+				height: 485px;
+			}
+			&--apps {
+				background-image: url('/assets/desktop-a/images/modals/wireless-promo--iphone-se/device-iphone-se--apps.jpg');
+				height: 475px;
+			}
+			&--switch {
+				background-image: url('/assets/desktop-a/images/modals/wireless-promo--iphone-se/device-iphone-se--switch.jpg');
+				height: 121px;
+			}
+			&--accessories {
+				background-image: url('/assets/desktop-a/images/modals/wireless-promo--iphone-se/device-iphone-se--accessories.jpg');
+				height: 400px;
+			}
+		}// .wireless-promo__container
+
+	}// .wireless-promo
+}//.modal--wireless-device-iphone-se
+
+
+// Limited VISA Rewards Card Modal
+.modal-limited-vrc {
+	background-color: rgba(#000,0.8);
+	bottom: 0;
+	height: 100%;
+	left: 0;
+	position: fixed;
+	right: 0;
+	text-align: left;
+	top: 0;
+	width: 100%;
+	z-index: 9999;
+
+	.modal-container {
+		margin: 0 auto;
+		max-width: 800px;
+		min-width: 750px;
+		position: relative;
+		top: 50%;
+		transform: translateY(-50%);
+		-ms-transform: translateY(-50%);
+		-moz-transform: translateY(-50%);
+		-o-transform: translateY(-50%);
+		-webkit-transform: translateY(-50%);
+		width: 75%;
+	}// .modal-container
+
+	.modal-close {
+		background-color: $color-white;
+	    border-radius: 100%;
+		box-shadow: 0px 0px 4px 0px #ffffff;
+		-webkit-box-shadow: 0px 0px 4px 0px #ffffff; /* Android 2.3+, iOS 4.0.2-4.2, Safari 3-4 */
+	    color: $color-gray-darkest;
+	    cursor: pointer;
+	    font-family: OMNES;
+	    font-size: 21px;
+	    font-weight: 400;
+	    height: 30px;
+	    line-height: 17px;
+	    padding-left: -1px;
+	    position: absolute;
+	    right: -13px;
+	    text-align: center;
+	    top: -13px;
+	    width: 30px;
+	    z-index: 1;
+	}// .modal-close
+
+	.main-content {
+		background-image: linear-gradient(to right, #3ac8f5 0%, #0075ac 100%);
+		border-radius: 7px;
+		height: 400px;
+		overflow: hidden;
+		padding: 70px 0rem 1rem 1rem;
+
+		.modal-text {
+			color: $color-white;
+			font-family: OMNES;
+			font-size: 18px;
+			font-weight: 300;
+
+			.modal__heading {
+				padding-bottom: 1rem;
+
+				span {
+					display: inline-block;
+
+					&.large-text {
+						font-size: 88px;
+						font-weight: 500;
+					}// &.large-text
+
+					&.small-text {
+						font-size: 36px;
+					}// &.small-text
+				}// span
+			}// .modal__heading
+
+			.modal-text__main-content {
+				width: 350px;
+			}
+
+			.call-now {
+				padding-top: 2rem;
+
+				.phone-number {
+					color: $color-white;
+					font-size: 48px;
+					font-weight: 500;
+
+					.h-phone {
+						color: $color-white;
+					}// .h-phone
+				}// .phone-number`
+
+			}// .call-now
+
+		}// .modal-text
+
+		.modal__image {
+			float: right;
+			margin-top: -15rem;
+			margin-right: -2.95rem;
+			img {
+				width: 95%;
+			}
+		}// .modal__image
+
+	}// .main-content
+
+}// .modal-limited-vrc
+
+/*-----------------------
+  @ADDRESS CHECK MODALS
+------------------------*/
+
+// Mobile Address Check modal
+.modal-address-check-mobile {
+	background-color: rgba(#333, .75);
+	bottom: 0;
+	height: 100%;
+	left: 0;
+	position: fixed;
+	right: 0;
+	top: 0;
+	width: 100%;
+	z-index: 999;
+
+	.modal-container {
+		margin: 0 auto;
+		position: relative;
+		top: 50%;
+		transform: translateY(-50%);
+		-ms-transform: translateY(-50%);
+		-moz-transform: translateY(-50%);
+		-o-transform: translateY(-50%);
+		-webkit-transform: translateY(-50%);
+		width: 850px;
+		z-index: 2;
+	}// .modal-container
+
+	.modal-close {
+		cursor: pointer;
+		height: 60px;
+		position: absolute;
+		right: 45px;
+		text-align: center;
+		top: 45px;
+		width: 60px;
+		z-index: 1;
+
+		img {
+			width: 100%;
+		}// img
+
+	}// .modal-close
+
+	.modal-content {
+		background-color: #fff;
+		border-radius: 5px;
+		box-shadow: 0 0 79px 0 rgba(#001d2d, 1);
+		height: auto;
+		overflow: hidden;
+		padding: 62px 0 96px;
+	}// .main-content
+
+}// .modal-address-check-mobile
+
+
+//-----------------------------
+// 3-Step Address Check Modal
+//-----------------------------
+.modal-address-check-three-steps {
+	background-color: rgba(#333, .75);
+	bottom: 0;
+	height: 100%;
+	left: 0;
+	position: fixed;
+	right: 0;
+	top: 0;
+	width: 100%;
+	z-index: 99999;
+
+	.modal-close {
+		cursor: pointer;
+		height: 34px;
+		position: absolute;
+		right: 2%;
+		text-align: center;
+		top: 35px;
+		width: 34px;
+		z-index: 1;
+
+		img {
+			width: 100%;
+		}// img
+
+	}// .modal-close
+
+	.modal-container {
+		@include transform(translateY(-50%));
+		background-color: #d7d7d7;
+		height: 650px;
+		margin: 0 auto;
+		padding: 8px;
+		position: relative;
+		top: 50%;
+		width: 920px;
+	}// .modal-container 
+
+	.modal-content {
+		background-color: #fff;
+		height: 100%;
+		padding: 30px;
+	}// .modal-content
+
+	.steps-counter {
+		margin-bottom: 46px;
+
+		.steps-row {
+			height: 150px;
+			margin: 0 auto 5px;
+			width: 650px;
+
+			.step-circle {
+				$circle-size: 60px; // A varible for the size of the circles
+				background-color: #e2e2e2;
+				border-radius: 100%;
+				color: #fff;
+				float: left;
+				font: {
+					family: OMNES;
+					size: 40px;
+					weight: 500;
+				}
+				height: $circle-size;
+				line-height: $circle-size;
+				position: relative;
+				text-align: center;
+				transition: background-color .25s ease;
+				width: $circle-size;
+
+				&.active,
+				&.complete {
+					background-color: $color-green;
+				}// &.active, &.complete
+
+			}// .step-circle
+
+			.step-label {
+				bottom: -60px;
+				color: $color-gray-darkest;
+				font-family: OMNES;
+				left: 50%;
+				line-height: 1;
+				position: absolute;
+				transform: translateX(-50%);
+				width: 200px;
+
+				span {
+					display: block;
+					text-align: center;
+				}// <span>
+
+				.bold {
+					font: {
+						size: 22px;
+						weight: 500;
+					}
+					margin-bottom: 8px;
+				}// .bold
+
+				.text {
+					font: {
+						size: 25px;
+						weight: 300;
+					}
+				}// .text
+
+			}// .step-label
+
+			.step-bar {
+				background-color: #e2e2e2;
+				float: left;
+				height: 6px;
+				margin: {
+					left: 8px;
+					right: 8px;
+					top: 35px;
+				}
+				position: relative;
+				width: 125px;
+
+                &.pre-bar,
+                &.post-bar {
+                    width: 63px;
+                }
+
+                &.pre-bar {
+                    border-top-left-radius: 3px;
+                    border-bottom-left-radius: 3px;
+                    overflow: hidden;
+                }
+                &.post-bar {
+                    border-top-right-radius: 3px;
+                    border-bottom-right-radius: 3px;
+                    overflow: hidden;
+                }
+
+				&.active,
+				&.complete {
+					background-color: $color-green;
+				}// &.active, &.complete
+
+				.bar-mask {
+					background-color: $color-green;
+					bottom: 0;
+					left: 0;
+					position: absolute;
+					right: 0;
+					top: 0;
+					transition: width .8s ease;
+					width: 0;
+
+					&.active {
+						border-bottom-right-radius: 3px;
+						border-top-right-radius: 3px;
+						width: 50%;
+					}// &.active
+
+					&.complete {
+						width: 100%;
+					}// &.complete
+
+				}// .bar-mask
+
+			}// .step-bar
+
+		}// .steps-row
+
+	}// .steps-counter
+
+	.main-content {
+
+		.content-box {
+			border: 1px dotted #a2a2a2;
+			border-radius: 4px;
+			box-shadow: 0 0 50px 3px rgba(#b7b7b7, .3) inset;
+			color: $color-gray-darkest;
+			font-family: OMNES;
+			padding: {
+				left: 30px;
+				top: 34px;
+			}
+
+			.btn {
+				@include linear-gradient(#0ba0e8, #067ab4);
+				border: 0;
+				border-radius: 3px;
+				font-weight: 500;
+				padding: 14px 44px;
+				text-transform: uppercase;
+			}// .btn
+
+		}// .content-box
+
+		.address-check__step {
+			overflow: hidden;
+
+			&.is-hidden {
+				display: none;
+			}// &.is-hidden
+
+			&.step-2,
+			&.step-1 {
+                text-align: center;
+                label {
+                    font-size: 22px;
+                    font-weight: 300;
+                    margin-right: 10px;
+                } // label
+                input {
+                    margin-right: 10px;
+                    &.error {
+                        border: 2px solid;
+				        border-color: #f00;
+			        }// &.error
+                } // input
+				.content-box {
+					.headline {
+						display: block;
+						font: {
+							size: 28px;
+							weight: 300;
+						}
+						margin-bottom: 30px;
+						.large-text {
+							font-weight: 500;
+							text-transform: uppercase;
+						}
+					}// .headline
+
+					.btn {
+						margin-bottom: 35px;
+					}// .btn
+
+				}// .content-box
+
+			}//&.step-1
+
+			&.step-3 {
+
+				.content-box {
+                    text-align: center;
+					.form-headline {
+						display: block;
+						font: {
+							size: 28px;
+							weight: 300;
+						}
+						margin-bottom: 30px;
+
+						.large-text {
+							font-weight: 500;
+							text-transform: uppercase;
+						}// .large-text
+
+					}// .form-headline
+
+					.btn {
+						// display: inline-block;
+						margin: 10px 0 50px;
+                        &.is-hidden {
+                            display: none;
+                        }// &.is-hidden
+					}// .btn
+
+					.loader {
+						animation: spin 1s ease-in-out infinite;
+							-webkit-animation: spin 1s ease-in-out infinite;
+						border: 3px solid rgba(255,255,255,.3);
+						border-radius: 50%;
+						border-top-color: $color-gray-darkest;
+						display: inline-block;
+						height: 50px;
+						margin: 1rem 23rem;
+						width: 50px;
+
+						@keyframes spin {
+						to { transform: rotate(360deg); }
+						}
+						@-webkit-keyframes spin {
+							to { -webkit-transform: rotate(360deg); }
+						}
+
+						&.is-hidden {
+							display: none;
+						}// &.is-hidden
+					}// .loader
+				}// .content-box
+
+			}//&.step-3
+
+		}// .address-check__step
+
+	}// .main-content
+
+	.support-link {
+		font: {
+			family: OMNES;
+			size: 24px;
+			weight: 300;
+		}
+		margin-top: 38px;
+		text-align: center;
+
+		&.is-hidden {
+			display: none;
+		}// &.is-hidden
+
+		a {
+			color: $color-gray-darkest;
+		}// <a>
+
+		.large-text {
+			font-weight: 500;
+			text-decoration: underline;
+			text-transform: uppercase;
+		}// .large-text
+
+	}// .support-link
+
+}// .modal-address-check-three-steps
+
+// CUSTOMER INTENT
+
+.modal--customer-intent {
+
+	.columns {
+		float: left;
+		height: 265px;
+		width: 33%;
+	}// .columns
+
+	.borders {
+		border-left: 1px solid $color-gray-darker;
+		border-right: 1px solid $color-gray-darker;
+	}// .borders
+
+	.modal__headline {
+		font-size: 22px;
+	}// .modal__headline
+
+	.modal__content {
+		position: relative;
+		text-align: center;
+	}// .modal-content
+
+	.modal__message {
+		padding: 2rem 1rem;
+	}// .modal__message
+
+	.modal__image {
+		height: 10rem;
+		margin: 0 auto;
+		padding: 1rem 0;
+		width: 90%;
+	}// .modal__image
+
+	.modal__button {
+		@include linear-gradient(#0ba0e8, #067ab4);
+		border-radius: 7px;
+		margin: 1rem 0;
+		width: 12rem;
+	}// .modal__button
+
+	.modal__footer {
+		padding: 17rem 0;
+		display: block;
+	}// .modal__footer
+
+}//.modal--customer-intent
+
+
+/*-----------------------
+  @EXIT MODALS
+------------------------*/
+
+// General Exit Modal Styles
+.js-modal, .js-modal-click {
+	display: none;
+}// .js-modal, .js-modal-click
+
+.modal-exit {
+	background-color: rgba(#000,.8);
+	bottom: 0;
+	height: 100%;
+	left: 0;
+	position: fixed;
+	right: 0;
+	top: 0;
+	width: 100%;
+	z-index: 9999;
+
+	.modal-container {
+		@include clearfix();
+		background: -moz-linear-gradient(top, #23a1eb, #187cb7);
+		background: -ms-linear-gradient(top, #23a1eb,#187cb7);
+		background: -o-linear-gradient(top, #23a1eb, #187cb7);
+		background: -webkit-linear-gradient(top, #23a1eb, #187cb7);
+		background: linear-gradient(top, #23a1eb, #187cb7);
+		box-shadow: 0 0 30px 8px rgba(#111, .9);
+		margin: 0 auto;
+		max-width: 800px;
+		min-width: 750px;
+		position: relative;
+		top: 50%;
+		transform: translateY(-50%);
+		-ms-transform: translateY(-50%);
+		-moz-transform: translateY(-50%);
+		-o-transform: translateY(-50%);
+		-webkit-transform: translateY(-50%);
+		width: 75%;
+
+		.att-logo {
+			left: 12px;
+			position: absolute;
+			top: 12px;
+		}// .att-logo
+
+		.modal-close {
+			border: 2px solid $color-white;
+			border-radius: 100%;
+			color: $color-white;
+			cursor: pointer;
+			font-family: arial; //CHANGE THIS!!
+			font-size: 26px;
+			font-weight: 300;
+			height: 32px;
+			line-height: 22px;
+			padding-left: 1px;
+			position: absolute;
+			right: 12px;
+			text-align: center;
+			top: 12px;
+			width: 32px;
+			z-index: 1;
+		}// .modal-close
+
+		.modal-content {
+			color: $color-white;
+			font-family: arial; //CHANGE THIS!!
+			font-weight: 300;
+			padding-bottom: 55px;
+			text-align: center;
+			width: 100%;
+
+			.bottom-bar {
+				@include clearfix();
+				background-color: $color-orange;
+				bottom: 0;
+				font-size: 30px;
+				font-weight: 400;
+				height: 55px;
+				left: 0;
+				padding: 12px 0;
+				position: absolute;
+				width: 100%;
+
+				.chat-button,
+				.cta,
+				.phone {
+					float: left;
+					margin: 0;
+				}// .chat-button, .cta, .phone
+
+				.cta,
+				.phone {
+					min-width: 262px;
+					max-width: 280px;
+					width: 35%;
+				}// .cta, .phone
+
+				.chat-button {
+					min-width: 225px;
+					max-width: 240px;
+					cursor: pointer;
+					position: relative;
+					top: -5px;
+					width: 30%;
+				}// .chat-button
+
+			}// .bottom-bar
+
+			.main-content {
+				@include clearfix();
+				width: 100%;
+
+				.modal-left,
+				.modal-right {
+					float: left;
+					width: 50%;
+				}// .modal-left, .modal-right
+
+				.price-legal {
+					height: auto;
+					position: relative;
+					top: 0;
+					width: 100%;
+
+					.label {
+						font-size: 36px;
+						font-weight: 400;
+						line-height: 1.5;
+					}// .label
+
+					.price-wrap {
+						display: inline;
+						float: none;
+						left: 0;
+						padding-left: 5px;
+						position: relative;
+						top: 10px;
+
+						.price {
+							display: inline;
+							height: auto;
+							position: static;
+
+							.base,
+							.currency,
+							.frequency,
+							.subunit_wrap {
+								display: inline;
+								float: none;
+								font-size: 36px;
+								font-style: normal;
+								font-weight: 400;
+								line-height: 1.5;
+								margin: 0;
+							}// .base, .currency, .frequency, .subunit_wrap
+
+							.base {
+								letter-spacing: normal;
+							}// .base
+
+							.subunit_wrap {
+								position: relative;
+								top: -1px;
+							}// .subunit_wrap
+
+						}// .price
+
+					}// .price-wrap
+
+					small {
+
+						.offer-details {
+							color: $color-white;
+							display: inline;
+							line-height: 1;
+							text-decoration: underline;
+						}// .offer-details
+					}
+
+				}// .price-legal
+
+			}// .main-content
+
+		}// .modal-content
+
+	}// .modal-container
+
+}// .modal-exit
+
+// AT&T U-verse TV Exit Modal
+.modal-exit--tv {
+
+	.modal-left {
+		padding-top: 80px;
+
+		.headline {
+			font-size: 65px;
+			margin-bottom: 25px;
+		}// .headline
+
+		.price-legal {
+			margin-top: -15px;
+
+			small {
+				margin-top: -4px;
+			}
+
+		}// .price-legal
+
+	}// .modal-left
+
+	.modal-right {
+		background-color: #000;
+		height: 495px;
+		position: relative;
+
+		// Guardians poster bg
+		.bg-guardians {
+			left: 0;
+			position: absolute;
+			top: 0;
+			width: 100%;
+		}// .bg-guardians
+
+		.guardians {
+			bottom: 20px;
+			font-size: 13px;
+			left: 0;
+			position: absolute;
+			width: 100%;
+
+			span {
+				font-size: 15px;
+				margin-right: 5px;
+			}
+
+			img {
+				margin-left: 5px;
+			}
+
+		}// .guardians
+
+	}// .modal-right
+
+}// .modal-exit-tv
+
+// VISA Rewards Card Exit Modal
+.modal-exit--vrc {
+
+	.modal-left {
+		padding-top: 88px;
+
+		.headline {
+			font-size: 100px;
+			margin-bottom: 2px;
+		}// .headline
+
+		.offer {
+			font-size: 18px;
+
+			.large-text {
+				display: block;
+				font-size: 24px;
+				font-weight: 400;
+				margin: 4px 0 0;
+			}// .large-text
+
+			.offer-details {
+				display: block;
+				margin-top: -4px;
+
+				a {
+					color: $color-white;
+					font-size: 9px;
+					text-decoration: underline;
+				}
+
+			}// .offer-details
+
+		}// .offer
+
+		img {
+			margin-bottom: 8px;
+		}
+
+	}// .modal-left
+
+	.modal-right {
+		background-color: #000;
+		height: 495px;
+		position: relative;
+
+		// Guardians poster bg
+		.bg-guardians {
+			left: 0;
+			position: absolute;
+			top: 0;
+			width: 100%;
+		}// .bg-guardians
+
+		.guardians {
+			bottom: 20px;
+			font-size: 13px;
+			left: 0;
+			position: absolute;
+			width: 100%;
+
+			span {
+				font-size: 15px;
+				margin-right: 5px;
+			}
+
+			img {
+				margin-left: 5px;
+			}
+
+		}// .guardians
+
+	}// .modal-right
+
+}// .modal-exit--vrc
+
+// Combo Exit Modal (VRC & U-verse TV)
+.modal-exit--combo {
+
+	.main-content {
+		padding: 28px 0 30px;
+
+		.modal-headline {
+			margin-bottom: 24px;
+
+			h2 {
+				font-size: 100px;
+			}
+
+			h3 {
+				font-size: 18px;
+				font-weight: 300;
+				margin-top: -4px;
+
+				.large-text {
+					font-size: 36px;
+					font-weight: 400;
+				}
+			}
+		}
+
+		.modal-left {
+
+			.headline {
+				font-size: 65px;
+				margin-bottom: 25px;
+			}// .headline
+
+			.price-legal {
+				margin-top: -15px;
+
+				small {
+					margin-top: -4px;
+				}
+			}// .price-legal
+
+		}// .modal-left
+
+		.modal-right {
+			padding-top: 8px;
+
+			.headline {
+				font-size: 100px;
+				margin-bottom: 2px;
+			}// .headline
+
+			.offer {
+				font-size: 18px;
+
+				.large-text {
+					display: block;
+					font-size: 24px;
+					font-weight: 400;
+					margin: 4px 0 0;
+				}// .large-text
+
+				.offer-details {
+					display: block;
+					margin-top: -4px;
+
+					a {
+						color: $color-white;
+						font-size: 9px;
+						text-decoration: underline;
+					}
+
+				}// .offer-details
+
+			}// .offer
+
+			img {
+				margin-bottom: 8px;
+			}
+		}
+
+	}// .main-content
+
+}// .modal-exit--combo

@@ -1,0 +1,109 @@
+<?
+	include(RV_LandingPage::find($site_settings['path']['includes'] . '/base/_header.php'));
+	include(RV_LandingPage::find($site_settings['path']['includes'] . '/masthead/_masthead.php'));
+    include(RV_LandingPage::find($site_settings['path']['includes'] . '/heroes/_hero-internet.php'));
+?>
+
+    <main class="main-content" role="main">
+
+        <section class="section">
+
+            <div class="row">
+
+                <div class="small-12 columns h-text-align-center">
+
+                    <h2 class="section__headline">Pick your perfect AT&T plan</h2>
+                    <p>Slide to explore Internet speeds.</p>
+
+                </div><!-- /.columns -->
+
+            </div><!-- /.row -->
+
+            <div class="row collapse">
+
+                <div class="small-12 columns">
+
+                    <div class="package-filter">
+
+                        <div class="package-filter__range-slider package-filter__range-slider--internet js-package-filter__range-slider--internet active" data-filter-group="internet">
+
+                            <?
+                                // packages are being filtered via js - cardFilter();
+                                // values per each point in range slider set in JSON object in cardFilter()
+                            ?>
+                            <div class="range-slider" data-slider data-options="start: 1; end: 4; initial: 3; step: 1;">
+                                <span class="range-slider-handle" role="slider" tabindex="0"></span>
+                                <span class="range-slider-active-segment"></span>
+                                <input type="hidden">
+                            </div>
+
+                            <ul class="range-slider-labels range-slider-labels--internet">
+                                <li class="range-slider-labels__label range-slider-labels__label--internet">10 Mbps</li>
+                                <li class="range-slider-labels__label range-slider-labels__label--internet">25 Mbps</li>
+                                <li class="range-slider-labels__label range-slider-labels__label--internet">50 Mbps</li>
+                                <li class="range-slider-labels__label range-slider-labels__label--internet">75 Mbps</li>
+                            </ul>
+
+                        </div><!-- /.package-filter__range-slider -->
+
+                    </div><!-- /.package-filter -->
+
+                </div><!-- /.columns -->
+
+            </div><!-- /.row -->
+
+            <div class="row">
+
+                <div class="small-12 columns">
+
+                    <div class="package-cards package-cards--internet js-package-cards--internet">
+
+                        <?
+                            // contains all of the package information
+                            include(RV_LandingPage::find($site_settings['path']['includes'] . '/packages/_packages-summary.php'));
+                        ?>
+
+                        <?
+                            // creating arry of all packages to be used
+                            $packagesInternet = array(
+                                $packageInternet10Mbps,
+                                $packageInternet25Mbps,
+                                $packageInternet50Mbps,
+                                $packageInternet75Mbps
+                            );
+
+                            // looping through each package array and outputing bundle 5Mbps cards
+                            foreach ($packagesInternet as $internetCard):
+
+                                // set the column template your products should use
+                                render_template(RV_LandingPage::find($site_settings['path']['includes'] . '/templates/packages/_package-bundle-stacked.php'), $internetCard, $site_settings);
+                            
+                            endforeach;
+
+                        ?>
+
+                    </div><!-- /.package-cards--internet -->
+
+                    <div class="package-cta h-text-align-center">
+
+                        <p><a href="/bundles.html" class="js-track" data-tracker='<?= rv_tracker_attrs($trackPage, "click", "view plans"); ?>'>View more DIRECTV & AT&T Internet Bundles</a></p>
+
+                        <h2 class="section__headline h-text-bold">Need help deciding?</h2>
+                        <p><a href="/help.html" class="js-track" data-tracker='<?= rv_tracker_attrs($trackPage, "Banner", "Pkg Picker"); ?>'>Use our tool</a></p>
+
+                    </div>
+
+                </div><!-- /.columns -->
+
+            </div><!-- /.row -->
+
+        </section><!-- /.section -->
+
+        <? include(RV_LandingPage::find($site_settings['path']['includes'] . '/banners/_banner--att-home-today.php')); ?>
+
+    </main><!-- /.main-content -->
+
+<?
+	include(RV_LandingPage::find($site_settings['path']['includes'] . '/mastfoot/_mastfoot.php'));
+	include(RV_LandingPage::find($site_settings['path']['includes'] . '/base/_footer.php'));
+?>

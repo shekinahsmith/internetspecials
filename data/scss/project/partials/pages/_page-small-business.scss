@@ -1,0 +1,599 @@
+/* NEW SMB STYLES */
+/*--------------------------
+  @SMALL BUSINESS PAGE
+---------------------------*/
+.page-small-business .grad-urgency {
+    background: #ff7900;
+    border: none;
+    filter: none;
+    .grad-invert {
+        background: #e44a15;
+        border: none;
+        filter: none;
+    }
+}
+.page-small-business .urgency-banner .grid-16 {
+    color: #FFFFFF;
+    font-weight: normal;
+    text-shadow: none;
+}
+
+.page-small-business .sidebar {
+    font-size: 17px;
+    font-family: OMNES;
+    font-family: OATTR;
+    font-style: italic;
+    font-weight: 300;
+    height: 435px;
+    padding: 0px;
+    margin: 170px 0px 0px;
+    float: left;
+    color: #FFF;
+    text-align: left;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.page-small-business .price-grid-blue {
+    height: 171px;
+}
+
+.page-small-business .price-grid .calling-bundle h2 {
+  letter-spacing: 0;
+  margin-top: 0; }
+
+
+.page-small-business .urgency-banner .grad-urgency {
+  background-color: $color-blue; }
+  @media (max-width: 1200px) {
+    .page-small-business .urgency-banner .grad-urgency {
+      margin-top: 20px; } }
+.page-small-business .urgency-banner .grad-invert {
+  background: none;
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  font-weight: 500; }
+  .page-small-business .urgency-banner .grad-invert.promo {
+    color: #fff; }
+.page-small-business .inner-hero.smb .grid-16 {
+  background-image: none;
+  height: 230px;
+  padding-left: 32px;
+  padding-top: 20px; }
+.page-small-business .inner-hero.smb .headline {
+  color: #067ab4;
+  font-size: 28px;
+  margin-top: 35px;
+  width: inherit; }
+  @media (max-width: 1200px) {
+    .page-small-business .inner-hero.smb .headline {
+      font-size: 26px; } }
+.page-small-business .inner-hero.smb .sub-headline {
+  color: #067ab4;
+  font-family: OMNES;
+  font-size: 42px;
+  letter-spacing: 0;
+  margin-bottom: 16px; }
+  @media (max-width: 1200px) {
+    .page-small-business .inner-hero.smb .sub-headline {
+      font-size: 36px;
+      margin-bottom: 10px; } }
+.page-small-business .inner-hero.smb .promo-text {
+  color: #666;
+  display: block;
+  font-family: OATTR;
+  font-size: 18px;
+  margin-bottom: 10px; }
+  @media (max-width: 1200px) {
+    .page-small-business .inner-hero.smb .promo-text {
+      margin-bottom: 4px; } }
+.page-small-business .inner-hero.smb .promo-text span {
+  font-family: OATTM; }
+.page-small-business .inner-hero.smb .btn, .page-small-business .inner-hero.smb .address-check .address-check-form .availability-submit, .address-check .address-check-form .page-small-business .inner-hero.smb .availability-submit {
+  background: none;
+  background-color: #067ab4;
+  border: none;
+  font-weight: 300;
+  text-shadow: none; }
+  @media (max-width: 1200px) {
+    .page-small-business .inner-hero.smb .btn, .page-small-business .inner-hero.smb .address-check .address-check-form .availability-submit, .address-check .address-check-form .page-small-business .inner-hero.smb .availability-submit {
+      font-size: 18px; } }
+  .page-small-business .inner-hero.smb .btn:hover, .page-small-business .inner-hero.smb .address-check .address-check-form .availability-submit:hover, .address-check .address-check-form .page-small-business .inner-hero.smb .availability-submit:hover {
+    background-color: #6EBDF6; }
+.page-small-business .inner-hero.smb img {
+  position: absolute;
+  right: 315px;
+  top: 15px; }
+  @media (max-width: 1200px) {
+    .page-small-business .inner-hero.smb img {
+      right: 270px;
+      max-width: 300px;
+      top: 25px; } }
+.page-small-business .inner-hero.smb .price-legal {
+  background-color: #ef6f00;
+  border-radius: 10px;
+  height: 210px;
+  position: absolute;
+  right: 25px;
+  text-shadow: none;
+  top: 8px;
+  width: 240px; }
+  @media (max-width: 1200px) {
+    .page-small-business .inner-hero.smb .price-legal {
+      height: 190px;
+      right: 15px;
+      top: 18px;
+      width: 230px; } }
+  .page-small-business .inner-hero.smb .price-legal .label {
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.2;
+    padding: 0 30px;
+    text-align: center;
+    text-transform: uppercase; }
+  .page-small-business .inner-hero.smb .price-legal .label span {
+    font-weight: 300;
+    text-transform: lowercase; }
+  .page-small-business .inner-hero.smb .price-legal .price {
+    font-family: OATTR; }
+  .page-small-business .inner-hero.smb .price-legal .base {
+    font-size: 100px; }
+    @media (max-width: 1200px) {
+      .page-small-business .inner-hero.smb .price-legal .base {
+        font-size: 82px; } }
+  .page-small-business .inner-hero.smb .price-legal .currency {
+    font-size: 30px;
+    margin-right: 4px;
+    margin-top: 30px;
+    text-shadow: none; }
+  .page-small-business .inner-hero.smb .price-legal .subunit_wrap {
+    margin-top: 20px; }
+  .page-small-business .inner-hero.smb .price-legal .frequency {
+    font-family: OATTR;
+    font-size: 20px;
+    margin-left: 3px;
+    position: relative;
+    top: 25px; }
+  .page-small-business .inner-hero.smb .price-legal small {
+    font-family: helvetica,arial,sans-serif;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 1;
+    margin-bottom: 12px;
+    padding: 0 10px; }
+  .page-small-business .inner-hero.smb .price-legal .link-plans {
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: underline; }
+  .page-small-business .inner-hero.smb .price-legal::after {
+    content: "";
+    position: absolute;
+    top: 90px;
+    left: -15px;
+    width: 0;
+    height: 0;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-right: 15px solid #ef6f00; }
+    @media (max-width: 1200px) {
+      .page-small-business .inner-hero.smb .price-legal::after {
+        top: 80px; } }
+.page-small-business .banner-gwp {
+  background-color: $color-blue; 
+  background-image: none;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  height: 96px;
+  line-height: 96px;
+  margin-bottom: 20px;
+  padding: 0 0 0 35px; }
+.page-small-business .banner-gwp img {
+  float: right;
+  position: relative;
+  right: 345px;
+  top: 16px; }
+  @media (max-width: 1200px) {
+    .page-small-business .banner-gwp img {
+      right: 245px;
+      top: 25px;
+      width: 75px; } }
+.page-small-business .banner-gwp h2,
+.page-small-business .banner-gwp .cta-phone {
+  float: none;
+  padding: 0; }
+  @media (max-width: 1200px) {
+    .page-small-business .banner-gwp {
+      padding-left: 20px; } }
+  .page-small-business .banner-gwp h2 {
+    font-family: OATTMI;
+    font-size: 33px;
+    display: inline-block;
+    vertical-align: middle; }
+    @media (max-width: 1200px) {
+      .page-small-business .banner-gwp h2 {
+        font-size: 32px; } }
+  .page-small-business .banner-gwp .offer-text {
+    font-family: OMNES;
+    font-size: 18px;
+    font-weight: 300;
+    margin: 0 10px;
+    position: relative;
+    top: 5px; }
+    @media (max-width: 1200px) {
+      .page-small-business .banner-gwp .offer-text {
+        font-size: 16px;
+        margin: 0 12px; } }
+  .page-small-business .banner-gwp .cta-phone {
+    display: inline-block;
+    font-family: OMNES;
+    font-size: 18px;
+    font-weight: 100;
+    position: relative;
+    right: -117px;
+    vertical-align: middle; }
+    @media (max-width: 1200px) {
+      .page-small-business .banner-gwp .cta-phone {
+        font-size: 16px;
+        right: -91px;
+        top: 5px; } }
+    .page-small-business .banner-gwp .cta-phone .h-phone {
+      font-family: OATTM;
+      font-size: 30px; }
+      @media (max-width: 1200px) {
+        .page-small-business .banner-gwp .cta-phone .h-phone {
+          font-size: 18px; } }
+
+.page-small-business .banner-gwp-legal {
+  color: #aaa;
+  font-size: 11px;
+  padding: 0 0 35px;
+  text-align: center; }
+.page-small-business .banner-gwp-legal a {
+  color: #aaa;
+  text-decoration: underline; }
+.page-small-business .work-smarter .grid-16 {
+   background-color: #000;
+   background-image: url(/assets/desktop-a/images/sections/dtv-smb-bg.jpg);
+   background-position: 100% 100%;
+   background-repeat: no-repeat;
+   background-size: contain;
+   border-radius: 5px;
+   margin-bottom: 20px;
+   padding: 15px 32px 18px; }
+   @media (max-width: 1200px) {
+        .page-small-business .work-smarter .grid-16 {
+          background-size: cover;
+          background-position: 65% 50%; } }
+.page-small-business .work-smarter .content {
+  position: relative;
+  top: 7px;
+  width: 450px; }
+.page-small-business .work-smarter .headline {
+  color: $color-orange;
+  font-family: OMNES;
+  font-weight: 500;
+  margin-bottom: -10px; }
+  @media (max-width: 1200px) {
+    .page-small-business .work-smarter .headline {
+      font-size: 44px; } }
+.page-small-business .work-smarter .headline span {
+  font-style: italic;
+  font-weight: 300; }
+.page-small-business .work-smarter .sub-headline {
+  color: $color-white;
+  font-family: OMNES;
+  font-size: 20px;
+  font-weight: 400; }
+.page-small-business .work-smarter .with-spacing {
+  color: $color-white;
+  font-size: 16px;
+  font-family: OMNES;
+  font-weight: 100;
+  line-height: 1.25;
+  margin-bottom: -17px;
+  width: 375px; }
+  @media (max-width: 1200px) {
+    .page-small-business .work-smarter .with-spacing {
+      font-size: 14px;
+      width: 330px; } }
+.page-small-business .work-smarter .cta-phone {
+  color: $color-white;
+  display: block;
+  font-family: OATTR;
+  font-size: 16px; }
+  @media (max-width: 1200px) {
+    .page-small-business .work-smarter .cta-phone {
+      font-size: 12px; } }
+.page-small-business .work-smarter .h-phone {
+  color: $color-white;
+  display: inline-block;
+  font-family: OATTM;
+  font-size: 30px;
+  margin-left: 10px;
+  position: relative;
+  top: 3px; }
+  @media (max-width: 1200px) {
+    .page-small-business .work-smarter .h-phone {
+      font-size: 24px; } }
+.page-small-business .work-smarter .promo-code {
+  color: $color-gray-darker;
+  font-size: 14px;
+  font-weight: 300; }
+.page-small-business .work-smarter .price-legal {
+  float: right;
+  margin-top: 25px;
+  position: inherit;
+  height: 210px;
+  right: 25px;
+  text-shadow: none;
+  width: 240px; }
+  @media (max-width: 1200px) {
+    .page-small-business .work-smarter .price-legal {
+      margin-top: 0; } }
+.page-small-business .work-smarter .price-burst .label span {
+  font-weight: 500; }
+.page-small-business .work-smarter a {
+  color: #fff;
+  text-decoration: underline; }
+.page-small-business .work-smarter .price-legal .base {
+  font-family: OATTR; }
+.page-small-business .work-smarter .price-legal .subnit {
+  font-family: OATTR; }
+.price-legal .subnit {
+  font-family: OATTR;
+}
+.page-small-business .work-smarter .price-legal .frequency {
+  font-family: OATTR; }
+.page-small-business .work-smarter .price-legal .small {
+  font-size: 11px;
+  position: relative;
+  right: 15px;
+  width: 270px; }
+.page-small-business .work-smarter .price-legal .price .currency {
+  font-family: OATTR;
+  text-shadow: none; }
+.page-small-business .price-grid-heading {
+  background-image: url(/images/hr-shadow.png);
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  padding: 54px 0; }
+  .page-small-business .price-grid-heading h2 {
+    color: #067ab4;
+    font-family: OMNES;
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center; }
+.page-small-business .unserviceable {
+  background-image: url(/images/hr-shadow.png);
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  margin-bottom: 20px;
+  padding-top: 60px;
+  position: relative; }
+  .page-small-business .unserviceable .plans_graph {
+    margin: 0;
+    margin-left: 24px; }
+  .page-small-business .unserviceable .plans_graph .price {
+    margin-top: -10px; }
+  .page-small-business .unserviceable .left-column .calling-bundle {
+    padding-top: 30px;
+    position: absolute; }
+    @media (max-width: 1200px) {
+      .page-small-business .unserviceable .left-column .calling-bundle {
+        padding-top: 16px; } }
+    .page-small-business .unserviceable .left-column .calling-bundle h2 {
+      color: #067ab4;
+      font-family: OATTM;
+      font-size: 28px;
+      line-height: 1;
+      text-align: left;
+      width: 345px; }
+      @media (max-width: 1200px) {
+        .page-small-business .unserviceable .left-column .calling-bundle h2 {
+          padding-left: 5px;
+          width: 275px; } }
+    .page-small-business .unserviceable .left-column .calling-bundle p {
+      background-color: #fd6809;
+      font-family: OATTRI;
+      font-size: 18px;
+      color: #fff;
+      height: 38px;
+      line-height: 38px;
+      letter-spacing: -1px;
+      padding: 0 12px;
+      position: absolute;
+      right: 0;
+      top: 95px; }
+      @media (max-width: 1200px) {
+        .page-small-business .unserviceable .left-column .calling-bundle p {
+          right: 29px;
+          top: 104px; } }
+      .page-small-business .unserviceable .left-column .calling-bundle p::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -15px;
+        width: 0;
+        height: 0;
+        border-bottom: 0;
+        border-left: 0;
+        border-top: 38px solid transparent;
+        border-right: 15px solid #fd6809; }
+  .page-small-business .unserviceable .left-column .sidebar {
+    background-color: #007ab3;
+    background-image: none;
+    border: none;
+    font-style: normal;
+    height: auto;
+    width: 345px; }
+    @media (max-width: 1200px) {
+      .page-small-business .unserviceable .left-column .sidebar {
+        font-size: 13px;
+        width: 275px; } }
+    .page-small-business .unserviceable .left-column .sidebar .col {
+      background-image: none;
+      padding-left: 30px; }
+      @media (max-width: 1200px) {
+        .page-small-business .unserviceable .left-column .sidebar .col {
+          padding-left: 25px; } }
+      .page-small-business .unserviceable .left-column .sidebar .col::before {
+        display: inline-block;
+        padding-right: 15px;
+        position: relative;
+        top: 6px; }
+    .page-small-business .unserviceable .left-column .sidebar .internet::before {
+      content: url(/assets/desktop-a/images/pages/smb/icon-internet-speed.png); }
+    .page-small-business .unserviceable .left-column .sidebar .email::before {
+      content: url(/assets/desktop-a/images/pages/smb/icon-email.png); }
+    .page-small-business .unserviceable .left-column .sidebar .web::before {
+      content: url(/assets/desktop-a/images/pages/smb/icon-web-browsing.png); }
+    .page-small-business .unserviceable .left-column .sidebar .sd-video::before {
+      content: url(/assets/desktop-a/images/pages/smb/icon-video-streaming.png); }
+    .page-small-business .unserviceable .left-column .sidebar .file::before {
+      content: url(/assets/desktop-a/images/pages/smb/icon-file-sharing.png); }
+    .page-small-business .unserviceable .left-column .sidebar .hd-video::before {
+      content: url(/assets/desktop-a/images/pages/smb/icon-video-streaming.png); }
+  .page-small-business .unserviceable .price-column {
+    height: auto;
+    width: 262px; }
+    @media (max-width: 1200px) {
+      .page-small-business .unserviceable .price-column {
+        width: 210px; } }
+    .page-small-business .unserviceable .price-column img {
+      padding-top: 12px; }
+  .page-small-business .unserviceable .price-grid-blue {
+    background-image: none; }
+    .page-small-business .unserviceable .price-grid-blue.price-grid-green {
+      background-color: #4ca90c; }
+    .page-small-business .unserviceable .price-grid-blue.price-grid-orange {
+      background-color: #ef6f00; }
+    .page-small-business .unserviceable .price-grid-blue.price-grid-purple {
+      background-color: #81017f; }
+    .page-small-business .unserviceable .price-grid-blue .price-intro {
+      font-size: 12px;
+      margin-bottom: 10px;
+      padding-top: 45px; }
+    .page-small-business .unserviceable .price-grid-blue .old-price {
+      font-size: 16px;
+      font-weight: 700;
+      position: relative; }
+      .page-small-business .unserviceable .price-grid-blue .old-price::after {
+        content: url(/assets/desktop-a/images/pages/smb/cross-out.png);
+        left: 85px;
+        position: absolute;
+        top: 0; }
+    .page-small-business .unserviceable .price-grid-blue .currency {
+      font-family: OATTR;
+      font-size: 40px;
+      font-style: normal;
+      margin-left: 52px; }
+      @media (max-width: $mq-desktop-large) {
+      .page-small-business .unserviceable .price-grid-blue .currency {
+        margin-left: 30px; } }
+    .page-small-business .unserviceable .price-grid-blue .dollars {
+      float: left;
+      font-family: OATTR;
+      font-size: 68px;
+      font-style: normal;
+      line-height: 1;
+      margin-bottom: 0; }
+    .page-small-business .unserviceable .price-grid-blue .price-secondary {
+      padding-top: 13px; }
+    .page-small-business .unserviceable .price-grid-blue .month {
+      font-family: OATTR;
+      font-style: normal;
+      margin-left: 6px; }
+    .page-small-business .unserviceable .price-grid-blue .offer-term {
+      font-size: 12px;
+      font-weight: 700;
+      margin-top: -8px; }
+  .page-small-business .unserviceable .legal {
+    margin-top: 0;
+    padding-bottom: 30px;
+    padding-left: 20px;
+    padding-top: 40px;
+    text-align: left; }
+  .page-small-business .smb .grey-light {
+    font-family: OMNES; }
+  .page-small-business .smb .grey-dark {
+    font-family: OMNES; }
+.page-small-business .smb-perks .grid-16 {
+  background-image: url(/assets/desktop-a/images/sections/section-smb-perks.jpg);
+  background-color: #f3f3f3;
+  background-repeat: no-repeat;
+  border-radius: 5px;
+  height: 353px;
+  margin-bottom: 20px; }
+  @media (max-width: 1200px) {
+    .page-small-business .smb-perks .grid-16 {
+      background-position: -21% 50%; } }
+.page-small-business .smb-perks .txt-block {
+  float: right;
+  padding-bottom: 0; }
+.page-small-business .smb-perks .headline {
+  color: #067ab4;
+  font-family: OATTM; }
+.page-small-business .smb-perks .perks-text {
+    color: #666;
+    font-family: OATTR;
+    line-height: 1.25;
+    margin-bottom: 30px; }
+  @media (max-width: 1200px) {
+    .page-small-business .smb-perks .perks-text {
+      padding: 0 10px; } }
+.page-small-business .smb-perks .perk-icons {
+  margin-bottom: 25px; }
+  .page-small-business .smb-perks .perk-icons img {
+    display: inline-block;
+    margin-right: 30px; }
+    .page-small-business .smb-perks .perk-icons img:last-child {
+      margin-right: 0; }
+.page-small-business .smb-perks .order-now {
+  color: #333;
+  font-size: 24px;
+  font-weight: 700; }
+.page-small-business .value-props.smb {
+  margin-bottom: 50px; }
+  @media (max-width: 1200px) {
+    .page-small-business .value-props.smb {
+      margin-bottom: 30px; } }
+  .page-small-business .value-props.smb .grid-4 {
+    background-color: #fff;
+    background-image: -webkit-linear-gradient(#fff, #f5f5f5);
+    background-image: linear-gradient(#fff, #f5f5f5);
+    border: 1px solid #efefef;
+    border-radius: 10px;
+    padding: 15px 25px;
+    text-align: center; }
+    @media (max-width: 1200px) {
+      .page-small-business .value-props.smb .grid-4 {
+        padding: 15px 20px; } }
+  .page-small-business .value-props.smb img {
+    margin-bottom: 13px; }
+  .page-small-business .value-props.smb .headline {
+    color: #333;
+    font-family: OATTR;
+    font-size: 24px;
+    margin-bottom: 15px; }
+  .page-small-business .value-props.smb .text-content {
+    font-family: OATTR;
+    line-height: 1.5; }
+.page-small-business .callout-get-online .h-phone {
+  color: #333; }
+.page-small-business .callout-get-online h2,
+.page-small-business .callout-get-online em {
+  color: #067ab4; }
+.page-small-business .callout-request-call .grad-secondary {
+  background-color: #067ab4;
+  font-size: 20px;
+  font-weight: 300;
+  text-shadow: none;
+  transition: all 0.2s ease-in 0s; }
+  .page-small-business .callout-request-call .grad-secondary:hover {
+    background-color: #6EBDF6; }
+
+/*# sourceMappingURL=style.css.map */

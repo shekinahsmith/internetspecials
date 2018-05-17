@@ -1,0 +1,19 @@
+////
+// Fonts
+////
+
+@include font-face(OMNES, '/webshared/fonts/att-omnes/omnesatt-light-webfont', 300); // OATTL
+@include font-face(OMNES, '/webshared/fonts/att-omnes/omnesatt-lightitalic-webfont', 300, italic); // OATTLI
+@include font-face(OMNES, '/webshared/fonts/att-omnes/omnesatt-regular-webfont', 400); // OATTR
+@include font-face(OMNES, '/webshared/fonts/att-omnes/omnesatt-regularitalic-webfont', 400, italic); // OATTRI
+@include font-face(OMNES, '/webshared/fonts/att-omnes/omnesatt-medium-webfont', 500); // OATTM
+@include font-face(OMNES, '/webshared/fonts/att-omnes/omnesatt-mediumitalic-webfont', 500, italic); // OATTMI
+
+// fix this later
+@font-face {
+	font-family: 'OpenSans';
+	src: url('/fonts/opensans-italic-webfont.eot');
+	src: url('/fonts/opensans-italic-webfont.eot?#iefix') format('embedded-opentype'), url('/fonts/opensans-italic-webfont.woff') format('woff'), url('/fonts/opensans-italic-webfont.ttf') format('truetype'), url('/fonts/opensans-italic-webfont.svg#opensans-italic') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}

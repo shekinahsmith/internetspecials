@@ -1,0 +1,122 @@
+<?
+	include(RV_LandingPage::find($site_settings['path']['includes'] . '/base/_header.php'));
+	include(RV_LandingPage::find($site_settings['path']['includes'] . '/masthead/_masthead.php'));
+    include(RV_LandingPage::find($site_settings['path']['includes'] . '/heroes/_hero-why-att.php'));
+?>
+
+<main class="main-content" role="main">
+
+    <section class="section">
+
+        <div class="row">
+
+            <div class="small-12 columns">
+
+                <div class="devices section__devices section__devices--caption">
+
+                    <div class="device device--tv">
+                        <img src="<?= $site_settings['path']['assets']?>/images/devices/tv.png" alt="TV">
+
+                        <div class="device__screen" style="background-image: url( <?= $site_settings['movie']['featured']['1']['image']['src']; ?> );"></div><!-- /.device__screen -->
+
+                    </div><!-- /.device -->
+
+                    <div class="devices__group devices__group--positioned devices__group--no-caption">
+
+                        <div class="device device--tablet device--tablet-horizontal">
+
+                            <img src="<?= $site_settings['path']['assets']?>/images/devices/tablet-hz-white.png" alt="Tablet">
+
+                            <div class="device__screen" style="background-image: url(<?= $site_settings['movie']['featured']['1']['image']['src']; ?>);"></div>
+
+                        </div><!-- /.device--tablet -->
+
+                        <div class="device device--phone device--phone-vertical">
+
+                            <img src="<?= $site_settings['path']['assets']?>/images/devices/phone-vt-white.png" alt="Mobile Phone">
+
+                            <div class="device__screen" style="background-image: url( <?=$site_settings['ui']['featured']['2']['image']['src']; ?>);"></div>
+
+                        </div><!-- /.device--phone -->
+
+                    </div><!-- /.devices__group -->
+
+                    <div class="devices__caption devices__caption--positioned devices__caption--left legal legal--movie-caption"><?=$site_settings['movie']['featured']['1']['image']['caption']; ?></div>
+
+                </div><!-- /.devices -->
+
+            </div><!-- /.columns -->
+
+        </div><!-- /.row -->
+
+        <div class="row">
+
+            <div class="small-12 columns">
+
+                <h2 class="section__headline">What makes AT&T better?</h2>
+
+                <p>AT&T Internet delivers consistently fast speeds, even at peak times when you need it most.</p>
+
+                <a href="/internet.html" class="button button--secondary button--block button--centered js-track" data-tracker='
+                <?= rv_tracker_attrs($trackPage, "Sub1", "Compare Plans"); ?>'>Compare Plans</a>
+
+                <p class="legal">Geographic and service restrictions apply to AT&T Internet services. Call or go to www.att.com to see if you qualify.</p>
+
+            </div><!-- /.columns -->
+
+        </div><!-- /.row -->
+
+    </section><!-- /.section -->
+
+    <section class="section section--image-cover section--image-cover-text-white" style="background-image: url(<?= $site_settings['path']['assets']; ?>/images/sections/woman-on-floor-with-laptop.png); background-position: bottom right;">
+
+        <div class="row">
+
+            <div class="small-7 columns">
+
+                <h2 class="section__headline">99% Reliability</h2>
+                <h4 class="section__subheadline">Live life uninterrupted</h4>
+
+                <p>Get TV and Internet with reliability that exceeds 99%.*</p>
+
+            </div><!-- /.columns -->
+
+        </div><!-- /.row -->
+
+        <div class="row">
+
+            <div class="small-12 columns">
+
+                <a href="/bundles.html" class="button button--secondary button--block button--centered js-track" data-tracker='
+                <?= rv_tracker_attrs($trackPage, "Sub2", "Shop Bundles"); ?>'>Shop Bundles</a>
+
+                <p class="legal">*DIRECTV signal reliability based on nationwide study of representative cites. Internet reliability based on U-verse High Speed Internet service.</p>
+
+            </div><!-- /.columns -->
+        
+        </div><!-- /.row -->
+
+    </section><!-- /.section -->
+
+    <section class="section section--centered section--image-cover section--image-cover-text-white" style="background-image: url(<?= $site_settings['path']['assets']; ?>/images/sections/fibers.png); background-position: bottom center; padding-bottom: 252px;">
+
+        <div class="row">
+
+            <div class="small-12 columns">
+
+                <h2 class="section__headline section__headline--alternate">The future of the Internet is here.</h2>
+
+                <p>The AT&T Fiber network is expanding across the country to bring you the fastest internet speeds available.</p>
+
+            </div><!-- /.columns -->
+
+        </div><!-- /.row -->
+
+    </section><!-- /.section -->
+
+</main><!-- /.main-content -->
+
+<?
+	include(RV_LandingPage::find($site_settings['path']['includes'] . '/mastfoot/_mastfoot.php'));
+	include(RV_LandingPage::find($site_settings['path']['includes'] . '/base/_footer.php'));
+?>

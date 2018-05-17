@@ -1,0 +1,19 @@
+<script src="/js/spin.min.js"></script>
+<script>
+	$(function() {
+	  $('a[href*=#]:not([href=#])').click(function() {
+	    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+	      var target = $(this.hash);
+	      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+	      if (target.length) {
+	        $('html,body').animate({
+	          scrollTop: target.offset().top
+	        }, 1000);
+	        return false;
+	      }
+	    }
+	  });
+	});
+</script>
+
+<link href="/assets/global/fonts/ss-glyphish-outlined/webfonts/ss-glyphish-outlined.css" rel="stylesheet" media="screen" />

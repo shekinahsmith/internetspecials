@@ -1,0 +1,98 @@
+/*===============================================================*
+ * Site Name: Internet Specials ( Mobile Optimized )
+ * Author: Matt Stvartak for Red Ventures
+ *
+ * Stylesheet: Mixins & Variables
+ *===============================================================*/
+
+/*===============================*
+ * Colors
+ *===============================*/
+$white: #fff;
+$black: #333;
+$grey: #c4c4c4;
+$lightGrey: #d8d8d8;
+$bodyText: #808080;
+
+// AT&T Official Swatches
+$darkOrange: #ff7200;
+$lightOrange: #fcb314;
+$darkBlue: #067ab4;
+$lightBlue: #7cc6ff;
+$darkGreen: #6ebb1f;
+$lightGreen: #c4d82d;
+$lightMagenta: #fa00a1;
+$darkMagenta: #b30a3c;
+$greenGradient: linear-gradient( $lightGreen, $darkGreen );
+$orangeGradient: linear-gradient( $lightOrange, $darkOrange );
+$orangeGradientReverse: linear-gradient( $darkOrange, $lightOrange );
+$blueGradient: linear-gradient( $lightBlue, $darkBlue );
+$magentaGradient: linear-gradient( $lightMagenta, $darkMagenta );
+$whiteGradient: linear-gradient( #fff, #cecece );
+
+/*===============================*
+ * Fonts
+ *===============================*/
+%attFont {
+	font-family: 'ATT', sans-serif;
+}
+
+%bodyFont {
+	font-family: 'Open Sans', sans-serif;
+}
+
+/*===============================*
+ * Mixins
+ *===============================*/
+
+@mixin keyframes($name) {
+	@-webkit-keyframes #{$name} {
+		@content;
+	}
+
+	@-moz-keyframes #{$name} {
+		@content;
+	}
+
+	@-ms-keyframes #{$name} {
+		@content;
+	}
+
+	@keyframes #{$name} {
+		@content;
+	}
+}
+
+@mixin animation($name) {
+	-webkit-animation: $name;
+	animation: $name;
+}
+
+@mixin clearfix {
+	&:before, &:after {
+		content: " ";
+		display: table;
+	}
+
+	&:after {
+		clear: both;
+	}
+}
+
+@mixin button {
+	display: inline-block;
+	padding: 10px;
+	background-image: $whiteGradient;
+	border: 1px solid #cecece;
+	color: $black;
+	text-align: center;
+	font-weight: bold;
+	text-transform: uppercase;
+	@include text-shadow( -1px -1px 0 rgba( 0, 0, 0, 0.2 ) );
+	@include box-shadow( 0px 2px 3px 0px rgba( 0, 0, 0, 0.2 ) );
+	@include border-radius( 5px );
+
+	&:active {
+		@include box-shadow( inset 0px 2px 3px 0px rgba( 0, 0, 0, 0.2 ) );
+	}
+}

@@ -1,0 +1,275 @@
+<?
+	include(RV_LandingPage::find($site_settings['path']['includes'] . '/base/_header.php'));
+	include(RV_LandingPage::find($site_settings['path']['includes'] . '/masthead/_masthead.php'));
+?>
+
+    <main class="main-content" role="main">
+
+        <section class="section section--secondary section--help">
+
+            <div class="loader  js-loader">
+                <div class="loader__content"><img src="/webshared/ds/images/logos/dstar/logo-star.png" alt="Loading..."></div>
+            </div>
+
+            <div class="row">
+
+                <div class="small-12 columns">
+
+                    <div class="help">
+
+                        <div class="product-rec">
+
+                            <a href="./help.html"><div class="product-rec__restart"><svg class="icon icon-flat--restart" width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg"><title>icon-flat/restart</title><path d="M32.051 12.165l-1.657.559a14.362 14.362 0 0 0-.736-1.506A14.296 14.296 0 0 0 17.258 4C9.396 4 3 10.396 3 18.258c0 7.86 6.396 14.258 14.258 14.258a14.198 14.198 0 0 0 12.067-6.663c.35-.555.776-1.415.776-1.415a.347.347 0 0 0-.17-.471l-2.078-.937a.378.378 0 0 0-.489.175s-.3.609-.578 1.047a11.21 11.21 0 0 1-9.529 5.264C11.05 29.516 6 24.465 6 18.258 6 12.05 11.05 7 17.259 7c4.04 0 7.793 2.185 9.793 5.7.182.32.341.652.49.987l-1.625.548c-.337.114-.375.376-.085.583l.884.632 3.595 2.565c.216.154.459.073.538-.183l.047-.154.582-1.88.676-2.183.32-1.04c.105-.34-.084-.524-.422-.41" fill="#009FDB" fill-rule="evenodd"/></svg> </div></a>
+
+                            <form-wizard ref="help" shape="" title="" subtitle="">
+
+                                <transition name="fade" v-cloak>
+
+                                    <tab-content id="second" class="product-rec__users">
+
+                                        <div class="product-rec__tab-wrapper" ref="tabWrapper">
+
+                                            <h1>How many people will be using your Internet?</h1>
+
+                                            <template>
+                                                <div>
+                                                    <vue-slider ref="slider" v-bind="userCount" v-model="userCount.value" :min="1" :max="5" :value="1" :piecewise="true" :piecewise-label="true"
+                                                        :dot-size="24" :tooltip="false" :piecewise-style="piecewiseStyle"></vue-slider>
+                                                </div>
+                                            </template>
+
+                                            <button class="button button--tertiary button--block button--centered" @click="goToNextStep" v-on:click="getUserCount(); trackingUserCnt();">Continue</button>
+
+                                        </div><!-- /.product-rec__tab-wrapper -->
+
+                                    </tab-content>
+
+                                </transition>
+
+                                <transition name="fade" v-cloak>
+
+                                    <tab-content id="third" class="product-rec__usage">
+
+                                        <div class="product-rec__tab-wrapper" ref="tabWrapper">
+
+                                            <h1>What do you use the internet for?</h1>
+
+                                            <p>Tap all that apply.</p>
+
+                                            <ul class="product-rec__list">
+
+                                                <li v-for="(buttonUse, index) in buttonUse" @click="toggleActiveUse(index)" class="product-rec__list-item product-rec__list-item js-button"
+                                                    :class="{'is-active' : buttonUse.active}">
+
+                                                    <div class="product-rec__image" v-html="buttonUse.icon"></div>
+                                                    {{buttonUse.name}}
+
+                                                </li>
+
+                                            </ul>
+
+                                            <button class="button button--block button--centered" v-bind:class="{'button--disabled': !step3Ready, 'button--tertiary': step3Ready}" :disabled="!step3Ready" v-on:click="goToNextStep(); trackingIntUsage();">Continue</button>
+
+                                        </div><!-- /.product-rec__tab-wrapper -->
+
+                                    </tab-content>
+
+                                </transition>
+
+                                <transition name="fade" v-cloak>
+
+                                    <tab-content id="fourth" class="product-rec__tv">
+
+                                        <div class="product-rec__tab-wrapper" ref="tabWrapper">
+
+                                            <h1>Are you interested in adding TV?</h1>
+
+                                            <ul class="product-rec__list">
+
+                                                <li v-for="(buttonTV, index) in buttonTV" @click="toggleActiveTV(index)" class="product-rec__list-item product-rec__list-item--tv-button js-button"
+                                                    :class="{'is-active' : buttonTV.active}">
+
+                                                    <span class="product-rec__image product-rec__image--tv-button" v-html="buttonTV.icon"></span>
+                                                    {{buttonTV.name}}
+
+                                                </li>
+
+                                            </ul>
+
+                                        </div><!-- /.product-rec__tab-wrapper -->
+
+                                        <div class="tab-content__features">
+
+                                            <div class="tab-content__features-image"><svg class="icon icon-linear--tv" width="72" height="72" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg"><title>icon-linear/tv</title><path d="M29.672 9.013v14.11a.857.857 0 0 1-.854.857H8.88a.375.375 0 0 1 0-.75h19.938a.106.106 0 0 0 .104-.107V9.013a.105.105 0 0 0-.104-.107H6.943a.106.106 0 0 0-.104.107v9.343a.375.375 0 0 1-.75 0V9.013c0-.472.383-.857.854-.857h21.875c.471 0 .854.385.854.857zM31.012 25a.584.584 0 0 1-.585.582H5.331a.582.582 0 0 1-.58-.582V7.33c0-.32.26-.58.58-.58h25.096c.321 0 .584.26.584.58V25zM30.426 6H5.331c-.734 0-1.33.596-1.33 1.33V25c0 .734.596 1.331 1.33 1.331h12.174v2.34H12.12a.375.375 0 0 0 0 .75h11.522a.375.375 0 1 0 0-.75h-5.386v-2.34h12.172c.735 0 1.334-.597 1.334-1.332V7.33c0-.734-.599-1.33-1.334-1.33z" fill="#009FDB" fill-rule="evenodd"/></svg></div>
+
+                                            <ul class="tab-content__features-list">
+	                                            
+                                                <li class="tab-content__features-list-item">Includes a Genie<sup>&reg;</sup> HD DVR upgrade</li>
+
+                                            </ul><!-- /.tab-content__features-list -->
+
+                                        </div><!-- /.tab-content__features -->
+
+                                    </tab-content>
+
+                                </transition>
+
+                                <transition name="fade" v-cloak>
+
+                                    <tab-content id="fifth" class="product-rec__channels">
+
+                                        <div class="product-rec__tab-wrapper" ref="tabWrapper">
+
+                                            <h1>What types of channels do you watch?</h1>
+
+                                            <ul class="product-rec__list">
+
+                                                <li v-for="(buttonChannels, index) in buttonChannels" @click="toggleActiveChannels(index)" class="product-rec__list-item product-rec__list-item js-button"
+                                                    :class="{'is-active' : buttonChannels.active}">
+
+                                                    {{buttonChannels.name}}
+                                                    <span class="product-rec__list-item-subheader">{{buttonChannels.channels}}</span>
+
+                                                </li>
+
+                                                <button class="button button--block button--centered" v-bind:class="{'button--disabled': !step5Ready, 'button--tertiary': step5Ready}" :disabled="!step5Ready" v-on:click="goToNextStep(); trackingChannels();">Continue</button>
+
+                                            </ul>
+
+                                        </div><!-- /.product-rec__tab-wrapper -->
+
+                                    </tab-content>
+
+                                </transition>
+
+                                <transition name="fade" v-cloak>
+
+                                    <tab-content id="sixth" class="product-rec__result">
+
+                                        <div class="product-rec__tab-wrapper" ref="tabWrapper">
+
+                                            <h1>Great! Here’s what we recommend:</h1>
+
+                                            <?
+                                                // contains all of the package information
+                                                include(RV_LandingPage::find($site_settings['path']['includes'] . '/packages/_packages-summary.php'));
+                                            ?>
+
+                                            <div v-show="getGrade === 'i50'">
+
+                                                <div class="package-cards">
+                                                    <?
+                                                    render_template(RV_LandingPage::find($site_settings['path']['includes'] . '/templates/packages/_package-product-recommendation.php'), $packageRecommendedInternet50, $site_settings);
+                                                    ?>
+
+                                                    <button class="package-card__cta-button button button--tertiary button--block" v-on:click="trackingResultOrder();"><span class="h-phone" data-c2c-parent="button">Call to order</span></button>
+                                                </div>
+
+                                            </div>
+
+                                            <div v-show="getGrade === 'i75'">
+
+                                                <div class="package-cards">
+                                                    <?
+                                                    render_template(RV_LandingPage::find($site_settings['path']['includes'] . '/templates/packages/_package-product-recommendation.php'), $packageRecommendedInternet75, $site_settings);
+                                                    ?>
+                                                </div>
+
+                                                <div class="package-card__cta-button button button--tertiary button--block" v-on:click="trackingResultOrder();"><span class="h-phone" data-c2c-parent="button">Call to order</span></div>
+
+                                            </div>
+
+                                            <div v-show="getGrade === 'i50Select'">
+
+                                                <div class="package-cards">
+                                                    <?
+                                                    render_template(RV_LandingPage::find($site_settings['path']['includes'] . '/templates/packages/_package-product-recommendation.php'), $packageRecommendedInternet50Select, $site_settings);
+                                                    ?>
+
+                                                    <div class="package-card__cta-button button button--tertiary button--block" v-on:click="trackingResultOrder();"><span class="h-phone" data-c2c-parent="button">Call to order</span></div>
+                                                </div>
+
+                                            </div>
+
+                                            <div v-show="getGrade === 'i75Select'">
+
+                                                <div class="package-cards">
+                                                    <?
+                                                    render_template(RV_LandingPage::find($site_settings['path']['includes'] . '/templates/packages/_package-product-recommendation.php'), $packageRecommendedInternet75Select, $site_settings);
+                                                    ?>
+                                                    <div class="package-card__cta-button button button--tertiary button--block" v-on:click="trackingResultOrder();"><span class="h-phone" data-c2c-parent="button">Call to order</span></div>
+                                                </div>
+
+                                            </div>
+
+                                            <div v-show="getGrade === 'i50Entertainment'">
+
+                                                <div class="package-cards">
+                                                    <?
+                                                    render_template(RV_LandingPage::find($site_settings['path']['includes'] . '/templates/packages/_package-product-recommendation.php'), $packageRecommendedInternet50Entertainment, $site_settings);
+                                                    ?>
+                                                    <div class="package-card__cta-button button button--tertiary button--block" v-on:click="trackingResultOrder();"><span class="h-phone" data-c2c-parent="button">Call to order</span></div>
+                                                </div>
+
+                                            </div>
+
+                                            <div v-show="getGrade === 'i75Entertainment'">
+
+                                                <div class="package-cards">
+                                                    <?
+                                                    render_template(RV_LandingPage::find($site_settings['path']['includes'] . '/templates/packages/_package-product-recommendation.php'), $packageRecommendedInternet75Entertainment, $site_settings);
+                                                    ?>
+                                                    <div class="package-card__cta-button button button--tertiary button--block" v-on:click="trackingResultOrder();"><span class="h-phone" data-c2c-parent="button">Call to order</span></div>
+                                                </div>
+
+                                            </div>
+
+                                            <div v-show="getGrade === 'i50Choice'">
+
+                                                <div class="package-cards">
+                                                    <?
+                                                    render_template(RV_LandingPage::find($site_settings['path']['includes'] . '/templates/packages/_package-product-recommendation.php'), $packageRecommendedInternet50Choice, $site_settings);
+                                                    ?>
+                                                    <div class="package-card__cta-button button button--tertiary button--block" v-on:click="trackingResultOrder();"><span class="h-phone" data-c2c-parent="button">Call to order</span></div>
+                                                </div>
+
+                                            </div>
+
+                                            <div v-show="getGrade === 'i75Choice'">
+
+                                                <div class="package-cards">
+                                                    <?
+                                                    render_template(RV_LandingPage::find($site_settings['path']['includes'] . '/templates/packages/_package-product-recommendation.php'), $packageRecommendedInternet75Choice, $site_settings);
+                                                    ?>
+                                                    <div class="package-card__cta-button button button--tertiary button--block" v-on:click="trackingResultOrder();"><span class="h-phone" data-c2c-parent="button">Call to order</span></div>
+                                                </div>
+
+                                            </div>
+
+                                        </div><!-- /.product-rec__tab-wrapper -->
+
+                                        <div class="tab-content__link"><a href="/internet.html" v-on:click="trackingResultAll(getGrade);"><img class="icon icon-flat--magnifying-glass" src="/webshared/atv/icons/dist/svg/icon-flat/magnifying-glass.svg" alt="icon"> View all AT&T Packages</a></div>
+
+                                    </tab-content>
+
+                                </transition>
+
+                            </form-wizard><!-- /.form-wizard -->
+
+                        </div><!-- /.product-rec -->
+
+                    </div><!-- /.help -->
+
+                </div><!-- /.columns -->
+
+            </div><!-- /.row -->
+
+        </section><!-- /.section -->
+
+
+    </main><!-- /.main-content -->
+
+<?
+	include(RV_LandingPage::find($site_settings['path']['includes'] . '/mastfoot/_mastfoot.php'));
+	include(RV_LandingPage::find($site_settings['path']['includes'] . '/base/_footer.php'));
+?>

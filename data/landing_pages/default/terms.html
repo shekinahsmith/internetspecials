@@ -1,0 +1,45 @@
+<? include_once(RV_LandingPage::find('includes/header.php')); ?>
+
+<? include_once(RV_LandingPage::find('includes/_masthead.html')); ?>
+
+<? include(RV_LandingPage::find('includes/banners/_urgency_banner.html')); ?>
+
+<div class="row">
+	<div class="grid-16 txt-block terms">
+
+		<h2>Offer Terms</h2>
+
+		<?
+			/*
+				#ATTCE-556 Chicago Offer
+				http://jira.redventures.net/browse/ATTCE-556
+			*/
+
+			$currentLPID = RV_LandingPage::get_real_lpid();
+			$chicagoOfferExperiences = array('291', '292', '457');
+
+			if (in_array($currentLPID, $chicagoOfferExperiences)) {
+				include( RV_Web_SharedInclude::include_shared_file('att', 'chicago_offer_terms.html') );
+			} else {
+				include( RV_Web_SharedInclude::include_shared_file('att', 'offer_terms.html') );
+			}
+
+		?>
+
+	</div>
+	<!-- END .grid-16 -->
+</div>
+<!-- END .row -->
+
+<div class="row">
+
+	<? include_once(RV_LandingPage::find('includes/callouts/_callout_get_online.html')); ?>
+
+	<? include_once(RV_LandingPage::find('includes/callouts/_callout_request_call.html')); ?>
+
+</div>
+<!-- END .row -->
+
+<? include(RV_LandingPage::find('includes/banners/_urgency_banner.html')); ?>
+
+<? include_once(RV_LandingPage::find('includes/footer.php')); ?>

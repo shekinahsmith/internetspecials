@@ -1,0 +1,90 @@
+// fonts
+$font-primary: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-secondary: OMNES;
+
+// Media Queries
+$mq-desktop-large: 1200px;
+
+// base color variables
+$color-black: #000;
+$color-blue: #067ab4;
+$color-blue-darker: #0c2577;
+$color-blue-lighter: #04c8f5;
+$color-gray: #efefef;
+$color-gray-darker: #666;
+$color-gray-darkest: #333;
+$color-orange: #ff7900;
+$color-orange-dark: #e34a16;
+$color-purple: #81017e;
+$color-yellow: #fcb314;
+$color-green: #4ca90c;
+$color-white: #fff;
+
+$white-color: #ffffff;
+$grey-light: #f3f3f3;
+$grey-dark: #ebebeb;
+$purple-dark: #81017e;
+$purple-light: #fa00a1;
+$green-dark: #6ebb1f;
+$green-light: #c4d82d;
+$blue-dark: #0c2577;
+$blue-med: #067ab4;
+$blue-light: #7cc6ff;
+$orange-dark: #ff7200;
+$orange-light: #fcb314;
+
+// from one file
+$white-color: #ffffff;
+$grey-light: #f3f3f3;
+$grey-dark: #ebebeb;
+$dark: #222;
+$orange: #ff7800;
+$blue: #3a9cd6;
+
+
+$color-primary: $color-blue;
+$color-secondary: $color-gray;
+$color-tertiary: $color-yellow;
+$color-quarternary: $color-purple;
+
+$highlight: $color-quarternary;
+
+// global color variables :: primary, secondary, etc ... based on content section name not color in palette
+$content-primary-background: $color-yellow;
+$content-primary-color: $color-gray-darkest;
+
+$color-legal: $color-gray-darkest;
+
+$content-secondary-background: $color-purple;
+$content-secondary-color: $color-gray;
+
+$content-tertiary-background: $color-gray;
+$content-tertiary-color: $color-gray-darkest;
+
+$border-color-base: $color-gray;
+
+// nav colors
+$nav-icon-color: $color-blue;
+$nav-link-color: $color-blue;
+$nav-primary-link-color: $color-gray;
+$nav-primary-background: $color-purple;
+
+// button colors :: primary, secondary, etc ... based on hierarchy in color palette b/c buttons will be globally used
+$button-color: $color-gray;
+$button-primary-background: $color-blue;
+$button-secondary-background: $color-purple;
+
+// price colors
+$price-color-primary: $color-blue;
+$price-color-secondary: $color-purple;
+
+// interior variable styles
+$interior-background: $color-gray;
+
+// banners
+$banner-color: $color-gray;
+
+$banner-urgency-primary-background: $color-blue;
+$banner-promotional-background: $color-orange;
+$banner-complimentary-background: $color-purple;
+$banner-secondary-complimentary-background: $color-green;

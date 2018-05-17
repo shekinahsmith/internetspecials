@@ -1,0 +1,55 @@
+<div class="availability-banner-2">
+
+    <div class="row">
+
+        <div class="grid-16">
+
+            <form method="post" action="/zip_check_post2.php">
+
+                <span>I am interested in </span>
+
+                <span class="services">
+
+                    <select class="selectric">
+
+                        <option value="int" selected>Internet</option>
+                        <option value="int">U-verse TV</option>
+                        <option value="int">Bundles</option>
+                        <option value="int">Phone</option>
+
+                    </select>
+
+                </span>
+
+                <span>for my </span>
+
+                <span class="residence">
+
+                    <select class="selectric">
+
+                        <option value="Home" selected>Home</option>
+                        <option value="Apartment">Apartment</option>
+
+                    </select>
+
+                </span>
+
+                <span class="snug-left">. My ZIP code is </span>
+
+                <input type="text" value="<?= ($WebLocation->postalCode == 0) ? '' : $WebLocation->postalCode; ?>" name="AvailabilityZipCode" required pattern="(\d{5}([\-]\d{4})?)" title="enter a valid five-digit ZIP code" />
+
+                <span class="snug-left">.</span>
+
+                <input type="submit" value="Check Availability" data-hailo-event="zip_finddeals" data-hailo-event-type="submit" class="js-hailo" />
+
+            </form>
+            <!-- form -->
+
+        </div>
+        <!-- .grid-16 -->
+
+    </div>
+    <!-- .row -->
+
+</div>
+<!-- .availability-banner-2 -->

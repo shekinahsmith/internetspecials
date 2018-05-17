@@ -1,0 +1,807 @@
+html body .uverse-inner-hero .hero-message .price-point span {
+	font-size: 55px;
+}//TEMPORARY FOR OFFER CHANGE
+
+////
+// Sections
+////
+
+section.has-no-grid {
+	margin-left: auto;
+	margin-right: auto;
+	width: 960px;
+
+	@media only screen and (min-width: 1200px) {
+		width: 1200px;
+	}
+	// $mq-desktop-large
+
+	.section-wrapper {
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+	// .section-wrapper
+
+}
+// section.has-no-grid
+
+.section-general {
+	color: $color-white;
+
+	&.has-theme-dark {
+		color: $color-grey-dark;
+	}
+	// &.has-theme-dark
+
+	.headline {
+		font-size: 43px;
+		font-family: OATTMI;
+	}
+	// .headline
+
+	p {
+		font-size: 20px;
+		margin-bottom: 26px;
+		font-family: OATTL;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+		// &:last-child
+
+		strong {
+			font-family: OATTR;
+		}
+		// strong
+
+	}
+	// p
+
+}
+// .section-general
+
+.section-boxes {
+	margin-bottom: 40px;
+
+	.bow-row {
+		@include clearfix();
+	}
+	// .bow-row
+
+	.box {
+		height: 100%;
+		float: left;
+		overflow: hidden;
+		position: relative;
+		width: 50%;
+
+		&.has-cover {
+			background-size: cover;
+			background-position: center;
+		}
+		// &.has-cover
+
+		&.has-theme-dark {
+			color: $color-grey-dark;
+		}
+		// &.has-theme-dark
+
+	}
+	// .box
+
+	.box-content {
+		@include transform(translate(0, -50%));
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		margin-left: -205px;
+		width: 410px;
+	}
+	// .box-content
+
+	.box-image {
+		@include transform(translate(-50%, -50%));
+		position: absolute;
+		left: 50%;
+		top: 50%;
+
+		img {
+			display: block;
+			max-width: none;
+		}
+		// img
+
+	}
+	// .box-image
+
+}
+// .section-boxes
+
+.hundreds-of-channels {
+	background-image: url('/images/sections/section-hundreds-of-channels.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	height: 680px;
+	text-align: center;
+ 	padding-top: 210px;
+
+	.section-content {
+		margin: 0 auto;
+		width: 480px;
+	}
+	// .section-content
+
+}
+// .hundreds-of-channels
+
+// global call out boxes
+.call-out {
+	margin-top: 35px;
+	padding: 30px 0 25px 0;
+	text-align: center;
+
+	h2 {
+		font-family: OATTRI;
+		font-size: 32px;
+	}
+
+	p {
+		font-size: 16px;
+		font-style: italic;
+	}
+
+	.promo-box {
+		margin: 20px 25px 0 25px;
+		padding: 20px 0;
+
+		.promo {
+			font-size: 16px;
+		}
+	}
+
+	.h-phone {
+		display: block;
+		font-size: 32px;
+		font-weight: bold;
+		margin-bottom: 5px;
+	}
+
+	&.is-primary {
+		h2,
+		.h-phone, {
+			color: #fff;
+		}
+
+		p {
+			color: #8c2300;
+		}
+	}
+}
+
+.section-whats-your-number {
+	margin-bottom: 10px;
+
+	.section-wrapper {
+		background-color: #f7f7f5;
+		background-image: url('/images/sections/section-bg-whats-your-number.png');
+		background-position: right center;
+		background-size: cover;
+		border-radius: 7px;
+		padding: 95px 0 75px 100px;
+	}
+
+	.section-title {
+		color: #000;
+		margin-bottom: 25px;
+		font-weight: 500;
+		font-style: italic;
+  		letter-spacing: -1px;
+		font-size: 50px;
+		font-family: OMNES;
+	}
+	// .section-title
+
+	.section-content {
+		text-align: center;
+		width: 475px;
+	}
+	// .section-content
+
+	.button {
+		text-transform: capitalize;
+	}
+	// .button
+
+	.is-medium {
+		color: #333333;
+		//font-family: $font-secondary;
+		font-size: 24px;
+		font-weight: 300;
+		line-height: 1.2;
+	}
+	// .is-medium
+
+}
+// .section-whats-your-number
+
+// directv Best of Both Companies
+section.directv-best-of-both-companies {
+	@include linear-gradient(-115deg, #0574ac 45%, #0c2577);
+	color: #fff;
+	font-family: $font-secondary;
+	margin-bottom: 20px;
+
+	.txt-block {
+		padding: 50px 0 70px 90px;
+		p {
+			font-size: 22px;
+			font-weight: 100;
+		}
+	}// .txt-block
+
+	// .headline seciton
+	.headline-section {
+		font-size: 30px;
+
+		// span
+		span {
+			display: block;
+
+			&.logo-directv {
+				margin-top: 20px;
+			}
+		}// span
+	}// .headline-section
+
+	p {
+		line-height: 1.2;
+	}
+
+	// offer length
+	.offer-length {
+		background: #fff;
+		border-radius: 100%;
+		color: #0B307F;
+		display: inline;
+		font-size: 12px;
+		font-style: italic;
+		font-weight: 700;
+		height: 15px;
+		position: absolute;
+		text-align: center;
+		width: 15px;
+	}// .offer-length
+
+	small {
+		color: #fff;
+		font-size: 10px;
+		position: relative;
+		top: 25px;
+	}
+
+	img {
+		&.scale {
+			margin: 25px 0 15px;
+		} // &.scale
+	} //img
+
+	.plus {
+		width: 25px;
+		height: 25px;
+		position: absolute;
+		top: 10px;
+		right: 5px;
+		background: url(/images/102/plus.png);
+		background-repeat: no-repeat;
+		background-position: center;
+		cursor: pointer;
+		&:hover {
+			.plus-inner {
+				visibility: visible;
+				opacity: 0.92;
+			}
+		}
+		.plus-inner {
+			width: 25px;
+			height: 25px;
+			position: relative;
+			visibility: hidden;
+			opacity: 0;
+			@include transition (all 0.3s);
+			z-index: 3;
+
+			.legal-back {
+				width: 215px;
+				height: 53px;
+				background-image: url(/images/102/arrow.png);
+				background-repeat: no-repeat;
+				background-position: bottom center;
+				position: absolute;
+				top: -55px;
+				left: -95px;
+
+				.is-75 & {
+					left: -180px;
+				}
+			}
+
+			.legal-popup {
+				width: 215px;
+				font-size: 10px;
+				color: #fff;
+				font-family: $font-secondary;
+				font-weight: 300;
+				font-style: italic;
+				background-color: #6e6e6e;
+				padding: 10px;
+				z-index: 2;
+				border-radius: 3px;;
+				line-height: 1.2;
+			}
+		}
+	}
+} // .directv-best-of-both-companies
+
+// directv directv-nfl-sunday-ticket
+section.directv-nfl-sunday-ticket {
+	font-family: $font-secondary;
+	.nflst {
+		position: relative;
+		background-color: $color-gray;
+		padding-bottom: 106px;
+		.txt-block {
+			float: left;
+			max-width: 70%;
+			padding: 90px 0 0 50px;
+		}
+		img {
+			max-width: 25%;
+			&.sunday-ticket {
+				float: right;
+				position: relative;
+				top: 110px;
+				right: 25px;
+			}//.sunday-ticket
+		}//img
+	}//.nflst
+
+	.img-block {
+		background-image: url(../assets/desktop-a/images/pages/directv/sunday-ticket-players.png);
+		background-repeat: no-repeat;
+		background-position: bottom center;
+		background-size: cover;
+		height: 396px;
+	}//.img-block
+
+	.grid-8 {
+		&.img-block {margin-left: 0;}
+		&.nflst {
+			margin-right: 0;
+			.txt-block {
+				margin-right: 10px;
+			}
+		}// &.nflst
+	}//.grid-8
+
+	.btn {
+		border-radius: 7px;
+		font-family: $font-secondary;
+		font-weight: bold;
+		background-color: #067ab4;
+		margin-top: 20px;
+		text-shadow: none;
+		text-transform: uppercase;
+	}// .btn
+
+	h3, p {
+		color: #333;
+	}// h3,p
+
+	p {
+		font-size: 18px;
+		line-height: 1.1;
+	}//p
+
+	small {
+		display: block;
+		font-size: 10px;
+		margin-top: 20px;
+		&.sub-legal {
+			margin-top: 8px;
+		}
+	}// small
+
+}// .directv-nfl-sunday-ticket
+
+// directv directv-genie
+section.directv-genie {
+	font-family: $font-secondary;
+
+	.genie {
+		background-color: $color-gray;
+		padding-bottom: 93px;
+		padding-top: 50px;
+		position: relative;
+		.txt-block {
+			padding: 50px;
+		}
+	}//.genie
+
+	.img-block {
+		background-image: url(../assets/desktop-a/images/pages/directv/genie-background.png);
+		background-repeat: no-repeat;
+		background-position: bottom center;
+		background-size: cover;
+		height: 396px;
+	}//.img-block
+
+	.grid-8 {
+		&.img-block {margin-right: 0;}
+		&.genie {
+			margin-left: 0;
+			.txt-block {
+				margin-left: 10px;
+			}
+		}// &.genie
+	}//.grid-8
+
+	.btn {
+		border-radius: 7px;
+		font-family: $font-secondary;
+		font-weight: bold;
+		background-color: #067ab4;
+		margin-top: 20px;
+		text-shadow: none;
+		text-transform: uppercase;
+	}// .btn
+
+	h3, p {
+		color: #333;
+	}// h3,p
+
+	p {
+		font-size: 18px;
+		line-height: 1.1;
+	}//p
+
+	small {
+		display: block;
+		font-size: 10px;
+		margin-top: 20px;
+		&.sub-legal {
+			margin-top: 8px;
+		}
+	}// small
+
+}// .directv-genie
+
+// directv directv-premium-channels
+section.directv-premium-channels {
+	font-family: $font-secondary;
+	margin-bottom: 20px;
+
+	.premium-channels {
+		background-color: $color-gray;
+		padding-bottom: 42px;
+		padding-top: 50px;
+		position: relative;
+		.txt-block {
+			padding: 50px;
+		}// .txt-block
+		.premium-channel-logos {
+			padding: 25px 40px 5px 0;
+		}// .premium-channel-logos
+	}//.premium-channels
+
+	.img-block {
+		background-image: url(../assets/desktop-a/images/pages/directv/gone-girl.png);
+		background-position: bottom center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		height: 396px;
+	}//.img-block
+
+	.grid-8 {
+		&.img-block {margin-left: 0;}
+		&.premium-channels {
+			margin-right: 0;
+			.txt-block {
+				margin-right: 10px;
+			}
+		}// &.premium-channels
+	}//.grid-8
+
+	.btn {
+		border-radius: 7px;
+		font-family: $font-secondary;
+		font-weight: bold;
+		background-color: #067ab4;
+		margin-top: 20px;
+		text-shadow: none;
+		text-transform: uppercase;
+	}// .btn
+
+	h3, p {
+		color: #333;
+	}// h3,p
+
+	p {
+		font-size: 18px;
+		line-height: 1.1;
+	}//p
+
+	small {
+		display: block;
+		font-size: 10px;
+		margin-top: 20px;
+		&.sub-legal {
+			margin-top: 8px;
+		}
+	}// small
+
+}// .directv-premium-channels
+
+
+
+.better-internet.serviceability {
+	text-align: center;
+	margin: 0 auto;
+
+	.serviceability__headline {
+		color: $color-blue-light;
+		font-size: 56px;
+		font-style: italic;
+		font-weight: 300;
+		line-height: 1.5;
+	}// serviceability__headline
+
+	.serviceability__sub-headline {
+		color: $color-blue-light;
+		font-size: 40px;
+		font-style: italic;
+		font-weight: 300;
+		line-height: 1;
+		padding-bottom: 25px;
+	}// serviceability__headline
+
+	.phone-number {
+		color: $color-orange;
+		font-size: 56px;
+		font-style: italic;
+		line-height: 1;
+	}// .phone-number
+
+	p {
+		font-size: 17px;
+		font-weight: 300;
+	}// p
+
+	.row.serviceability {
+		padding: 55px 0;
+	}// .row.serviceability
+
+}// .better-internet.serviceability
+
+
+.content-favorite-devices {
+	border-bottom: 1px solid #cdced0;
+	text-align: center;
+
+	.btn {
+		cursor: pointer;
+		background-color: #ff7900;
+		border-radius: 5px;
+		font-family: OATTM;
+		padding: 14px 36px;
+		text-shadow: none;
+		text-transform: none;
+
+		&.is-tertiary {
+			background-color: $color-blue;
+		}// &.is-tertiary
+	}// .btn
+
+	.row {
+		position: relative;
+	}
+
+	.txt-block {
+		h2 {
+			font-size: 36px;
+		}// h2
+
+		h3 {
+			color: #ff7900;
+		    font-size: 20px;
+		    line-height: 1.3;
+		    margin-top: 20px;
+		}// h3
+	}// .txt-block
+
+	.slick-dots {
+		bottom: 1rem;
+	}// .slick-dots
+
+	.product-slide {
+		margin: 0 auto;
+
+		.row {
+			padding: 0 0 4rem;
+		}// .row
+	}// .product-slide
+
+	.product {
+		img {
+			margin: 0 auto;
+			height: 210px;
+			text-align: center;
+		}// img
+
+		&__name {
+			color: $color-gray-darkest;
+			padding: 1.5rem 0;
+		}// &__name
+
+		&.has-border-right {
+			border-right: 1px solid #cdced0;
+		}// &.has-border-right
+	}// .product
+
+} // .content-covered
+
+
+// Bundles Uverse Updates
+
+.ih-bundles {
+
+	.grid-16 {
+		background-position: 500px center;
+
+		@media only screen and (max-width: 1199px) {
+			background-position: 1px center;
+		}
+	}
+
+	h2 {
+		font-size: 44px;
+	}
+
+	.price-legal {
+		right: 23px;
+
+    .label {
+      font-size: 10px;
+      width: auto;
+    }
+
+		@media only screen and (max-width: 1199px) {
+			right: 5px;
+		}
+	}
+}
+
+.scale {
+
+	&.is-centered {
+		margin: 0 auto;
+		position: relative;
+	}
+}
+
+.att-bundles-wrapper {
+	margin-top: 120px;
+}
+
+.custom-bundle-column {
+
+	.custom-bundle-title {
+		text-align: center;
+
+		h3 {
+			color: #ff7200;
+			font-size: 22px;
+			margin: 10px 0;
+		}
+
+		img {
+			margin-top: -150px;
+		}
+	}
+
+	.custom-bundle-banner {
+		background: #7bc6ff;
+		color: #fff;
+		font-size: 14px;
+		margin: 0;
+		padding: 5px 0;
+		text-align: center;
+
+		strong {
+			text-transform: uppercase;
+		}
+
+		@media only screen and (max-width: 1199px) {
+			font-size: 12px;
+		}
+	}
+
+	.custom-bundle-list {
+		min-height: 300px;
+
+		li {
+			border-top: 2px solid #e4e4e4;
+			overflow: hidden;
+			padding: 12px 0;
+
+			&:first-child {
+				border-top: none;
+			}
+		}
+
+		.custom-bundle-icon {
+			color: #ff7200;
+			float: left;
+			font-size: 18px;
+			text-align: center;
+			width: 30%;
+
+			img {
+				margin-bottom: 5px;
+			}
+		}
+
+		p {
+			float: left;
+			width: 55%;
+		}
+	}
+}
+
+.build-bundle {
+
+	.row {
+		overflow: visible;
+	}
+
+	h2 {
+		font-size: 40px;
+
+		@media only screen and (max-width: 1199px) {
+			font-size: 30px;
+		}
+	}
+
+	.bundle-image {
+		margin-top: -20px;
+	}
+
+	@media only screen and (max-width: 1199px) {
+
+		.txt-block {
+			padding-bottom: 20px;
+		}
+	}
+}
+
+.legal-message {
+	display: block;
+	font-size: 11px;
+	font-style: italic;
+	line-height: 1.4;
+	margin-top: 25px;
+}
+
+.uverse-evolution {
+	margin-bottom: 0;
+}
+
+.what-is-uverse {
+	p.legal {
+		position: relative;
+		top: -35px;
+	}
+
+	.row {
+		overflow: visible;
+	}
+}

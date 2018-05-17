@@ -1,0 +1,119 @@
+
+.row {
+	margin-left: -5%;
+	margin-right: -5%;
+	margin-bottom: 10%;
+	display: block;
+	@include clearfix;
+}
+
+.table {
+	display: table;
+
+	[class*="span-"] {
+		display: table-cell;
+		float: none;
+		vertical-align: middle;
+	}
+}
+
+[class*="span-"] {
+	float: left;
+	padding: 0 5%;
+}
+
+[class*="-centered"] {
+	text-align: center;
+}
+
+.span-1 {
+	width: 8.333333333%;
+}
+
+.span-2 {
+	width: 16.666666666%;
+}
+
+.span-3 {
+	width: 25%;
+}
+
+.span-4 {
+	width: 33.333333332%
+}
+
+.span-5 {
+	width: 41.666666665%;
+}
+
+.span-6 {
+	width: 50%;
+}
+
+.span-7 {
+	width: 58.333333331%;
+}
+
+.span-8 {
+	width: 66.666666664%;
+}
+
+.span-9 {
+	width: 75%;
+}
+
+.span-10 {
+	width: 83.33333333%;
+}
+
+.span-11 {
+	width: 91.666666663%;
+}
+
+.span-1 {
+	width: 100%;
+}
+
+.offset-1 {
+	margin-left: 8.333333333%;
+}
+
+.offset-2 {
+	margin-left: 16.666666666%;
+}
+
+.offset-3 {
+	margin-left: 25%;
+}
+
+.offset-4 {
+	margin-left: 33.333333332%
+}
+
+.offset-5 {
+	margin-left: 41.666666665%;
+}
+
+.offset-6 {
+	margin-left: 50%;
+}
+
+.offset-7 {
+	margin-left: 58.333333331%;
+}
+
+.offset-8 {
+	margin-left: 66.666666664%;
+}
+
+.offset-9 {
+	margin-left: 75%;
+}
+
+.offset-10 {
+	margin-left: 83.33333333%;
+}
+
+.offset-11 {
+	margin-left: 91.666666663%;
+}
