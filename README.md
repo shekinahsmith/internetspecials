@@ -13,4 +13,10 @@ The webpack setup and the configuration for Vue was handled by another member of
 - Vue
 - Foundation 5
 
+Pertinent Files For Resdesign: 
+- `data/assets/mobile-c/`
+- `data/landing_pages/2100/`
+- `data/landing_pages/default/includes/mobile-c/`
+
+
 This was my first introduction to Vue.js, however, the technical stack for this team was a bit old. Attempting to make our old PHP stack work within the bounds of Vue was incredibly difficult. 
